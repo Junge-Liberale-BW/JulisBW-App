@@ -4,7 +4,7 @@
 
 
       <div v-for="(properties, titel) in lak_liste" v-bind:key="titel"
-           class="col-6 col-md-4 lak-kachel-wrapper"
+           class="col-6 col-sm-3 col-lg-2 lak-kachel-wrapper"
       >
         <div class="lak-kachel"
              @click="wechsel_seite(titel)"
