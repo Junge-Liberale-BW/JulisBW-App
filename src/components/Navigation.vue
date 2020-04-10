@@ -63,6 +63,10 @@
       changeNavigationState: function () {
         if (this.navigationState) {
           this.navigationWidth = '0'
+          this.unfold = {
+            inhalte: false,
+            verband: false
+          }
         } else {
           this.navigationWidth = '100vw'
         }
@@ -72,7 +76,8 @@
         this.unfold[index] = !this.unfold[index];
       },
       changeSite: function (site) {
-        this.$store.commit('wechsel_seite', site);
+        this.$store.dispatch('wechsel_seite', site);
+        this.changeNavigationState();
       }
     },
   }
@@ -131,8 +136,6 @@ a:hover {
 
 #open-nav-button:hover {
   border: 1px solid #aeaeae;
-  background-color: #E5007D;
-  color: #fff;
   outline: none;
 }
 
