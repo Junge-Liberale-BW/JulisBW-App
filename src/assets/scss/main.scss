@@ -1,6 +1,7 @@
 $magenta: #e5007d;
 $darker_magenta: #c10069;
 $cyan: #009EE3;
+$gelb: #ffed00;
 
 .text-magenta {
   color: $magenta;
@@ -44,4 +45,69 @@ $cyan: #009EE3;
 
 .clickable{
   cursor: pointer;
+}
+
+
+.vc-rounded-full{
+  border-radius: 0 !important;
+  margin: 0;
+}
+
+.vc-h-full{
+  width: 100%;
+}
+
+.veranstaltungs-vorschau-item{
+
+  align-content: center;
+
+  font-weight: bolder;
+
+  //padding-top: .5rem;
+  //padding-bottom: .5rem;
+
+  border-bottom: 1px solid #b7b7b7;
+  border-top: 1px solid #b7b7b7;
+
+  .datum-tag{
+    background-color: $magenta;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 1rem 0.5rem;
+  }
+
+  .ist_heute{
+    background-color: $gelb !important;
+  }
+
+  .keine-veranstaltungen{
+    background-color:#dfdfdf !important;
+  }
+
+  .keine-veranstaltungen-text{
+    font-size: 1rem !important;
+  }
+
+  .info-text{
+    //padding: 1rem 0.5rem;
+    padding-left: .5rem;
+    font-size: 1.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+
+.kalender-header{
+  height: 7rem;
+  background-color: $magenta;
+
+  padding-top: 3.5rem;
+  color: white;
+
+  .switch-icon{
+    position: absolute;
+    right: 1rem;
+    top: 3.5rem;
+  }
 }

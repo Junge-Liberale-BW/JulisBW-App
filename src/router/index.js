@@ -46,6 +46,11 @@ const routes = [
     component: () => import('../views/Kalender.vue')
   },
   {
+    path: '/Terminliste',
+    name: 'Terminliste',
+    component: () => import('../views/Terminliste.vue')
+  },
+  {
     path: '/Merch',
     name: 'Merch',
     component: () => import('../views/Merch-Shop.vue')
