@@ -1,7 +1,7 @@
 <template>
   <div>
     <button id="open-nav-button" @click="changeNavigationState" v-bind:class="{'opened-nav-button': navigationState}">&#9776;</button>
-    <nav v-bind:style="{maxWidth: navigationWidth}">
+    <nav v-bind:style="{left: navigationWidth}">
 
       <div di="nav-content">
 
@@ -54,7 +54,7 @@
     data: function () {
       return {
         navigationState: false,
-        navigationWidth: '0vw',
+        navigationWidth: '-80vw',
         navigationMargin: '0vw',
         active: 'Home',
         unfold: {
@@ -66,13 +66,13 @@
     methods: {
       changeNavigationState: function () {
         if (this.navigationState) {
-          this.navigationWidth = '0'
+          this.navigationWidth = '-80vw'
           this.unfold = {
             inhalte: false,
             verband: false
           }
         } else {
-          this.navigationWidth = '80vw'
+          this.navigationWidth = '0vw'
         }
         this.navigationState = !this.navigationState;
       },
@@ -92,10 +92,9 @@ nav {
   min-height: 100vh;
   width: 80vw;
   transition: 300ms;
-  max-width: 0;
   background-color: #f1f1f1;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   border-right: 1px solid #aeaeae;
@@ -126,7 +125,7 @@ a:hover {
   background-color: #fff;
   color: #E5007D;
   border: none;
-  position: absolute;
+  position: fixed;
   top: 20vh;
   left: 0;
   z-index: 1001;
