@@ -26,9 +26,9 @@ const routes = [
     component: () => import('../views/Impresseum.vue')
   },
   {
-    path: '/Inhalte',
-    name: 'Inhalte',
-    component: () => import('../views/Inhalte.vue')
+    path: '/Landesarbeitskreise',
+    name: 'Landesarbeitskreise',
+    component: () => import('../views/Landesarbeitskreise.vue')
   },
   {
     path: '/Juliette',
