@@ -1,8 +1,20 @@
 <template>
   <div>
-      <img :src="$store.state.headerBilder[$route.name]">
+      <img :src="gib_bild">
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'Header',
+
+    computed:{
+      gib_bild(){
+        return this.$store.state.headerBilder[this.$route.name];
+      }
+    }
+  }
+</script>
 
 <style scoped>
 img {

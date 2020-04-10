@@ -4,7 +4,6 @@ nav {
   min-height: 100vh;
   width: 80vw;
   transition: 300ms;
-  max-width: 0;
   background-color: white;
   overflow: hidden;
   position: absolute;
@@ -74,7 +73,7 @@ a:hover {
 
 #nav-body {
   list-style: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   padding: 0px;
 
@@ -97,10 +96,9 @@ a:hover {
   }
 
   .nav-subitem{
-    //padding-top: .4rem;
-    //padding-bottom: .4rem;
-
-    padding: .5rem;
+    padding: .8rem 1rem;
+    font-size: 1rem;
+    font-weight: bolder;
   }
 }
 

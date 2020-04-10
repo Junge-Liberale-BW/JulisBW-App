@@ -10,8 +10,9 @@
         :class="{'opened-nav-button': navigationOpen}"
       />
     </button>
+
     <nav :style="{left: navigationWidth}">
-      <div di="nav-content">
+      <div id="nav-content">
         <div id="nav-header">
           <img
             height="100%"
@@ -21,11 +22,11 @@
 
         <ul id="nav-body">
           <li @click="changeSite('Home')">
-            <i class="la la-home" /> Home
+            <i class="la la-home la-lg" /> Home
           </li>
 
           <li @click="unfoldList('inhalte')">
-            <i class="la la-pen-nib" /> Inhalte <i
+            <i class="la la-pen-nib la-lg" /> Inhalte <i
               :class="{la: true, 'icon-right': true, 'la-angle-up': unfold.inhalte, 'la-angle-right': !unfold.inhalte}"
             />
           </li>
@@ -33,23 +34,23 @@
             v-if="unfold.inhalte"
             class="unfoldList"
           >
+            <li class="nav-subitem">
+              <i class="la la-angle-right la-lg" /> Beschlusssammlung
+            </li>
+            <li class="nav-subitem">
+              <i class="la la-angle-right la-lg" /> Programmatik-Lexikon
+            </li>
             <li
               class="nav-subitem"
               @click="changeSite('Landesarbeitskreise')"
             >
-              <i class="la la-angle-right" /> Landesarbeitskreise
-            </li>
-            <li class="nav-subitem">
-              <i class="la la-angle-right" /> Beschlusssammlung
-            </li>
-            <li class="nav-subitem">
-              <i class="la la-angle-right" /> Programmatik-Lexikon
+              <i class="la la-angle-right la-lg" /> Landesarbeitskreise
             </li>
           </ul>
 
 
           <li @click="unfoldList('verband')">
-            <i class="la la-thumbs-up" /> Verband <i
+            <i class="la la-thumbs-up la-lg" /> Verband <i
               :class="{la: true, 'icon-right': true, 'la-angle-up': unfold.verband, 'la-angle-right': !unfold.verband}"
             />
           </li>
@@ -76,19 +77,19 @@
 
 
           <li @click="changeSite('Kalender')">
-            <i class="la la-calendar" /> Kalender
+            <i class="la la-calendar la-lg" /> Kalender
           </li>
 
           <div class="horizontal-line" />
 
           <li @click="changeSite('Podcast')">
-            <i class="la la-podcast" /> Podcast
+            <i class="la la-podcast la-lg" /> Podcast
           </li>
 
-          <li><i class="la la-envelope" /> Newsletter</li>
+          <li><i class="la la-envelope la-lg" /> Newsletter</li>
 
           <li @click="changeSite('Juliette')">
-            <i class="la la-book" /> Juliette
+            <i class="la la-book la-lg" /> Juliette
           </li>
         </ul>
       </div>
@@ -101,7 +102,7 @@
     name: 'Navigation',
     data: function () {
       return {
-        navigationState: false,
+        navigationOpen: false,
         navigationWidth: '-80vw',
         navigationMargin: '0vw',
         active: 'Home',
@@ -113,7 +114,7 @@
     },
     methods: {
       changeNavigationState: function () {
-        if (this.navigationState) {
+        if (this.navigationOpen) {
           this.navigationWidth = '-80vw'
           this.unfold = {
             inhalte: false,

@@ -7,7 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     headerBilder: {
-      'Home': false,
+      'Home':  'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
       'Landesarbeitskreise':  'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
       'Beschlusssammlung': false,
       'ProgrammatikLexikon': false,
