@@ -4,27 +4,28 @@
     <nav v-bind:style="{maxWidth: navigationWidth}">
 
       <div id="nav-header">
-        <img height="100%" src="https://www.julis-bw.de/wp-content/uploads/sites/59/2017/12/Icon-magenta_auf_gelb-e1539360858186.png" />
+        <img height="100%" src="https://www.julis.de/wp-content/uploads/2017/03/Logo-Junge-Liberale-web.png" />
       </div>
 
       <ul id="nav-body">
 
         <li @click="changeSite('Home')"><i class="la la-home"></i> Home</li>
 
-        <li @click="unfoldList('inhalte')"><i class="la la-pen-nib"></i> Inhalte <i v-bind:class="{la: true, 'la-angle-up': unfold.inhalte, 'la-angle-right': !unfold.inhalte}"></i></li>
+        <li @click="unfoldList('inhalte')">
+          <i class="la la-pen-nib"></i> Inhalte <i v-bind:class="{la: true, 'icon-right': true, 'la-angle-up': unfold.inhalte, 'la-angle-right': !unfold.inhalte}"></i></li>
         <ul class="unfoldList" v-if="unfold.inhalte">
-          <li @click="changeSite('Landesarbeitskreise')">Landesarbeitskreise</li>
-          <li>Beschlusssammlung</li>
-          <li>Programmatik-Lexikon</li>
+          <li @click="changeSite('Landesarbeitskreise')"><i class="la la-angle-right"></i> Landesarbeitskreise</li>
+          <li><i class="la la-angle-right"></i> Beschlusssammlung</li>
+          <li><i class="la la-angle-right"></i> Programmatik-Lexikon</li>
         </ul>
 
 
-        <li @click="unfoldList('verband')"><i class="la la-thumbs-up"></i> Verband <i v-bind:class="{la: true, 'la-angle-up': unfold.verband, 'la-angle-right': !unfold.verband}"></i></li>
+        <li @click="unfoldList('verband')"><i class="la la-thumbs-up"></i> Verband <i v-bind:class="{la: true, 'icon-right': true, 'la-angle-up': unfold.verband, 'la-angle-right': !unfold.verband}"></i></li>
         <ul class="unfoldList" v-if="unfold.verband">
-          <li>Wer wir sind</li>
-          <li>Landesvorstand</li>
-          <li>Julis A-Z</li>
-          <li @click="changeSite('Merch')">Merch-Shop</li>
+          <li><i class="la la-angle-right"></i> Wer wir sind</li>
+          <li><i class="la la-angle-right"></i> Landesvorstand</li>
+          <li><i class="la la-angle-right"></i> Julis A-Z</li>
+          <li @click="changeSite('Merch')"><i class="la la-angle-right"></i> Merch-Shop</li>
         </ul>
 
 
@@ -88,6 +89,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
+  border-right: 1px solid #aeaeae;
 }
 
 a {
@@ -145,7 +147,7 @@ a:hover {
   margin-bottom: 50px;
   width: 80vw;
   font-size: 40px;
-  background-color: #FFED00;
+  background-color: #fff;
 }
 
 #nav-header img {
@@ -161,6 +163,16 @@ a:hover {
 
 #nav-body li {
   padding: 0px 20px;
+  position: relative;
+}
+
+#nav-body li:hover {
+  cursor: pointer;
+}
+
+#nav-body li .icon-right {
+  position: absolute;
+  right: 10px;
 }
 
 #nav-body i {
@@ -181,5 +193,9 @@ a:hover {
 
 .unfoldList li {
   color: #fff !important;
+}
+
+#nav-body .unfoldList li i {
+  color: #fff;
 }
 </style>
