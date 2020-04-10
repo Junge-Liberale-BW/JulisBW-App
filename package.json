@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "boostrap": "^2.0.0",
+    "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
     "line-awesome": "^1.3.0",
     "vue": "^2.6.11",
@@ -44,8 +45,7 @@
     ],
     "parserOptions": {
       "parser": "babel-eslint"
-    },
-    "rules": {}
+    }
   },
   "browserslist": [
     "> 1%",
