@@ -45,3 +45,38 @@ $cyan: #009EE3;
 .clickable{
   cursor: pointer;
 }
+
+
+.vc-rounded-full{
+  border-radius: 0 !important;
+}
+
+.veranstaltungs-vorschau-item{
+
+  align-content: center;
+
+  font-weight: bolder;
+
+  //padding-top: .5rem;
+  //padding-bottom: .5rem;
+
+  border-bottom: 1px solid #b7b7b7;
+  border-top: 1px solid #b7b7b7;
+
+  .datum-tag{
+    background-color: $magenta;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    padding: 1rem 0.5rem;
+  }
+
+  .info-text{
+    //padding: 1rem 0.5rem;
+    padding-left: .5rem;
+    font-size: 1.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
