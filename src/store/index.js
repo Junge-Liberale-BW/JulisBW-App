@@ -37,7 +37,7 @@ export default new Vuex.Store({
         'icon': 'globe',
         'href': '/Europa und Aussen'
       },
-      'Finanzen & Raub': {
+      'Finanzen & Steuern': {
         'icon': 'money-bill',
         'href': '/Finanzen und Steuern'
       },
