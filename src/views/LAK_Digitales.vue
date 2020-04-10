@@ -9,11 +9,11 @@
       Sie kann individuelle Freiheit beflügeln und Innovation fördern, aber auch Menschen unterdrücken und wenigen Akteuren überproportional viel Macht über unsere gesellschaft verleihen.</p>
       Dieser LAK befasst sich mit der Frage was Politik tun oder lassen sollte,
       um IT zum Wohle der Gesellschaft und nicht zu ihrem Schaden zu gebrauchen.<br>
-      <div style="text-align:center;">
+      <div class="text-center">
         <button type="button" class="button-cyan">JETZT ZUM LAK ANMELDEN</button>
       </div>
 
-       <div class="card mb-3 border-custom mx-auto" style="max-width: 540px;">
+       <div class="card mb-3 border-custom mx-auto">
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="https://via.placeholder.com/50" class="card-img" alt="Timo Breuninger">
@@ -23,14 +23,11 @@
               <h5 class="card-title">LEITUNG</h5>
               <h5 class="card-title2">TIMO BREUNINGER</h5>
               <p class="card-text">Elektroingenieur</p>
-              <div id="card-link">
-               <a href="mailto:max.m@example.com"><i class="las la-envelope la-sm"></i> NACHRICHT SCHREIBEN</a>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="card mb-3 border-custom mx-auto" style="max-width: 540px;">
+      <div class="card mb-3 border-custom mx-auto">
         <div class="row no-gutters">
           <div class="col-md-4">
             <img src="https://via.placeholder.com/50" class="card-img" alt="Mirjam Aron">
@@ -40,16 +37,13 @@
               <h5 class="card-title">STELLVERTRETERIN</h5>
               <h5 class="card-title2">MIRJAM ARON</h5>
               <p class="card-text">Studentin der Rechtswissenschaft</p>
-              <div id="card-link">
-               <a href="mailto:max.m@example.com"><i class="las la-envelope la-sm"></i> NACHRICHT SCHREIBEN</a>
-              </div>
             </div>
           </div>
         </div>
       </div>
-      <p>Du interessierst dich für das Thema Digitales & Meiden und möchtestdich im Landesarbeitskreis engagieren?</p>
+      <p>Du interessierst dich für das Thema Digitales & Medien und möchtest dich im Landesarbeitskreis engagieren?</p>
       <p>Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!</p>
-      <div style="text-align:center;">
+      <div class="text-center">
         <button type="button" class="button-cyan">JETZT ZUM LAK ANMELDEN</button>
       </div>
     </div>
