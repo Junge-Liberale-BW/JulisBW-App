@@ -99,6 +99,7 @@ nav {
   top: 0;
   left: 0;
   border-right: 1px solid #aeaeae;
+  z-index: 1000;
 }
 
 #nav-content {
@@ -128,7 +129,7 @@ a:hover {
   position: absolute;
   top: 20vh;
   left: 0;
-  z-index: 100;
+  z-index: 1001;
   border: 1px solid #aeaeae;
 }
 
