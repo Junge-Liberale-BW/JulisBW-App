@@ -41,6 +41,11 @@
           if (veranstaltung_datum < this.selected_day || veranstaltung.length > 5) {
             continue
           }
+
+          veranstaltung.ist_am_gewaehlten_tag = false;
+          if(veranstaltung_datum.getDate() === this.selected_day.getDate()){
+            veranstaltung.ist_am_gewaehlten_tag = true;
+          }
           veranstaltung.Datum = veranstaltung_datum;
           verantstaltungen.push(veranstaltung)
         }

@@ -8,7 +8,7 @@
     />
 
     <KalenderVeranstaltungsVorschau
-      selected_day="current_day"
+      :selected_day="current_day"
     />
   </div>
 </template>
@@ -38,8 +38,8 @@
           {
             key: 'heute',
             highlight: {
-              color: 'gray',
-              // fillMode: '',
+              color: "gray",
+              fillMode: 'light',
               contentClass: 'italic',
             },
             dates: new Date(),
