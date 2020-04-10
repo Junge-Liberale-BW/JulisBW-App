@@ -11,10 +11,10 @@
 
         <router-link
         to="/Home">
-          <li>Home</li>
+          <li><i class="la la-home"></i> Home</li>
         </router-link>
 
-        <li @click="unfoldList('inhalte')">Inhalte</li>
+        <li @click="unfoldList('inhalte')"><i class="la la-pen-nib"></i> Inhalte <i v-bind:class="{la: true, 'la-angle-up': unfold.inhalte, 'la-angle-right': !unfold.inhalte}"></i></li>
         <ul class="unfoldList" v-if="unfold.inhalte">
           <router-link
           to="/Landesarbeitskreise">
@@ -31,7 +31,7 @@
         </ul>
 
 
-        <li @click="unfoldList('verband')">Verband</li>
+        <li @click="unfoldList('verband')"><i class="la la-thumbs-up"></i> Verband <i v-bind:class="{la: true, 'la-angle-up': unfold.verband, 'la-angle-right': !unfold.verband}"></i></li>
         <ul class="unfoldList" v-if="unfold.verband">
           <router-link
           to="/Wer-wir-sind">
@@ -54,24 +54,24 @@
 
         <router-link
         to="/Kalender">
-          <li>Kalender</li>
+          <li><i class="la la-calendar"></i> Kalender</li>
         </router-link>
 
         <div class="horizontal-line"></div>
 
         <router-link
         to="/Podcast">
-          <li>Podcast</li>
+          <li><i class="la la-podcast"></i> Podcast</li>
         </router-link>
 
         <router-link
         to="/Newsletter">
-          <li>Newsletter</li>
+          <li><i class="la la-envelope"></i> Newsletter</li>
         </router-link>
 
         <router-link
         to="/Juliette">
-          <li>Juliette</li>
+          <li><i class="la la-book"></i> Juliette</li>
         </router-link>
 
       </ul>
@@ -194,6 +194,10 @@ a:hover {
 
 #nav-body li {
   padding: 0px 20px;
+}
+
+#nav-body i {
+  color: #E5007D;
 }
 
 .horizontal-line {
