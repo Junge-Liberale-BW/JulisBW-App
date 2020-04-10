@@ -10,7 +10,8 @@
 </template>
 
 <script>
-  import VueRssFeed from 'vue-rss-feed';
+  import VueRssFeed from "./rss/VueRssFeed";
+
 
   export default {
     name: "rssparser",
@@ -18,12 +19,12 @@
       {
         VueRssFeed
       },
-    props:['url'],
+    props:['url', 'renderlimit'],
     data() {
       return {
         feedUrl: this.url,
         name: "",
-        limit: 5,
+        limit: this.renderlimit,
       };
     },
   };
