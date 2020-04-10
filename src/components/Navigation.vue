@@ -3,43 +3,47 @@
     <button id="open-nav-button" @click="changeNavigationState" v-bind:class="{'opened-nav-button': navigationState}">&#9776;</button>
     <nav v-bind:style="{maxWidth: navigationWidth}">
 
-      <div id="nav-header">
-        <img height="100%" src="https://www.julis.de/wp-content/uploads/2017/03/Logo-Junge-Liberale-web.png" />
+      <div di="nav-content">
+
+        <div id="nav-header">
+          <img height="100%" src="https://www.julis.de/wp-content/uploads/2017/03/Logo-Junge-Liberale-web.png" />
+        </div>
+
+        <ul id="nav-body">
+
+          <li @click="changeSite('Home')"><i class="la la-home"></i> Home</li>
+
+          <li @click="unfoldList('inhalte')">
+            <i class="la la-pen-nib"></i> Inhalte <i v-bind:class="{la: true, 'icon-right': true, 'la-angle-up': unfold.inhalte, 'la-angle-right': !unfold.inhalte}"></i></li>
+          <ul class="unfoldList" v-if="unfold.inhalte">
+            <li @click="changeSite('Landesarbeitskreise')"><i class="la la-angle-right"></i> Landesarbeitskreise</li>
+            <li><i class="la la-angle-right"></i> Beschlusssammlung</li>
+            <li><i class="la la-angle-right"></i> Programmatik-Lexikon</li>
+          </ul>
+
+
+          <li @click="unfoldList('verband')"><i class="la la-thumbs-up"></i> Verband <i v-bind:class="{la: true, 'icon-right': true, 'la-angle-up': unfold.verband, 'la-angle-right': !unfold.verband}"></i></li>
+          <ul class="unfoldList" v-if="unfold.verband">
+            <li><i class="la la-angle-right"></i> Wer wir sind</li>
+            <li><i class="la la-angle-right"></i> Landesvorstand</li>
+            <li><i class="la la-angle-right"></i> Julis A-Z</li>
+            <li @click="changeSite('Merch')"><i class="la la-angle-right"></i> Merch-Shop</li>
+          </ul>
+
+
+          <li @click="changeSite('Kalender')"><i class="la la-calendar"></i> Kalender</li>
+
+          <div class="horizontal-line"></div>
+
+          <li @click="changeSite('Podcast')"><i class="la la-podcast"></i> Podcast</li>
+
+          <li><i class="la la-envelope"></i> Newsletter</li>
+
+          <li @click="changeSite('Juliette')"><i class="la la-book"></i> Juliette</li>
+
+        </ul>
+
       </div>
-
-      <ul id="nav-body">
-
-        <li @click="changeSite('Home')"><i class="la la-home"></i> Home</li>
-
-        <li @click="unfoldList('inhalte')">
-          <i class="la la-pen-nib"></i> Inhalte <i v-bind:class="{la: true, 'icon-right': true, 'la-angle-up': unfold.inhalte, 'la-angle-right': !unfold.inhalte}"></i></li>
-        <ul class="unfoldList" v-if="unfold.inhalte">
-          <li @click="changeSite('Landesarbeitskreise')"><i class="la la-angle-right"></i> Landesarbeitskreise</li>
-          <li><i class="la la-angle-right"></i> Beschlusssammlung</li>
-          <li><i class="la la-angle-right"></i> Programmatik-Lexikon</li>
-        </ul>
-
-
-        <li @click="unfoldList('verband')"><i class="la la-thumbs-up"></i> Verband <i v-bind:class="{la: true, 'icon-right': true, 'la-angle-up': unfold.verband, 'la-angle-right': !unfold.verband}"></i></li>
-        <ul class="unfoldList" v-if="unfold.verband">
-          <li><i class="la la-angle-right"></i> Wer wir sind</li>
-          <li><i class="la la-angle-right"></i> Landesvorstand</li>
-          <li><i class="la la-angle-right"></i> Julis A-Z</li>
-          <li @click="changeSite('Merch')"><i class="la la-angle-right"></i> Merch-Shop</li>
-        </ul>
-
-
-        <li @click="changeSite('Kalender')"><i class="la la-calendar"></i> Kalender</li>
-
-        <div class="horizontal-line"></div>
-
-        <li @click="changeSite('Podcast')"><i class="la la-podcast"></i> Podcast</li>
-
-        <li><i class="la la-envelope"></i> Newsletter</li>
-
-        <li @click="changeSite('Juliette')"><i class="la la-book"></i> Juliette</li>
-
-      </ul>
     </nav>
   </div>
 </template>
@@ -68,7 +72,7 @@
             verband: false
           }
         } else {
-          this.navigationWidth = '100vw'
+          this.navigationWidth = '80vw'
         }
         this.navigationState = !this.navigationState;
       },
@@ -95,6 +99,10 @@ nav {
   top: 0;
   left: 0;
   border-right: 1px solid #aeaeae;
+}
+
+#nav-content {
+  min-width: 80;
 }
 
 a {
