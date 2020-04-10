@@ -43,7 +43,19 @@ export default new Vuex.Store({
         'icon': 'graduation-cap',
         'href': '/Verbandsentwicklung'
       },
-    }
+    },
+    termine:[
+      {
+        "Titel": "Go-Live Hackathon TI",
+        "Datum": "2020-04-14T14:00:00",
+        "Ort": "WebEx"
+      },
+      {
+        "Titel": "Landeskongress",
+        "Datum": "2020-04-22T10:00:00",
+        "Ort": "Stuttgart"
+      }
+    ]
   },
   mutations: {},
   actions: {
@@ -53,6 +65,7 @@ export default new Vuex.Store({
   },
   modules: {},
   getters: {
-    landesarbeitskreise: state => state.landesarbeitskreise
+    landesarbeitskreise: state => state.landesarbeitskreise,
+    termine: state => state.termine
   }
 })
