@@ -55,9 +55,14 @@ export default new Vuex.Store({
         "Datum": "2020-04-22T10:00:00",
         "Ort": "Stuttgart"
       }
-    ]
+    ],
+    currentDate: new Date()
   },
-  mutations: {},
+  mutations: {
+      setze_datum(state, neues_datum){
+        state.currentDate = neues_datum;
+      }
+  },
   actions: {
     wechsel_seite (context, neue_seite) {
       router.push(neue_seite)
@@ -66,6 +71,7 @@ export default new Vuex.Store({
   modules: {},
   getters: {
     landesarbeitskreise: state => state.landesarbeitskreise,
-    termine: state => state.termine
+    termine: state => state.termine,
+    currentDate: state => state.currentDate
   }
 })

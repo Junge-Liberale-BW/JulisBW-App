@@ -37,12 +37,14 @@
     },
 
     props: [
-      'selected_day'
+      'selected_day',
+      'max_items'
     ],
 
     watch:{
         'selected_day': function () {
           this.gib_anstehende_veranstaltungen();
+          this.$forceUpdate();
         }
     },
 
@@ -72,10 +74,10 @@
           veranstaltung = this.veranstaltungen_liste[veranstaltung]
           let veranstaltung_datum = new Date(veranstaltung.Datum)
 
-          if (veranstaltung_datum < this.selected_day || veranstaltung.length > 5) {
+          if (veranstaltung_datum.getTime() < this.selected_day.getTime() || this.anstehende_veranstaltungen.length > this.max_items) {
             continue
           }
-          if(veranstaltung_datum.getDate() === this.selected_day.getDate()){
+          if(veranstaltung_datum.getTime() === this.selected_day.getTime()){
             this.mindestens_eine_veranstaltung = true;
           }
           veranstaltung.Datum = veranstaltung_datum;

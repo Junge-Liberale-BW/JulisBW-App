@@ -15,6 +15,7 @@
 
     <KalenderVeranstaltungsVorschau
       :selected_day="current_day"
+      :max_items="5"
     />
   </div>
 </template>
@@ -34,6 +35,8 @@
       Calendar
     },
 
+
+
     data () {
       return {
         'current_day': new Date(),
@@ -43,6 +46,21 @@
     },
 
     computed: {
+
+      current_date(){
+        return this.$store.getters.currentDate;
+      },
+      // current_day(){
+      //   return this.current_date;
+      // },
+      // current_month(){
+      //   //Monat ist hier 0-basiert
+      //   return this.current_date.getMonth() + 1;
+      // },
+      // current_year(){
+      //   return this.current_date.getFullYear();
+      // },
+
       attributes () {
         return [
           {
@@ -97,9 +115,21 @@
 
     methods: {
       change_current_day (payload) {
+        let neues_datum = this.current_date;
+        neues_datum.setDate(payload.day);
+
+        this.$store.commit('setze_datum', neues_datum)
+
         this.current_day = new Date(payload.date)
       },
       change_month_and_year(payload){
+        let neues_datum = this.current_date;
+        //Monatsindex bei setMonth ist 0-basiert
+        neues_datum.setMonth(payload.month - 1);
+        neues_datum.setFullYear(payload.year);
+
+        this.$store.commit('setze_datum', neues_datum)
+
         this.current_month = payload.month;
         this.current_year = payload.year;
       }

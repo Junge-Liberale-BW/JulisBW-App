@@ -4,7 +4,9 @@
       {{ month }} {{ year }}
     </h3>
 
-    <i class="switch-icon la la-list la-2x"></i>
+    <i :class="get_icon_classes"
+       @click="wechsel_ansicht"
+    ></i>
   </div>
 </template>
 
@@ -14,8 +16,32 @@
 
     props: [
       'month',
-      'year'
-    ]
+      'year',
+    ],
+
+    computed:{
+      get_icon_classes(){
+        return {
+          'switch-icon': true,
+          'clickable': true,
+          'la': true,
+          'la-2x': true,
+          'la-list': this.$route.name === 'Kalender',
+          'la-calendar': this.$route.name === 'Terminliste'
+        }
+      }
+    },
+
+    methods: {
+      wechsel_ansicht () {
+
+        if(this.$route.name === 'Kalender'){
+          this.$store.dispatch('wechsel_seite', 'Terminliste')
+        }else {
+          this.$store.dispatch('wechsel_seite', 'Kalender')
+        }
+      }
+    }
   }
 </script>
 
