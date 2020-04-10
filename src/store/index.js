@@ -43,7 +43,8 @@ export default new Vuex.Store({
         'icon': 'graduation-cap',
         'href': '/Verbandsentwicklung'
       },
-    }
+    },
+    ausgewählterLAK: ''
   },
   mutations: {},
   actions: {
@@ -53,6 +54,7 @@ export default new Vuex.Store({
   },
   modules: {},
   getters: {
-    landesarbeitskreise: state => state.landesarbeitskreise
+    landesarbeitskreise: state => state.landesarbeitskreise,
+    ausgewählterLAK: state => state.ausgewählterLAK
   }
 })

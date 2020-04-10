@@ -122,6 +122,9 @@ export default {
 
             console.log(this.inputData)
         }
+    },
+    mounted: function () {
+        this.inputData.LKAs.push(this.$store.getters.ausgewählterLAK);
     }
 }
 </script>
