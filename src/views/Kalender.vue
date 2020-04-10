@@ -50,16 +50,6 @@
       current_date(){
         return this.$store.getters.currentDate;
       },
-      // current_day(){
-      //   return this.current_date;
-      // },
-      // current_month(){
-      //   //Monat ist hier 0-basiert
-      //   return this.current_date.getMonth() + 1;
-      // },
-      // current_year(){
-      //   return this.current_date.getFullYear();
-      // },
 
       attributes () {
         return [

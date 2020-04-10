@@ -77,7 +77,9 @@
           if (veranstaltung_datum.getTime() < this.selected_day.getTime() || this.anstehende_veranstaltungen.length > this.max_items) {
             continue
           }
-          if(veranstaltung_datum.getTime() === this.selected_day.getTime()){
+          if(veranstaltung_datum.getDate() === this.selected_day.getDate()
+            && veranstaltung_datum.getMonth() === this.selected_day.getMonth()
+          ){
             this.mindestens_eine_veranstaltung = true;
           }
           veranstaltung.Datum = veranstaltung_datum;
