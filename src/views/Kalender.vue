@@ -14,7 +14,7 @@
     />
 
     <KalenderVeranstaltungsVorschau
-      :selected_day="current_day"
+      :selected_date="current_day"
       :max_items="5"
     />
   </div>

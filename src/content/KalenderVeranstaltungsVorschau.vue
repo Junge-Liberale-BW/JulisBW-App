@@ -4,7 +4,7 @@
     <div v-if="!mindestens_eine_veranstaltung" class="col-12 mb-3">
       <div class="row veranstaltungs-vorschau-item">
         <div class="datum-tag keine-veranstaltungen">
-          {{selected_day.getDate()}}
+          {{selected_date.getDate()}}
         </div>
 
         <div class="info-text keine-veranstaltungen-text">
@@ -19,7 +19,7 @@
     >
       <VeranstaltungsVorschauItem
         :veranstaltung="kommende_veranstaltung"
-        :gewaehlter_tag="selected_day"
+        :gewaehlter_tag="selected_date"
       />
     </div>
   </div>
@@ -37,12 +37,12 @@
     },
 
     props: [
-      'selected_day',
+      'selected_date',
       'max_items'
     ],
 
     watch:{
-        'selected_day': function () {
+        'selected_date': function () {
           this.gib_anstehende_veranstaltungen();
           this.$forceUpdate();
         }
@@ -74,11 +74,11 @@
           veranstaltung = this.veranstaltungen_liste[veranstaltung]
           let veranstaltung_datum = new Date(veranstaltung.Datum)
 
-          if (veranstaltung_datum.getTime() < this.selected_day.getTime() || this.anstehende_veranstaltungen.length > this.max_items) {
+          if (veranstaltung_datum.getTime() < this.selected_date.getTime() || this.anstehende_veranstaltungen.length > this.max_items) {
             continue
           }
-          if(veranstaltung_datum.getDate() === this.selected_day.getDate()
-            && veranstaltung_datum.getMonth() === this.selected_day.getMonth()
+          if(veranstaltung_datum.getDate() === this.selected_date.getDate()
+            && veranstaltung_datum.getMonth() === this.selected_date.getMonth()
           ){
             this.mindestens_eine_veranstaltung = true;
           }
