@@ -23,10 +23,30 @@
               <h5 class="card-title">LEITUNG</h5>
               <h5 class="card-title2">TIMO BREUNINGER</h5>
               <p class="card-text">Elektroingenieur</p>
+
+            <div class="text-center">
+              <a class="btn-link clickable"
+                @click="schalte_leitung_anzeigen_um"
+                @touchmove="schalte_leitung_anzeigen_um"
+              >
+                <i class="las la-angle-down"></i>
+              </a>
+             </div> 
+             
             </div>
           </div>
         </div>
       </div>
+
+              <div v-if="zeige_details_leitung === true"
+                id="zusatzinhalt-leitung"
+              >
+                <ul class="mt-4">
+                  <li>er ist zuständig für die Organisation von Vernastaltungen Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt </li><hr>
+                  <li><a href="mailto:max.m@example.com"><i class="las la-envelope la-2x"></i>NACHRICHT SCHREIBEN</a></li>
+                </ul>
+              </div>
+
       <div class="card mb-3 border-custom mx-auto">
         <div class="row no-gutters">
           <div class="col-md-4">
@@ -52,7 +72,20 @@
 
 <script>
   export default {
-    name: 'Verband'
+    name: 'Verband',
+
+    data(){
+      return {
+        'zeige_details_leitung': false
+      }
+    },
+
+    methods:{
+      schalte_leitung_anzeigen_um(){
+        this.zeige_details_leitung = !this.zeige_details_leitung;
+      }
+    }
+
   }
 </script>
 
@@ -101,22 +134,29 @@ h1{
   color: black;
 }
 .card-title2{
-  font-weight:bolder; 
+  font-weight:bolder;
   color: #e5007d;
 }
 .card-text{
- font-weight:bold; 
+ font-weight:bold;
  color: #e5007d;
  margin-top: -3%;
-}
-#card-link a:link{
-  color: black;
-}
-#card-link a:visited{
-  color: black;
 }
 .border-custom{
   border-color: #e5007d;
   border-width: medium;
+}
+#zusatzinhalt-leitung{
+  background-color: #e5007d;
+  margin-top: -7% !important;
+  padding-bottom: 2px;
+  padding-right: 2%;
+  color: white;
+}
+#zusatzinhalt-leitung a:link{
+  color:white;
+}
+.la-envelope{
+  vertical-align: middle;
 }
 </style>
