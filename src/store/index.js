@@ -20,7 +20,6 @@ export default new Vuex.Store({
       'Newsletter': false,
       'Juliette': false
     },
-    aktuelleSeite: 'Home', 
     landesarbeitskreise: {
       'Arbeit & Soziales': {
         'icon': 'suitcase',
@@ -64,7 +63,6 @@ export default new Vuex.Store({
   actions: {
     wechsel_seite (context, neue_seite) {
       router.push(neue_seite);
-      context.state.aktuelleSeite = neue_seite;
     }
   },
   modules: {},
