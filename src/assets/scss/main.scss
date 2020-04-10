@@ -97,3 +97,17 @@ $gelb: #ffed00;
   }
 }
 
+
+.kalender-header{
+  height: 7rem;
+  background-color: $magenta;
+
+  padding-top: 3.5rem;
+  color: white;
+
+  .switch-icon{
+    position: absolute;
+    right: 1rem;
+    top: 3.5rem;
+  }
+}
