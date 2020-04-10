@@ -9,70 +9,34 @@
 
       <ul id="nav-body">
 
-        <router-link
-        to="/Home">
-          <li><i class="la la-home"></i> Home</li>
-        </router-link>
+        <li @click="changeSite('Home')"><i class="la la-home"></i> Home</li>
 
         <li @click="unfoldList('inhalte')"><i class="la la-pen-nib"></i> Inhalte <i v-bind:class="{la: true, 'la-angle-up': unfold.inhalte, 'la-angle-right': !unfold.inhalte}"></i></li>
         <ul class="unfoldList" v-if="unfold.inhalte">
-          <router-link
-          to="/Landesarbeitskreise">
-            <li>Landesarbeitskreise</li>
-          </router-link>
-          <router-link
-          to="/Beschlusssammlung">
-            <li>Beschlusssammlung</li>
-          </router-link>
-          <router-link
-          to="/Programmatik-Lexikon">
-            <li>Programmatik-Lexikon</li>
-          </router-link>
+          <li @click="changeSite('Landesarbeitskreise')">Landesarbeitskreise</li>
+          <li>Beschlusssammlung</li>
+          <li>Programmatik-Lexikon</li>
         </ul>
 
 
         <li @click="unfoldList('verband')"><i class="la la-thumbs-up"></i> Verband <i v-bind:class="{la: true, 'la-angle-up': unfold.verband, 'la-angle-right': !unfold.verband}"></i></li>
         <ul class="unfoldList" v-if="unfold.verband">
-          <router-link
-          to="/Wer-wir-sind">
-            <li>Wer wir sind</li>
-          </router-link>
-          <router-link
-          to="/Landesvorstand">
-            <li>Landesvorstand</li>
-          </router-link>
-          <router-link
-          to="/Julis-A-Z">
-            <li>Julis A-Z</li>
-          </router-link>
-          <router-link
-          to="/Merch-Shop">
-            <li>Merch-Shop</li>
-          </router-link>
+          <li>Wer wir sind</li>
+          <li>Landesvorstand</li>
+          <li>Julis A-Z</li>
+          <li @click="changeSite('Merch')">Merch-Shop</li>
         </ul>
 
 
-        <router-link
-        to="/Kalender">
-          <li><i class="la la-calendar"></i> Kalender</li>
-        </router-link>
+        <li @click="changeSite('Kalender')"><i class="la la-calendar"></i> Kalender</li>
 
         <div class="horizontal-line"></div>
 
-        <router-link
-        to="/Podcast">
-          <li><i class="la la-podcast"></i> Podcast</li>
-        </router-link>
+        <li @click="changeSite('Podcast')"><i class="la la-podcast"></i> Podcast</li>
 
-        <router-link
-        to="/Newsletter">
-          <li><i class="la la-envelope"></i> Newsletter</li>
-        </router-link>
+        <li><i class="la la-envelope"></i> Newsletter</li>
 
-        <router-link
-        to="/Juliette">
-          <li><i class="la la-book"></i> Juliette</li>
-        </router-link>
+        <li @click="changeSite('Juliette')"><i class="la la-book"></i> Juliette</li>
 
       </ul>
     </nav>
@@ -105,6 +69,9 @@
       },
       unfoldList: function (index) {
         this.unfold[index] = !this.unfold[index];
+      },
+      changeSite: function (site) {
+        this.$store.commit('wechsel_seite', site);
       }
     },
   }
