@@ -1,15 +1,17 @@
 <template>
   <div class="article">
     <div class="title">
-      <a :href="article.link" target="_blank">
-        <h3>{{article.title}}</h3>
-      </a>
+      <h3>{{article.title}}</h3>
     </div>
     <div class="body">
-      <p class="content" v-html="article.summary"></p>
+      <a :href="article.link" target="_blank">
+        <h3>
+          {{article.link}}
+        </h3>
+      </a>
+      <p class="content" v-html="article.content"></p>
     </div>
     <div class="footer">
-      <span class="hostname">{{this.getHostname()}}</span>
       <span v-if="article.isoDate" class="middot">&bull;</span>
       <span class="datetime">{{this.getDateTime()}}</span>
     </div>
@@ -39,14 +41,7 @@
     name: "Article",
     props: ["article"],
     methods: {
-      getHostname() {
-        try {
-          const urlObj = new URL(this.article.link);
-          return urlObj.hostname.replace("www.", "").replace("ww2.", "");
-        } catch (e) {
-          console.error(e.toString());
-        }
-      },
+
       getDateTime() {
         if (this.article.isoDate) {
           return parseDate(this.article.isoDate);

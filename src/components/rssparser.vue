@@ -11,6 +11,7 @@
 
 <script>
   import VueRssFeed from "./rss/VueRssFeed";
+  const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
 
 
   export default {
@@ -22,7 +23,7 @@
     props:['url', 'renderlimit'],
     data() {
       return {
-        feedUrl: this.url,
+        feedUrl: CORS_PROXY + this.url,
         name: "",
         limit: this.renderlimit,
       };

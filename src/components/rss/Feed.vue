@@ -65,6 +65,7 @@
           if (data.ok) {
             const text = await data.text();
             const parser = new RSSParser();
+            //console.log(text)
             parser.parseString(text, (err, parsed) => {
               this.loading = false;
               if (err) {
