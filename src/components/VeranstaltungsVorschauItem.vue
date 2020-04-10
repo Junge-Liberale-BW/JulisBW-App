@@ -24,8 +24,21 @@
     name: 'VeranstaltungItem',
 
     props: [
-      'veranstaltung'
+      'veranstaltung',
+      'gewaehlter_tag'
     ],
+
+    data(){
+       return {
+         'ist_am_gewaehlten_tag': this.veranstaltung.Datum.getDate() === this.gewaehlter_tag.getDate()
+       }
+    },
+
+    watch:{
+      'gewaehlter_tag': function () {
+        this.aktualisiere_ist_am_gewaehlten_tag();
+      }
+    },
 
     computed: {
       gib_tag () {
@@ -34,14 +47,17 @@
       gib_uhrzeit () {
         return this.veranstaltung.Datum.getHours()
       },
-      ist_am_gewaehlten_tag(){
-        return this.veranstaltung.ist_am_gewaehlten_tag;
-      },
       gib_datum_tag_klassen(){
           return {
             'datum-tag': true,
             'ist_heute': this.ist_am_gewaehlten_tag
           }
+      }
+    },
+
+    methods:{
+      aktualisiere_ist_am_gewaehlten_tag(){
+        this.ist_am_gewaehlten_tag = this.veranstaltung.Datum.getDate() === this.gewaehlter_tag.getDate();
       }
     }
   }
