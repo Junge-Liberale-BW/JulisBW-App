@@ -26,7 +26,7 @@
           <ul class="unfoldList" v-if="unfold.verband">
             <li><i class="la la-angle-right"></i> Wer wir sind</li>
             <li><i class="la la-angle-right"></i> Landesvorstand</li>
-            <li><i class="la la-angle-right"></i> Julis A-Z</li>
+            <li @click="changeSite('Julis-A-Z')"><i class="la la-angle-right"></i> Julis A-Z</li>
             <li @click="changeSite('Merch')"><i class="la la-angle-right"></i> Merch-Shop</li>
           </ul>
 
