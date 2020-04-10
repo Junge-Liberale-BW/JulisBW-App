@@ -10,7 +10,7 @@
         <br>
         {{gib_uhrzeit}} Uhr | {{veranstaltung.Ort}}
       </div>
-      <div class="ml-auto my-auto">
+      <div class="ml-auto my-auto mr-4">
         <i class="la la-angle-right la-2x"></i>
       </div>
     </div>

@@ -74,7 +74,9 @@
           veranstaltung = this.veranstaltungen_liste[veranstaltung]
           let veranstaltung_datum = new Date(veranstaltung.Datum)
 
-          if (veranstaltung_datum.getTime() < this.selected_date.getTime() || this.anstehende_veranstaltungen.length > this.max_items) {
+          if ( (veranstaltung_datum.getDate() > this.selected_date.getDate()
+            && veranstaltung_datum.getMonth() > this.selected_date.getMonth())
+            || this.anstehende_veranstaltungen.length > this.max_items) {
             continue
           }
           if(veranstaltung_datum.getDate() === this.selected_date.getDate()
