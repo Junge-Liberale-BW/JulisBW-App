@@ -10,7 +10,7 @@
         :class="{'opened-nav-button': navigationOpen}"
       />
     </button>
-    <nav :style="{maxWidth: navigationWidth}">
+    <nav :style="{left: navigationWidth}">
       <div di="nav-content">
         <div id="nav-header">
           <img
@@ -101,8 +101,8 @@
     name: 'Navigation',
     data: function () {
       return {
-        navigationOpen: false,
-        navigationWidth: '0vw',
+        navigationState: false,
+        navigationWidth: '-80vw',
         navigationMargin: '0vw',
         active: 'Home',
         unfold: {
@@ -113,14 +113,14 @@
     },
     methods: {
       changeNavigationState: function () {
-        if (this.navigationOpen) {
-          this.navigationWidth = '0'
+        if (this.navigationState) {
+          this.navigationWidth = '-80vw'
           this.unfold = {
             inhalte: false,
             verband: false
           }
         } else {
-          this.navigationWidth = '80vw'
+          this.navigationWidth = '0vw'
         }
         this.navigationOpen = !this.navigationOpen
       },
@@ -136,5 +136,6 @@
 </script>
 
 <style scoped>
+
 
 </style>
