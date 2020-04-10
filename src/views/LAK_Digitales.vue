@@ -23,10 +23,27 @@
               <h5 class="card-title">LEITUNG</h5>
               <h5 class="card-title2">TIMO BREUNINGER</h5>
               <p class="card-text">Elektroingenieur</p>
+
+              <a class="btn-link clickable"
+                @click="schalte_leitung_anzeigen_um"
+                @touchmove="schalte_leitung_anzeigen_um"
+              >
+                mehr Lesen
+              </a>
+              <div v-if="zeige_details_leitung === true"
+                id="zusatzinhalt-leitung"
+              >
+                <ul class="mt-4">
+                  <li>geiler Typ</li>
+                  <li>Foobar</li>
+                  <li>Lorem Ipsum</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="card mb-3 border-custom mx-auto">
         <div class="row no-gutters">
           <div class="col-md-4">
@@ -52,7 +69,20 @@
 
 <script>
   export default {
-    name: 'Verband'
+    name: 'Verband',
+
+    data(){
+      return {
+        'zeige_details_leitung': false
+      }
+    },
+
+    methods:{
+      schalte_leitung_anzeigen_um(){
+        this.zeige_details_leitung = !this.zeige_details_leitung;
+      }
+    }
+
   }
 </script>
 
@@ -101,11 +131,11 @@ h1{
   color: black;
 }
 .card-title2{
-  font-weight:bolder; 
+  font-weight:bolder;
   color: #e5007d;
 }
 .card-text{
- font-weight:bold; 
+ font-weight:bold;
  color: #e5007d;
  margin-top: -3%;
 }

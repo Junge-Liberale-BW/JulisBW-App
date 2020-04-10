@@ -31,7 +31,7 @@ const routes = [
     component: () => import('../views/Landesarbeitksreise.vue')
   },
   {
-    path: '/LAK_Digitales',
+    path: '//LAK_Digitales',
     name: 'LAK_Digitales',
     component: () => import('../views/LAK_Digitales.vue')
   },
