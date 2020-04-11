@@ -26,9 +26,14 @@ const routes = [
     component: () => import('../views/Impresseum.vue')
   },
   {
-    path: '/Landesarbeitksreise',
-    name: 'Landesarbeitksreise',
-    component: () => import('../views/Landesarbeitksreise.vue')
+    path: '/Landesarbeitskreise',
+    name: 'Landesarbeitskreise',
+    component: () => import('../views/Landesarbeitskreise.vue')
+  },
+  {
+    path: '/Digitales & Medien',
+    name: 'Digitales & Medien',
+    component: () => import('../views/LAK_Digitales.vue')
   },
   {
     path: '/Juliette',
@@ -39,6 +44,11 @@ const routes = [
     path: '/Kalender',
     name: 'Kalender',
     component: () => import('../views/Kalender.vue')
+  },
+  {
+    path: '/Terminliste',
+    name: 'Terminliste',
+    component: () => import('../views/Terminliste.vue')
   },
   {
     path: '/Merch',
@@ -55,6 +65,11 @@ const routes = [
     name: 'Verband',
     component: () => import('../views/Verband.vue')
   },
+  {
+    path: '/LAK-anmelden',
+    name: 'LAK-anmelden',
+    component: () => import('../views/LAK-Anmeldung')
+  }
 
 ]
 

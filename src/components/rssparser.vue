@@ -10,7 +10,9 @@
 </template>
 
 <script>
-  import VueRssFeed from 'vue-rss-feed';
+  import VueRssFeed from "./rss/VueRssFeed";
+  const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
+
 
   export default {
     name: "rssparser",
@@ -18,12 +20,12 @@
       {
         VueRssFeed
       },
-    props:['url'],
+    props:['url', 'renderlimit'],
     data() {
       return {
-        feedUrl: this.url,
+        feedUrl: CORS_PROXY + this.url,
         name: "",
-        limit: 5,
+        limit: this.renderlimit,
       };
     },
   };

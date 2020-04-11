@@ -1,5 +1,5 @@
 <template>
-  <div id="LAK-Anmeldung">
+  <div id="LAK-Anmeldung" v-bind:key="key">
       <p>Du möchtest die inhaltliche Arbeit der Jungen Liberalen vorantreiben und deine Ideen einbringen?</p>
       <h2>Zum Landesarbeitskreis anmelden:</h2>
 
@@ -25,7 +25,7 @@
           Ich Interessiere mich für folgende Landesarbeitskreise:
       </p>
       <div v-for="(each, index) in LAKs" v-bind:key="index">
-          <input type="checkbox" :value="each"  v-model="inputData.LKAs">
+          <input type="checkbox" :value="each" v-model="inputData.LAKs">
           <label>{{ each }}</label>
       </div>
       <p class="error" v-if="error">
@@ -41,11 +41,12 @@
 export default {
     data: function () {
         return {
+            key: 0,
             inputData: {
                 name: '',
                 email: '',
                 kreisverband: '',
-                LKAs: []
+                LAKs: []
             },
             kreisverbände: [
                 'Baden-Baden',
@@ -84,21 +85,7 @@ export default {
                 'Tübingen',
                 'Ulm-Biberbach'
             ],
-            LAKs: [
-                "Arbeit & Soziales",
-                "Bildung & Forschung",
-                "Digitalisierung und Medien",
-                "Europa, Außen & Verteidigung",
-                "Finanzen & Steuern",
-                "Gesellschaft & Kultur",
-                "Gesundheit",
-                "Handwerk & Wirtschaft",
-                "Innen & Recht",
-                "Kommunales",
-                "Umwelt & Verkehr",
-                "Verbandsentwicklung",
-                "Liberale Schüler"
-            ],
+            LAKs: [],
             error: false
         }
     },
@@ -124,7 +111,8 @@ export default {
         }
     },
     mounted: function () {
-        this.inputData.LKAs.push(this.$store.getters.ausgewählterLAK);
+        this.LAKs = Object.keys(this.$store.getters.landesarbeitskreise);
+        this.inputData.LAKs.push(this.$store.getters.ausgewählterLAK);
     }
 }
 </script>
