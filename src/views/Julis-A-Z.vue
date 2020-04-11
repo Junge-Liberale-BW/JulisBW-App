@@ -15,11 +15,20 @@
                     {{ topic[0] }}
                     <span v-if="content[letterIndex][topicIndex][2] % 2 === 0">{{ topic[1] }}</span>
                     <br>
-                    <a v-if="content[letterIndex][topicIndex][2] % 2 !== 0" @click="changeStateofContentLength(letterIndex, topicIndex)">Mehr anzeigen</a>
-                    <a v-if="content[letterIndex][topicIndex][2] % 2 === 0" @click="changeStateofContentLength(letterIndex, topicIndex)">Weniger anzeigen</a>
+                    <a v-if="content[letterIndex][topicIndex][2] % 2 !== 0"
+                       @click="changeStateofContentLength(letterIndex, topicIndex)"
+                       class="clickable"
+                    >Mehr anzeigen
+                    </a>
+                    <a v-if="content[letterIndex][topicIndex][2] % 2 === 0"
+                       @click="changeStateofContentLength(letterIndex, topicIndex)"
+                       class="clickable"
+                    >
+                      Weniger anzeigen
+                    </a>
                 </p>
             </div>
-            
+
         </div>
     </div>
   </div>
