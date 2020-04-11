@@ -1,10 +1,29 @@
 @import "main";
 
+.nav-item {
+  cursor: pointer;
+
+  //padding-top: 1rem;
+  //padding-bottom: 1rem;
+
+  padding: .5rem 1.5rem;
+  position: relative;
+
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .icon-right {
+    position: absolute;
+    right: 10px;
+  }
+}
+
 nav {
   min-height: 100vh;
   width: 80vw;
   transition: 300ms;
-  max-width: 0;
   background-color: white;
   overflow: hidden;
   position: absolute;
@@ -38,6 +57,7 @@ a:hover {
   padding-top: .3rem;
   padding-bottom: .3rem;
 }
+
 .opened-nav-button {
   background-color: #E5007D !important;
   color: #fff;
@@ -74,33 +94,21 @@ a:hover {
 
 #nav-body {
   list-style: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   padding: 0px;
 
-  li {
-    padding: 0px 20px;
-    position: relative;
-
-    &:hover{
-      cursor: pointer;
-    }
-
-    .icon-right {
-      position: absolute;
-      right: 10px;
-    }
-  }
 
   i {
     color: #E5007D;
   }
 
-  .nav-subitem{
-    //padding-top: .4rem;
-    //padding-bottom: .4rem;
+  .nav-subitem {
+    padding: .8rem 1rem;
+    font-size: 1rem;
+    font-weight: bolder;
 
-    padding: .5rem;
+    cursor: pointer;
   }
 }
 
@@ -109,7 +117,7 @@ a:hover {
   margin: 10px 20px;
 }
 
-.unfoldList{
+.unfoldList {
   list-style: none;
   font-size: 20px;
   padding: 0px;
