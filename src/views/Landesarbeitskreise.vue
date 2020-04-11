@@ -4,7 +4,7 @@
     <Header/>
 
     <div class="col-12">
-      <div class="row justify-content-center">
+      <div class="row justify-content-center kachel-wrapper">
         <div v-for="(properties, titel) in lak_liste" v-bind:key="titel"
              class="col-6 col-sm-3 col-lg-2 lak-kachel-wrapper"
         >

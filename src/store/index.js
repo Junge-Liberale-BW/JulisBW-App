@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import router from '../router'
 import lak from './modules/lak'
+import unsereThemen from './modules/unsereThemen'
 
 Vue.use(Vuex)
 
@@ -20,7 +21,7 @@ export default new Vuex.Store({
       'Podcast': false,
       'Newsletter': false,
       'Juliette': false,
-      'UnsereThemen': '../assets/Header/unsereThemen.png'
+      'UnsereThemen': require('../assets/Header/unsereThemen.png')
     },
     termine: [
       {
@@ -47,11 +48,13 @@ export default new Vuex.Store({
     }
   },
   modules: {
-    lak: lak
+    lak: lak,
+    unsereThemen: unsereThemen
   },
   getters: {
     termine: state => state.termine,
     currentDate: state => state.currentDate,
-    landesarbeitskreise: state => state.lak.liste
+    landesarbeitskreise: state => state.lak.liste,
+    unsereThemen: state => state.unsereThemen.liste
   }
 })
