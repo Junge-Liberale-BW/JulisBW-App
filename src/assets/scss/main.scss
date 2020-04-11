@@ -42,6 +42,36 @@ $gelb: #ffed00;
   }
 }
 
+.lak-seite{
+  margin-bottom: 7rem;
+}
+
+.lak-header {
+  width: 100%;
+  background-color: #e5007d;
+
+  padding-bottom: 1rem;
+}
+
+.lak-content{
+
+  margin-top: 1.5rem;
+
+  .lak-leiter-kachel{
+    border-color: #e5007d;
+    border-width: medium;
+    margin-bottom: 2rem;
+
+    .lak-zusatzinhalt{
+      background-color: #e5007d;
+      color: white;
+
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+}
 
 .clickable{
   cursor: pointer;
