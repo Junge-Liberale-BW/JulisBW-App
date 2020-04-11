@@ -1,7 +1,8 @@
 $magenta: #e5007d;
 $darker_magenta: #c10069;
 $cyan: #009EE3;
-$gelb: #ffed00;
+$darker_cyan: #007AAF;
+$yellow: #ffed00;
 
 .text-magenta {
   color: $magenta;
@@ -20,22 +21,23 @@ $gelb: #ffed00;
   color: white;
 
   text-align: center;
+  line-height: 1.2;
 
-  border-radius: .6rem;
+  border-radius: .4rem;
 
-  padding-top: 1rem;
+  padding-top: 2rem;
   padding-bottom: 1rem;
   padding-left: .5rem;
   padding-right: .5rem;
 
   margin-top: 1.5rem;
 
-  font-weight: 600;
+  font-weight: 800;
   text-transform: uppercase;
 
   cursor: pointer;
 
-  border-bottom: $darker_magenta .5rem solid;
+  box-shadow: 0 0.5rem 0 $darker_magenta;
 
   &:hover{
     background-color: $darker_magenta;
@@ -43,19 +45,36 @@ $gelb: #ffed00;
 }
 
 .lak-seite{
-  margin-bottom: 7rem;
+  //margin-bottom: 2rem;
 }
 
 .lak-header {
   width: 100%;
   background-color: $magenta;
-
   padding-bottom: 1rem;
+  h1{
+    font-weight: 800;
+    font-size: 1.2em;
+  }
 }
 
 .lak-content{
 
-  margin-top: 1.5rem;
+  padding: 1.8em !important;
+  text-align: justify;
+  line-height: 1.2;
+  font-weight: bold;
+  .button-wrapper{
+    text-align: center;
+    padding: 0.5em;
+    .btn{
+      background-color: $cyan;
+      border-radius: 0.4em;
+      border: none;
+      font-weight: bold;
+      box-shadow: 0rem 0.2rem 0 $darker_cyan;
+    }
+  }
 
   .lak-leiter-kachel{
     border-color: $magenta;
@@ -107,7 +126,7 @@ $gelb: #ffed00;
   }
 
   .ist_heute{
-    background-color: $gelb !important;
+    background-color: $yellow !important;
   }
 
   .keine-veranstaltungen{
@@ -129,7 +148,7 @@ $gelb: #ffed00;
 
 
 .kalender-header{
-  height: 7rem;
+  height: 6.5rem;
   background-color: $magenta;
 
   padding-top: 3.5rem;
