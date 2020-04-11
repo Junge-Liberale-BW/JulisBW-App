@@ -8,7 +8,12 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     headerBilder: {
-      'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
+      'Home': [
+        ['https://wolke.julis-bw.de/index.php/apps/gallery/preview.public/81346?width=2800&height=2800&c=145acf899061c984740d8d0c2b21e741&requesttoken=Ecw5l7aoNdzquNNRnCoHjcO2TxKcFWG0VzO7qq0pcK4%3D%3AIoVupcT5Up241qMAqH5F%2FY%2FkDmLGcgL7eEmP4J0bJ%2BM%3D&token=WJLQL9NkMyxCcfK', true],
+        ['https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png', false],
+        ['https://wolke.julis-bw.de/index.php/apps/gallery/preview.public/81346?width=2800&height=2800&c=145acf899061c984740d8d0c2b21e741&requesttoken=Ecw5l7aoNdzquNNRnCoHjcO2TxKcFWG0VzO7qq0pcK4%3D%3AIoVupcT5Up241qMAqH5F%2FY%2FkDmLGcgL7eEmP4J0bJ%2BM%3D&token=WJLQL9NkMyxCcfK', true],
+        ['https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png', false]
+      ],
       'Landesarbeitskreise': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
       'Beschlusssammlung': false,
       'ProgrammatikLexikon': false,

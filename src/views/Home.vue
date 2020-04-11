@@ -1,14 +1,16 @@
 <template>
   <div>
-    <Header />
+    
+    <HeaderSlider />
+
   </div>
 </template>
 
 <script>
-  import Header from '../components/Header'
+import HeaderSlider from '../components/HeaderSlider'
   export default {
     name: 'Home',
-    components: { Header }
+    components: { HeaderSlider }
   }
 </script>
 
