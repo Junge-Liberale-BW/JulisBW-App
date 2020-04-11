@@ -113,6 +113,13 @@
           </li>
         </ul>
       </div>
+
+      <div class="nav-footer">
+          <a>Über die App</a>
+        <br>
+          <a @click="changeSite('Impresseum')">Impresseum und Datenschutz</a>
+      </div>
+
     </nav>
   </div>
 </template>
