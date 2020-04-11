@@ -1,5 +1,6 @@
 <template>
   <div>
+      <Header></Header>
       <img :src="$store.state.headerBilder[$route.name]">
   </div>
 </template>

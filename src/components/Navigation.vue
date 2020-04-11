@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header></Header>
     <button
       id="nav-button"
       :class="{'opened-nav-button': navigationOpen}"
@@ -98,11 +97,9 @@
 </template>
 
 <script>
-  import Header from '../components/Header'
 
   export default {
     name: 'Navigation',
-    components: { Header },
     data: function () {
       return {
         navigationOpen: false,
@@ -138,7 +135,3 @@
     },
   }
 </script>
-
-<style scoped>
-
-</style>

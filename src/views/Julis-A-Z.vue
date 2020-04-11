@@ -1,26 +1,35 @@
 <template>
-  <div id="julis-a-z" :key="key">
-      
-    <div v-for="(letter, letterIndex) in content" v-bind:key="letterIndex">
-        <h2>{{ letterIndex }}</h2>
+  <div>
 
-        <div v-for="(topic, topicIndex) in letter" :key="content[letterIndex][topicIndex][2]">
-            <h3>{{ topicIndex }}</h3>
-            <p>
-                {{ topic[0] }}
-                <span v-if="content[letterIndex][topicIndex][2] % 2 === 0">{{ topic[1] }}</span>
-                <br>
-                <a v-if="content[letterIndex][topicIndex][2] % 2 !== 0" @click="changeStateofContentLength(letterIndex, topicIndex)">Mehr anzeigen</a>
-                <a v-if="content[letterIndex][topicIndex][2] % 2 === 0" @click="changeStateofContentLength(letterIndex, topicIndex)">Weniger anzeigen</a>
-            </p>
+    <div class="header">
+        <Header />
+    </div>
+
+    <div id="julis-a-z" :key="key">
+        <div v-for="(letter, letterIndex) in content" v-bind:key="letterIndex">
+            <h2>{{ letterIndex }}</h2>
+
+            <div v-for="(topic, topicIndex) in letter" :key="content[letterIndex][topicIndex][2]">
+                <h3>{{ topicIndex }}</h3>
+                <p>
+                    {{ topic[0] }}
+                    <span v-if="content[letterIndex][topicIndex][2] % 2 === 0">{{ topic[1] }}</span>
+                    <br>
+                    <a v-if="content[letterIndex][topicIndex][2] % 2 !== 0" @click="changeStateofContentLength(letterIndex, topicIndex)">Mehr anzeigen</a>
+                    <a v-if="content[letterIndex][topicIndex][2] % 2 === 0" @click="changeStateofContentLength(letterIndex, topicIndex)">Weniger anzeigen</a>
+                </p>
+            </div>
+            
         </div>
-        
     </div>
   </div>
 </template>
 
 <script>
+import Header from '../components/Header'
+
 export default {
+    components: { Header },
     data: function () {
         return {
             content: {
@@ -57,6 +66,12 @@ export default {
 </script>
 
 <style scoped>
+
+.header {
+    padding: 0;
+}
+
+
 #julis-a-z {
     padding: 20px;
 }
