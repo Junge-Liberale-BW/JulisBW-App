@@ -31,8 +31,8 @@ const routes = [
     component: () => import('../views/Landesarbeitskreise.vue')
   },
   {
-    path: '/LAK_Digitales',
-    name: 'LAK_Digitales',
+    path: '/Digitales & Medien',
+    name: 'Digitales & Medien',
     component: () => import('../views/LAK_Digitales.vue')
   },
   {
@@ -44,6 +44,11 @@ const routes = [
     path: '/Kalender',
     name: 'Kalender',
     component: () => import('../views/Kalender.vue')
+  },
+  {
+    path: '/Terminliste',
+    name: 'Terminliste',
+    component: () => import('../views/Terminliste.vue')
   },
   {
     path: '/Merch',
