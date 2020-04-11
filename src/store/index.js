@@ -19,7 +19,8 @@ export default new Vuex.Store({
       'Kalender': false,
       'Podcast': false,
       'Newsletter': false,
-      'Juliette': false
+      'Juliette': false,
+      'UnsereThemen': '../assets/Header/unsereThemen.png'
     },
     termine: [
       {
