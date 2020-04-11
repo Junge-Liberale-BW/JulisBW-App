@@ -69,6 +69,11 @@ const routes = [
     path: '/LAK-anmelden',
     name: 'LAK-anmelden',
     component: () => import('../views/LAK-Anmeldung')
+  },
+  {
+    path: '/Julis-A-Z',
+    name: 'Julis-A-Z',
+    component: () => import('../views/Julis-A-Z.vue')
   }
 
 ]
