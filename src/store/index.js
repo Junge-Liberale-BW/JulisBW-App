@@ -53,7 +53,7 @@ export default new Vuex.Store({
       'ProgrammatikLexikon': false,
       'WerWirSind': false,
       'Landesvorstand': false,
-      'JulisABisZ': false,
+      'Julis-A-Z': 'https://wolke.julis-bw.de/index.php/apps/gallery/preview.public/81266?width=2000&height=2000&c=0526ccfd17e86db49aeeb5e6055b8848&requesttoken=k61ZTe4qboSJmXnsTP02GrTU3K9IiKWweyhUyyA2eZA%3D%3Awd5uKaBuCt3h6Rq8CZUHafe9psYKp%2BjVKH0ZoW1XTd0%3D&token=WJLQL9NkMyxCcfK',
       'Merch': false,
       'Kalender': false,
       'Podcast': false,
