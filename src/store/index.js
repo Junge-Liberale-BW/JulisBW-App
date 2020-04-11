@@ -6,6 +6,20 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    headerBilder: {
+      'Home': false,
+      'Landesarbeitskreise':  'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
+      'Beschlusssammlung': false,
+      'ProgrammatikLexikon': false,
+      'WerWirSind': false,
+      'Landesvorstand': false,
+      'JulisABisZ': false,
+      'Merch': false,
+      'Kalender': false,
+      'Podcast': false,
+      'Newsletter': false,
+      'Juliette': false
+    },
     landesarbeitskreise: {
       'Arbeit & Soziales': {
         'icon': 'suitcase',
@@ -48,7 +62,7 @@ export default new Vuex.Store({
   mutations: {},
   actions: {
     wechsel_seite (context, neue_seite) {
-      router.push(neue_seite)
+      router.push(neue_seite);
     }
   },
   modules: {},
