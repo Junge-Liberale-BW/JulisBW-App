@@ -10,7 +10,6 @@
         >
           <div class="lak-kachel"
                @click="wechsel_seite(titel)"
-               @touchmove="wechsel_seite(titel)"
           >
             <i :class=" 'las la-4x la-' + properties.icon"></i>
             <br>
