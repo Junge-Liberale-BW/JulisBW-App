@@ -8,7 +8,6 @@
 </template>
 
 <script>
-var intervall;
 export default {
     name: 'HeaderSlider',
     data: function () {
@@ -16,11 +15,14 @@ export default {
         image: [],
         index: 0,
         key: 0,
-
+        interval: undefined
       }
     },
     computed: {
         gibBild() {
+            if (this.image.length === 0) {
+                this.getImages();
+            }
             return this.image[this.index];
         }
     },
@@ -28,23 +30,24 @@ export default {
         changeImage: function (index) {
             this.index = index;
             this.key++;
-            clearInterval(intervall)
+            clearInterval(this.interval)
         },
         nextImage: function () {
             this.index++;
-            
             if (this.index === this.image.length) {
                 this.index = 0;
             }
             this.key++;
+        },
+        getImages: function () {
+            this.image = this.$store.state.headerBilder[this.$route.name];
+            this.index = 0;
         }
     },
     mounted: function () {
-      this.image = this.$store.state.headerBilder[this.$route.name];
-      this.index = 0;
-        intervall = setInterval(() => {
+        this.interval = setInterval(() => {
             this.nextImage();
-        }, 8000)
+        }, 6000)
     }
   }
 </script>
