@@ -48,7 +48,7 @@ $gelb: #ffed00;
 
 .lak-header {
   width: 100%;
-  background-color: #e5007d;
+  background-color: $magenta;
 
   padding-bottom: 1rem;
 }
@@ -58,12 +58,12 @@ $gelb: #ffed00;
   margin-top: 1.5rem;
 
   .lak-leiter-kachel{
-    border-color: #e5007d;
+    border-color: $magenta;
     border-width: medium;
     margin-bottom: 2rem;
 
     .lak-zusatzinhalt{
-      background-color: #e5007d;
+      background-color: $magenta;
       color: white;
 
       padding-top: 1rem;
