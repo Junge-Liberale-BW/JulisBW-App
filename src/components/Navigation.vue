@@ -41,10 +41,10 @@
             class="unfoldList"
           >
             <li class="nav-subitem">
-              <i class="la la-angle-right la-lg" /> Beschlusssammlung
+              <i class="la la-angle-right la-lg" /> Unsere Themen
             </li>
             <li class="nav-subitem">
-              <i class="la la-angle-right la-lg" /> Programmatik-Lexikon
+              <i class="la la-angle-right la-lg" /> Beschlusssammlung
             </li>
             <li
               class="nav-subitem"
@@ -74,7 +74,7 @@
               <i class="la la-angle-right" /> Landesvorstand
             </li>
             <li class="nav-subitem">
-              <i class="la la-angle-right" /> Julis A-Z
+              <i class="la la-angle-right" /> JuLis A-Z
             </li>
             <li
               class="nav-subitem"
