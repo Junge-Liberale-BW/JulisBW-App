@@ -7,44 +7,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    landesarbeitskreise: {
-      'Arbeit & Soziales': {
-        'icon': 'suitcase',
-        'href': '/Arbeit und Soziales'
-      },
-      'Bildung & Forschung': {
-        'icon': 'school',
-        'href': '/Bildung und Forschung'
-      },
-      'Digitales & Medien': {
-        'icon': 'server',
-        'href': '/Digitales und Medien'
-      },
-      'Europa & Aussen': {
-        'icon': 'globe',
-        'href': '/Europa und Aussen'
-      },
-      'Finanzen & Struern': {
-        'icon': 'money-bill',
-        'href': '/Finanzen und Steuern'
-      },
-      'Gesellschaft & Kultur': {
-        'icon': 'users',
-        'href': '/Gesellschaft und Kultur'
-      },
-      'Umwelt und Verkehr': {
-        'icon': 'road',
-        'href': '/Umwelt und Verkehr'
-      },
-      'Verbandsentwicklung': {
-        'icon': 'dna',
-        'href': '/Verbandsentwicklung'
-      },
-      'Liberale Schüler': {
-        'icon': 'graduation-cap',
-        'href': '/Verbandsentwicklung'
-      },
-    },
     ausgewählterLAK: '',
     headerBilder: {
       'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
