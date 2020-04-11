@@ -1,37 +1,50 @@
 <template>
   <div :key="key" id="header-slider">
-      <img :src="gibBilder[0]">
+      <img :src="gibBild[0]" @click="$store.dispatch('wechsel_seite', gibBild[1])">
       <div id="points">
-          <div @click="changeImage(indexBilder)" v-bind:class="{point: true, active: (indexBilder === index)}" v-for="(each, indexBilder) in bilder" :key="indexBilder"></div>
+          <div @click="changeImage(indexBilder)" v-bind:class="{point: true, active: (indexBilder === index)}" v-for="(each, indexBilder) in image" v-bind:key="indexBilder"></div>
       </div>
   </div>
 </template>
 
 <script>
+var intervall;
 export default {
     name: 'HeaderSlider',
     data: function () {
       return {
-        bilder: [],
+        image: [],
         index: 0,
-        key: 0
+        key: 0,
+
       }
     },
     computed: {
-        gibBilder() {
-            return this.bilder[this.index];
+        gibBild() {
+            return this.image[this.index];
         }
     },
     methods: {
         changeImage: function (index) {
             this.index = index;
             this.key++;
+            clearInterval(intervall)
+        },
+        nextImage: function () {
+            this.index++;
+            
+            if (this.index === this.image.length) {
+                this.index = 0;
+            }
+            this.key++;
         }
     },
     mounted: function () {
-      this.bilder = this.$store.state.headerBilder[this.$route.name];
+      this.image = this.$store.state.headerBilder[this.$route.name];
       this.index = 0;
-      console.log(this.bilder)
+        intervall = setInterval(() => {
+            this.nextImage();
+        }, 8000)
     }
   }
 </script>
