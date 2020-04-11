@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Juliette from "../views/juliette/Juliette";
+import JulietteIssue from "../views/juliette/JulietteIssue";
+import JulietteArticle from "../views/juliette/JulietteArticle";
 
 Vue.use(VueRouter)
 
@@ -38,7 +41,14 @@ const routes = [
   {
     path: '/Juliette',
     name: 'Juliette',
-    component: () => import('../views/Juliette.vue')
+    component: Juliette,
+  }, {
+    path: '/Juliette/issue/:id',
+    component: JulietteIssue
+  }, {
+    path: '/Juliette/article/:id',
+    component: JulietteArticle
+
   },
   {
     path: '/Kalender',

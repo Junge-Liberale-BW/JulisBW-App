@@ -3,6 +3,10 @@ $darker_magenta: #c10069;
 $cyan: #009EE3;
 $gelb: #ffed00;
 
+body *{
+  word-break: break-word;
+}
+
 .text-magenta {
   color: $magenta;
 }
