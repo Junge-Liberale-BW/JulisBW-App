@@ -21,11 +21,17 @@
         </div>
 
         <ul id="nav-body">
-          <li @click="changeSite('Home')">
+          <li
+            class="nav-item"
+            @click="changeSite('Home')"
+          >
             <i class="la la-home la-lg" /> Home
           </li>
 
-          <li @click="unfoldList('inhalte')">
+          <li
+            class="nav-item"
+            @click="unfoldList('inhalte')"
+          >
             <i class="la la-pen-nib la-lg" /> Inhalte <i
               :class="{la: true, 'icon-right': true, 'la-angle-up': unfold.inhalte, 'la-angle-right': !unfold.inhalte}"
             />
@@ -49,7 +55,10 @@
           </ul>
 
 
-          <li @click="unfoldList('verband')">
+          <li
+            class="nav-item"
+            @click="unfoldList('verband')"
+          >
             <i class="la la-thumbs-up la-lg" /> Verband <i
               :class="{la: true, 'icon-right': true, 'la-angle-up': unfold.verband, 'la-angle-right': !unfold.verband}"
             />
@@ -76,19 +85,30 @@
           </ul>
 
 
-          <li @click="changeSite('Kalender')">
+          <li
+            class="nav-item"
+            @click="changeSite('Kalender')"
+          >
             <i class="la la-calendar la-lg" /> Kalender
           </li>
 
           <div class="horizontal-line" />
 
-          <li @click="changeSite('Podcast')">
+          <li
+            class="nav-item"
+            @click="changeSite('Podcast')"
+          >
             <i class="la la-podcast la-lg" /> Podcast
           </li>
 
-          <li><i class="la la-envelope la-lg" /> Newsletter</li>
+          <li class="nav-item">
+            <i class="la la-envelope la-lg" /> Newsletter
+          </li>
 
-          <li @click="changeSite('Juliette')">
+          <li
+            class="nav-item"
+            @click="changeSite('Juliette')"
+          >
             <i class="la la-book la-lg" /> Juliette
           </li>
         </ul>
