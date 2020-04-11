@@ -7,9 +7,9 @@
 <script>
   export default {
     name: 'Header',
-
     computed:{
       gib_bild(){
+        console.log(this.$route.name);
         return this.$store.state.headerBilder[this.$route.name];
       }
     }

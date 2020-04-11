@@ -21,7 +21,8 @@ export default new Vuex.Store({
       'Podcast': false,
       'Newsletter': false,
       'Juliette': false,
-      'UnsereThemen': require('../assets/Header/unsereThemen.png')
+      'UnsereThemen': require('../assets/Header/unsereThemen.png'),
+      'freiheitSelbstbestimmung': require('../assets/Header/freiheitSelbstbestimmung.png')
     },
     termine: [
       {
