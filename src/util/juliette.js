@@ -2,7 +2,7 @@ import axios from "axios"
 
 class JulietteDataService {
 
-  apiBase = "https://www.julis-bw.de/wp-json/wp/v2"
+  apiBase
 
   constructor(apiBase) {
 
@@ -86,4 +86,4 @@ class JulietteDataService {
 }
 
 
-export default new JulietteDataService("https://www.julis-bw.de/category/juliette/feed")
+export default new JulietteDataService("https://www.julis-bw.de/wp-json/wp/v2")
