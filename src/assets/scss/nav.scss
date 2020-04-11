@@ -2,13 +2,8 @@
 
 .nav-item {
   cursor: pointer;
-
-  //padding-top: 1rem;
-  //padding-bottom: 1rem;
-
   padding: .5rem 1.5rem;
   position: relative;
-
 
   &:hover {
     cursor: pointer;
@@ -22,15 +17,27 @@
 
 nav {
   min-height: 100vh;
-  width: 80vw;
+  width: 280px;
   transition: 300ms;
   background-color: white;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   border-right: 1px solid #aeaeae;
   z-index: 50;
+
+  .nav-footer{
+
+      //margin-top: 4rem;
+      text-align: center;
+
+      a{
+        color: $magenta;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+  }
 }
 
 a {
