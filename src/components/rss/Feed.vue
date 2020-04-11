@@ -3,8 +3,8 @@
   <div v-else class="feed">
     <h1 v-if="name" class="name">{{name}}</h1>
     <h1 v-else class="title">{{feed.title}}</h1>
-    <div class = "feed">
-     {{feed.description}}
+    <div class="feed">
+      {{feed.description}}
     </div>
     <div v-if="loading" class="spinner">
       <div class="bounce1"></div>
@@ -25,6 +25,8 @@
 <script>
   import Article from "./Article.vue";
   import RSSParser from "rss-parser";
+
+
   export default {
     name: "Feed",
     components: {
@@ -62,12 +64,12 @@
         this.error = "";
         this.loading = true;
         this.feed = {};
+
         try {
           const data = await fetch(this.feedUrl);
           if (data.ok) {
             const text = await data.text();
             const parser = new RSSParser();
-
 
 
             parser.parseString(text, (err, parsed) => {

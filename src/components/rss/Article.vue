@@ -12,7 +12,7 @@
       </a>
       <p class="summary" v-html="article.content"></p>
       <button class="btn" v-if="btn" v-on:click="selected = !selected"> Ganzer Text</button>
-      <p class="full-content" v-if="selected" v-html="article.fullcont"></p>
+      <p class="full-content" v-if="selected" v-html="article['content:encoded']"></p>
     </div>
     <div class="footer">
       <span v-if="article.isoDate" class="middot">&bull;</span>
@@ -26,6 +26,7 @@
     const systemDate = new Date(Date.parse(tdate));
     const userDate = new Date();
     const diff = Math.floor((userDate - systemDate) / 1000);
+
 
 
     if (diff < 59) {
