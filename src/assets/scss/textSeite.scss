@@ -1,0 +1,24 @@
+@import "main";
+
+.themenSeite{
+    margin: 1rem;
+
+    font-weight: bold;
+}
+
+.themen-title-cyan{
+    color: $cyan;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.themen-title-magenta{
+    color: $magenta;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.themen-p{
+    text-align: justify;
+    line-height: 1.2rem;
+}
