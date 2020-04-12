@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Header :sticky="true"/>
-    <div v-for="person in landesvorstand" v-bind:key="person.name"
+    <Header/>
+    <div v-for="(person, index) in landesvorstand" v-bind:key="person.name"
              class="landesvorstand-kacheln">
-        <PersonKachel class="landesvorstand-kachel" :person="person" :color="magenta"/>
+        <PersonKachel class="landesvorstand-kachel" :person="person" :color="getColor(index)"/>
     </div>
   </div>
 </template>
@@ -23,11 +23,20 @@
     computed: {
       landesvorstand () {
         return this.$store.getters.landesvorstand
-      },
-      magenta(){
-          return "yellow";
       }
     },
+    methods:{
+        getColor(index){
+            let i = parseInt(index)
+            if (i < 1){
+                return "magenta";
+            }else if (i < 5 ){
+                return "blue";
+            }else {
+                return "yellow";
+            }
+        }
+    }
 
   }
 </script>

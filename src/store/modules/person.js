@@ -157,7 +157,7 @@ export default new Vuex.Store({
           'twitter': undefined,
           'instagram': 'lrrnschnrck'
         },
-        9: {
+        10: {
           'position': 'Beisitzer für Programmatik',
           'firstname': 'Paul',
           'lastname': 'Thies',

@@ -20,10 +20,18 @@
             <li v-for="item in person.tasks" v-bind:key="item">{{item}}</li>
         </ul>
         <div class="socials">
-            <a :href="'mailto:' + person.email + '@julis-bw.de'"><i class="la la-lg la-envelope"/></a>
-            <a :href="'https://www.facebook.com/' + person.facebook"><i class="la la-lg la-facebook"/></a>
-            <a :href="'https://www.twitter.com/' + person.twitter"><i class="la la-lg la-twitter"/></a>
-            <a :href="'https://www.instagram.com/' + person.instagram"><i class="la la-lg la-instagram"/></a>
+            <div v-if="person.email !== undefined" >
+                <a :href="'mailto:' + person.email + '@julis-bw.de'"><i class="la la-lg la-envelope"/></a>
+            </div>
+            <div v-if="person.facebook !== undefined">
+                <a :href="'https://www.facebook.com/' + person.facebook"><i class="la la-lg la-facebook"/></a>
+            </div>
+            <div v-if="person.twitter !== undefined">
+                <a :href="'https://www.twitter.com/' + person.twitter"><i class="la la-lg la-twitter"/></a>
+            </div>
+            <div v-if="person.instagram !== undefined">
+                <a :href="'https://www.instagram.com/' + person.instagram"><i class="la la-lg la-instagram"/></a>
+            </div>
         </div>
     </div>
 </div>
@@ -154,7 +162,7 @@ export default {
     line-height: 0.8rem !important;
     padding-top: 0.5rem;
     padding-left: 1rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 1rem;
     padding-right: 1rem;
     ul{
         list-style-position: inside;
@@ -164,8 +172,7 @@ export default {
         padding-left: 0rem;
     }
     .socials{
-        display: grid;
-        grid-template-columns: auto auto auto auto;
+        display: flex;
         align-items: center !important;
         justify-content: space-around;
         i{
