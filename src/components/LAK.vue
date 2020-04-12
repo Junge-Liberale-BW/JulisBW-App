@@ -11,7 +11,7 @@
       <p>{{ textbaustein_2 }}</p>
 
       <div class="button-wrapper">
-      <button type="button" class="btn btn-primary text-uppercase mx-auto">
+      <button type="button" class="btn btn-primary text-uppercase mx-auto" @click="anmeldenZumLAK">
         Jetzt zum LAK anmelden
       </button>
       </div>
@@ -29,7 +29,7 @@
       <p>Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!</p>
 
       <div class="button-wrapper">
-      <button type="button" class="btn btn-primary text-uppercase mx-auto">
+      <button type="button" class="btn btn-primary text-uppercase mx-auto" @click="anmeldenZumLAK">
         Jetzt zum LAK anmelden
       </button>
       </div>
