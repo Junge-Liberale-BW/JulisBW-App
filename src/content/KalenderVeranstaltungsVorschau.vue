@@ -70,7 +70,10 @@
     methods:{
       gib_anstehende_veranstaltungen () {
         this.anstehende_veranstaltungen = [];
+        this.mindestens_eine_veranstaltung = false;
+
         for (let veranstaltung in this.veranstaltungen_liste) {
+
           veranstaltung = this.veranstaltungen_liste[veranstaltung]
           let veranstaltung_datum = new Date(veranstaltung.Datum)
 
