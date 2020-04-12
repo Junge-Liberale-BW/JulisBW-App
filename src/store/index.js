@@ -62,7 +62,7 @@ export default new Vuex.Store({
     termine: state => state.termine,
     currentDate: state => state.currentDate,
     landesarbeitskreise: state => state.lak.liste,
-    unsereThemen: state => state.unsereThemen.liste
+    unsereThemen: state => state.unsereThemen.liste,
     ausgewählterLAK: state => state.ausgewählterLAK
   }
 })
