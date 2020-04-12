@@ -53,8 +53,10 @@
             <li class="nav-subitem" @click="changeSite('Landesvorstand')">
               <i class="la la-angle-right" /> Landesvorstand
             </li>
+
             <li class="nav-subitem" @click="changeSite('Julis-A-Z')">
-              <i class="la la-angle-right" /> Julis A-Z
+              <i class="la la-angle-right" /> JuLis A-Z
+
             </li>
             <li class="nav-subitem" @click="changeSite('Merch')">
               <i class="la la-angle-right" /> Merch-Shop

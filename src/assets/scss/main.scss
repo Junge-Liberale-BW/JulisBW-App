@@ -1,48 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
   font-family: 'Montserrat', sans-serif;
 }
 
 $magenta: #e5007d;
 $darker_magenta: #c10069;
 $cyan: #009EE3;
-$gelb: #ffed00;
+$darker_cyan: #007AAF;
+$yellow: #ffed00;
+
+body *{
+  word-break: break-word;
+}
 
 .text-magenta {
   color: $magenta;
 }
 
-.text-cyan{
+.text-cyan {
   color: $cyan;
 }
 
-.header-sticky{
+
+.lak-kachel {
+  min-height: 10rem;
+  align-content: center;
+
+  background-color: $magenta;
+  color: white;
+
+  text-align: center;
+  line-height: 1.2;
+
+  border-radius: .4rem;
+
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+
+  margin-top: 1.5rem;
+
+  font-weight: 800;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  box-shadow: 0 0.5rem 0 $darker_magenta;
+
+  &:hover {
+    background-color: $darker_magenta;
+  }
+}
+
+.header-sticky {
   position: sticky;
   top: 0;
 }
 
-.lak-seite{
-  margin-bottom: 7rem;
+.lak-seite {
+  //margin-bottom: 2rem;
 }
 
 .lak-header {
   width: 100%;
-  background-color: #e5007d;
-
+  background-color: $magenta;
   padding-bottom: 1rem;
+
+  h1 {
+    font-weight: 800;
+    font-size: 1.2em;
+  }
 }
 
-.lak-content{
+.lak-content {
 
-  margin-top: 1.5rem;
+  padding: 1.8em !important;
+  text-align: justify;
+  line-height: 1.2;
+  font-weight: bold;
 
-  .lak-leiter-kachel{
-    border-color: #e5007d;
+  .button-wrapper {
+    text-align: center;
+    padding: 0.5em;
+
+    .btn {
+      background-color: $cyan;
+      border-radius: 0.4em;
+      border: none;
+      font-weight: bold;
+      box-shadow: 0rem 0.2rem 0 $darker_cyan;
+    }
+  }
+
+  .lak-leiter-kachel {
+    border-color: $magenta;
     border-width: medium;
     margin-bottom: 2rem;
 
-    .lak-zusatzinhalt{
-      background-color: #e5007d;
+    .lak-zusatzinhalt {
+      background-color: $magenta;
       color: white;
 
       padding-top: 1rem;
@@ -52,21 +110,21 @@ $gelb: #ffed00;
 
 }
 
-.clickable{
+.clickable {
   cursor: pointer;
 }
 
 
-.vc-rounded-full{
+.vc-rounded-full {
   border-radius: 0 !important;
   margin: 0;
 }
 
-.vc-h-full{
+.vc-h-full {
   width: 100%;
 }
 
-.veranstaltungs-vorschau-item{
+.veranstaltungs-vorschau-item {
 
   align-content: center;
 
@@ -78,26 +136,26 @@ $gelb: #ffed00;
   border-bottom: 1px solid #b7b7b7;
   border-top: 1px solid #b7b7b7;
 
-  .datum-tag{
+  .datum-tag {
     background-color: $magenta;
     font-size: 1.8rem;
     font-weight: 600;
     padding: 1rem 0.5rem;
   }
 
-  .ist_heute{
-    background-color: $gelb !important;
+  .ist_heute {
+    background-color: $yellow !important;
   }
 
-  .keine-veranstaltungen{
-    background-color:#dfdfdf !important;
+  .keine-veranstaltungen {
+    background-color: #dfdfdf !important;
   }
 
-  .keine-veranstaltungen-text{
+  .keine-veranstaltungen-text {
     font-size: 1rem !important;
   }
 
-  .info-text{
+  .info-text {
     //padding: 1rem 0.5rem;
     padding-left: .5rem;
     font-size: 1.2rem;
@@ -107,14 +165,14 @@ $gelb: #ffed00;
 }
 
 
-.kalender-header{
-  height: 7rem;
+.kalender-header {
+  height: 6.5rem;
   background-color: $magenta;
 
   padding-top: 3.5rem;
   color: white;
 
-  .switch-icon{
+  .switch-icon {
     position: absolute;
     right: 1rem;
     top: 3.5rem;
