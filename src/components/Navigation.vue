@@ -50,7 +50,7 @@
             <li class="nav-subitem">
               <i class="la la-angle-right" /> Wer wir sind
             </li>
-            <li class="nav-subitem">
+            <li class="nav-subitem" @click="changeSite('Landesvorstand')">
               <i class="la la-angle-right" /> Landesvorstand
             </li>
             <li class="nav-subitem" @click="changeSite('Julis-A-Z')">

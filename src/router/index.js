@@ -76,6 +76,11 @@ const routes = [
     component: () => import('../views/Verband.vue')
   },
   {
+    path: '/Landesvorstand',
+    name: 'Landesvorstand',
+    component: () => import('../views/Landesvorstand.vue')
+  },
+  {
     path: '/Julis-A-Z',
     name: 'Julis-A-Z',
     component: () => import('../views/Julis-A-Z.vue')

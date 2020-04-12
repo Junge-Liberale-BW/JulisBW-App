@@ -6,10 +6,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    liste: {
       landesvorstand:{
-        'Landesvorsitzender': {
-          'name': 'Valentin Christian Abel',
+        0: {
+          'position': 'Landesvorsitzender',
+          'firstname': 'Valentin',
+          'lastname': 'Abel',
+          'img': require('../../assets/img/person/valentin-abel.jpg'),
           'tasks': 'Aufgaben: alles',
           'email': 'abel',
           'facebook': 'TheRealVCA',
@@ -18,9 +20,7 @@ export default new Vuex.Store({
         }
       },
       lakleiter:{
-
       }
-    },
   },
   mutations: {
 

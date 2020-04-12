@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import router from '../router'
 import lak from './modules/lak'
 import unsereThemen from './modules/unsereThemen'
+import person from './modules/person'
 
 Vue.use(Vuex)
 
@@ -14,7 +15,7 @@ export default new Vuex.Store({
       'Beschlusssammlung': false,
       'ProgrammatikLexikon': false,
       'WerWirSind': false,
-      'Landesvorstand': false,
+      'Landesvorstand': require('../assets/Header/landesvorstand.png'),
       'Julis-A-Z': 'https://wolke.julis-bw.de/index.php/apps/gallery/preview.public/81266?width=2000&height=2000&c=0526ccfd17e86db49aeeb5e6055b8848&requesttoken=k61ZTe4qboSJmXnsTP02GrTU3K9IiKWweyhUyyA2eZA%3D%3Awd5uKaBuCt3h6Rq8CZUHafe9psYKp%2BjVKH0ZoW1XTd0%3D&token=WJLQL9NkMyxCcfK',
       'Merch': false,
       'Kalender': false,
@@ -50,13 +51,14 @@ export default new Vuex.Store({
   },
   modules: {
     lak: lak,
-    unsereThemen: unsereThemen
+    unsereThemen: unsereThemen,
+    person: person
   },
   getters: {
     termine: state => state.termine,
     currentDate: state => state.currentDate,
     landesarbeitskreise: state => state.lak.liste,
     unsereThemen: state => state.unsereThemen.liste,
-    landesvorstand: state => state.person.liste.landesvorstand
+    landesvorstand: state => state.person.landesvorstand
   }
 })
