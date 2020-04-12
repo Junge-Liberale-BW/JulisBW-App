@@ -2,31 +2,24 @@
   <div class="article">
     <div class="title">
       <h3 class="article-title">{{article.title}}</h3>
-
     </div>
-    <div class="body">
-      <a class="article-link" :href="article.link" target="_blank">
-        <h3>
-          {{article.link}}
-        </h3>
-      </a>
-      <p class="summary" v-html="article.content"></p>
-      <button class="btn" v-if="btn" v-on:click="selected = !selected"> Ganzer Text</button>
-      <p class="full-content" v-if="selected" v-html="article['content:encoded']"></p>
+    <div class="durationbody">
+      {{article['itunes:duration']}}
     </div>
-    <div class="footer">
-      <span v-if="article.isoDate" class="middot">&bull;</span>
-      <span class="datetime">{{this.getDateTime()}}</span>
-    </div>
+    <hr class="row"/>
   </div>
 </template>s
 
 <script>
+
+  //import Media from "cordova-plugin-media";
+
   const parseDate = tdate => {
     const systemDate = new Date(Date.parse(tdate));
     const userDate = new Date();
     const diff = Math.floor((userDate - systemDate) / 1000);
-
+    //let myMedia = new Media(this.article.link);
+    //myMedia.play();
 
 
     if (diff < 59) {
