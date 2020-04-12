@@ -2,13 +2,8 @@
 
 .nav-item {
   cursor: pointer;
-
-  //padding-top: 1rem;
-  //padding-bottom: 1rem;
-
   padding: .5rem 1.5rem;
   position: relative;
-
 
   &:hover {
     cursor: pointer;
@@ -22,15 +17,27 @@
 
 nav {
   min-height: 100vh;
-  width: 80vw;
+  width: 280px;
   transition: 300ms;
   background-color: white;
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   border-right: 1px solid #aeaeae;
   z-index: 50;
+
+  .nav-footer{
+
+      //margin-top: 4rem;
+      text-align: center;
+
+      a{
+        color: $magenta;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+  }
 }
 
 a {
@@ -47,12 +54,12 @@ a:hover {
 }
 
 #nav-button {
-  background-color: #fff;
-  color: #E5007D;
+  background-color: white;
+  color: $magenta;
   position: fixed;
-  top: 7vh;
+  top: 3em;
   z-index: 100;
-  border: 1px solid #d8d8d8;
+  border-style: none;
 
   padding-top: .3rem;
   padding-bottom: .3rem;
@@ -61,21 +68,19 @@ a:hover {
 .opened-nav-button {
   background-color: #E5007D !important;
   color: #fff;
+  border-style: none;
 }
 
 
 #nav-button:active {
-  border: 1px solid #aeaeae;
   outline: none;
 }
 
 #nav-button:hover {
-  border: 1px solid #aeaeae;
   outline: none;
 }
 
 #nav-button:focus {
-  border: 1px solid #aeaeae;
   outline: none;
 }
 
@@ -100,13 +105,13 @@ a:hover {
 
 
   i {
-    color: #E5007D;
+    color: $magenta;
   }
 
   .nav-subitem {
-    padding: .8rem 1rem;
+    padding: .6rem 1.5rem;
     font-size: 1rem;
-    font-weight: bolder;
+    font-weight: bold;
 
     cursor: pointer;
   }
@@ -120,14 +125,14 @@ a:hover {
 .unfoldList {
   list-style: none;
   font-size: 20px;
-  padding: 0px;
-  background-color: #E5007D;
+  padding: .5rem;
+  background-color: $magenta;
 }
 
 .unfoldList li {
-  color: #fff !important;
+  color: white !important;
 }
 
 #nav-body .unfoldList li i {
-  color: #fff;
+  color: white;
 }
