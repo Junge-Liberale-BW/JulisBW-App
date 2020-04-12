@@ -57,7 +57,6 @@
         this.zeige_details_leitung = !this.zeige_details_leitung
       }
     }
-
   }
 </script>
 
