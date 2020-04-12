@@ -1,4 +1,5 @@
 <template>
+<div :class="colorScheme">
     <div class="person-box">
         <img :src="person.img" class="person-img">
         <div class="person-text">
@@ -7,27 +8,111 @@
                 <p class="name">
                     {{person.firstname}}<br>{{person.lastname}}
                 </p>
-                <i class="la la-lg la-angle-down"/>
+                <i v-if="folded" class="la la-lg la-angle-down" @click="foldSection"/>
+                <i v-else class="la la-lg la-angle-up" @click="foldSection"/>
+
             </div>
         </div>
     </div>
+    <div v-if="!folded" class="person-info">
+        Aufgaben:<br>
+        <ul>
+            <li v-for="item in person.tasks" v-bind:key="item">{{item}}</li>
+        </ul>
+        <div class="socials">
+            <a :href="'mailto:' + person.email + '@julis-bw.de'"><i class="la la-lg la-envelope"/></a>
+            <a :href="'https://www.facebook.com/' + person.facebook"><i class="la la-lg la-facebook"/></a>
+            <a :href="'https://www.twitter.com/' + person.twitter"><i class="la la-lg la-twitter"/></a>
+            <a :href="'https://www.instagram.com/' + person.instagram"><i class="la la-lg la-instagram"/></a>
+        </div>
+    </div>
+</div>
 </template>
 
 <script>
 export default {
     name:"PersonKachel",
     props: [
-      'person'
+      'person',
+      'color'
     ],
+    data () {
+      return {
+        'folded': true
+      }
+    },
     computed:{
+        colorScheme(){
+            if (this.color === "magenta"){
+                return "color-scheme-magenta";
+            } else if (this.color === "blue"){
+                return "color-scheme-blue";
+            }else {
+                return "color-scheme-yellow";
+            }
+        }
+    },
+    methods: {
+      foldSection () {
+        this.folded = !this.folded
+      }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+.color-scheme-magenta{
+    .person-box{
+        color:#e5007d;
+    }
+    .person-info{
+        background-color:#e5007d;
+        color: white;
+        .socials{
+            i{
+                color: white;
+            }
+        }
+    }
+}
+
+.color-scheme-blue{
+    .person-box{
+        color:#009EE3;
+    }
+    .person-info{
+        background-color:#009EE3;
+        color: white;
+        .socials{
+            i{
+                color: white;
+            }
+        }
+    }
+}
+
+.color-scheme-yellow{
+    .person-box{
+        color: #ffed00;
+        .name{
+            color: #e5007d;
+        }
+    }
+    .person-info{
+        background-color:#ffed00;;
+        color: #e5007d;
+        .socials{
+            i{
+                color: #e5007d;
+            }
+        }
+    }
+}
+
+
+
 .person-box{
     border-style: solid;
-    color: #e5007d;
     display: grid;
     grid-template-columns: 7rem auto;
     i{
@@ -62,6 +147,33 @@ export default {
         }
     }
 }
+
+.person-info{
+    font-weight: bold;
+    font-size: 0.7rem;
+    line-height: 0.8rem !important;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    ul{
+        list-style-position: inside;
+        padding-left: 0.2rem !important;
+    }
+    li{
+        padding-left: 0rem;
+    }
+    .socials{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        align-items: center !important;
+        justify-content: space-around;
+        i{
+            font-size: 1.5rem;
+        }
+    }
+}
+
 
 img {
     width: 7rem;

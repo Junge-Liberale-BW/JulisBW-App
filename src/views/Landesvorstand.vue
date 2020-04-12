@@ -3,7 +3,7 @@
     <Header :sticky="true"/>
     <div v-for="person in landesvorstand" v-bind:key="person.name"
              class="landesvorstand-kacheln">
-        <PersonKachel class="landesvorstand-kachel" :person="person"/>
+        <PersonKachel class="landesvorstand-kachel" :person="person" :color="magenta"/>
     </div>
   </div>
 </template>
@@ -23,6 +23,9 @@
     computed: {
       landesvorstand () {
         return this.$store.getters.landesvorstand
+      },
+      magenta(){
+          return "yellow";
       }
     },
 
