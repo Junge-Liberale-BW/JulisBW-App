@@ -2,7 +2,7 @@
   <div>
       <h2>Aktuelle Termin</h2>
 
-      <div id="terminKarte" class="row">
+      <div id="terminKarte" class="row" :key="key">
           <div id="terminKarteDatum">
               
               <span id="tag">{{ new Date(termine[terminIndex].Datum).getDate() }}</span>
@@ -12,11 +12,14 @@
           <div id="terminKarteInfos">
 
               <h3>{{ termine[terminIndex].Titel }}</h3>
-              <div><i class="la la-clock"></i>{{ `${new Date(termine[terminIndex].Datum).getHours()}:${new Date(termine[terminIndex].Datum).getMinutes()}` }}</div>
+              <div><i class="la la-clock"></i>{{ getTime }}</div>
               <div><i class="la la-map-marker"></i>{{ termine[terminIndex].Ort }}</div>
 
           </div>
       </div>
+      <div id="points">
+            <div v-bind:class="{point: true, active: indexTermin === terminIndex}" @click="neuerTermin(indexTermin)" v-for="(each, indexTermin) in termine" v-bind:key="indexTermin"></div>
+        </div>
   </div>
 </template>
 
@@ -26,6 +29,7 @@ export default {
         return {
             termine: [],
             terminIndex: 0,
+            key: 0,
             months: [
                 'Jan',
                 'Feb',
@@ -43,7 +47,25 @@ export default {
         }
     },
     methods: {
+        neuerTermin: function (neuerIndex) {
+            this.terminIndex = neuerIndex;
+            this.key++;
+        }
+    },
+    computed: {
+        getTime () {
+            let temp = [new Date(this.termine[this.terminIndex].Datum).getHours().toString(), new Date(this.termine[this.terminIndex].Datum).getMinutes().toString()];
+            
+            for (let each in temp) {
+                if (temp[each].length === 1) {
+                    temp[each] = `0${temp[each]}`;
+                }
+            }
 
+            temp = `${temp[0]}:${temp[1]}`
+
+            return temp;
+        }
     },
     mounted: function () {
         this.termine = this.$store.getters.termine;
@@ -107,7 +129,24 @@ h2 {
 }
 
 #terminKarteInfos h3 {
-    margin: 0;
+    margin: 0 0 15p;
+}
+
+#points {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.point {
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.point.active {
+    background: white;
+    border: 1px solid black;
 }
 
 </style>
