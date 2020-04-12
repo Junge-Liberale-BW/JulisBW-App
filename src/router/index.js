@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -39,6 +38,13 @@ const routes = [
     path: '/Juliette',
     name: 'Juliette',
     component: () => import('../views/Juliette.vue')
+  }, {
+    path: '/Juliette/issue/:id',
+    component: () => import('../content/juliette/JulietteIssue.vue')
+  }, {
+    path: '/Juliette/article/:id',
+    component: () => import('../content/juliette/JulietteArticle.vue')
+
   },
   {
     path: '/Kalender',
