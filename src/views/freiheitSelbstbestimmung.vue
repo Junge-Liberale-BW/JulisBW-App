@@ -16,17 +16,11 @@
   export default {
     name: 'freiheitSelbstbestimmung',
     components: { Header, ThemenSeite },
-    data () {
-      return {
-        'zeige_details_leitung': false
-      }
-    },
-
     computed: {
       fixed_content () {
         return {
           0:{
-            title:"Wir kämpfen dafür, dass du dein Leben leben kannst, wie du es willst!",
+            title:"„Wir kämpfen dafür, dass du dein Leben leben kannst, wie du es willst!“",
             text:"Unsere Leitkultur ist das Grundgesetz und wir respektieren jeden Menschen wie er ist. Wir wollen, dass jeder in Deutschland – unabhängig von Religion, sexueller Orientierung, Herkunft oder Aussehen – nach seiner Façon selig werden kann. Unser Ziel ist eine Gesellschaft die die Prinzipien von Gleichheit und Gleichberechtigung uneingeschränkt anerkennt und verteidigt."
             }
         }
