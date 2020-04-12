@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Juliette</h1>
+    <Header />
     <router-link v-for="(article) of issues"
                  v-bind:key="article"
                  :to="'/Juliette/issue/'+article"
@@ -11,8 +11,12 @@
 </template>
 
 <script>
+
+import Header from '../components/Header'
+
   export default {
     name: 'Juliette',
+    components: { Header },
 
     data() {
       return {issues: []}
@@ -26,12 +30,7 @@
 </script>
 
 <style scoped>
-  h1 {
-    background-color: #e5007d;
-    color: #ffed00;
-    padding: 1rem;
-    text-align: center;
-  }
+  
 
   a {
     display: block;
