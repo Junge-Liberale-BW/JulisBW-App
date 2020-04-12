@@ -10,10 +10,11 @@
       <p> {{ textbaustein_1 }} </p>
       <p>{{ textbaustein_2 }}</p>
 
-
+      <div class="button-wrapper">
       <button type="button" class="btn btn-primary text-uppercase mx-auto">
         Jetzt zum LAK anmelden
       </button>
+      </div>
 
       <div class="row">
           <LakLeiterKachel
@@ -27,7 +28,11 @@
       <p>Du interessierst dich für das Thema Digitales & Medien und möchtest dich im Landesarbeitskreis engagieren?</p>
       <p>Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!</p>
 
-      <button type="button" class="btn btn-primary">JETZT ZUM LAK ANMELDEN</button>
+      <div class="button-wrapper">
+      <button type="button" class="btn btn-primary text-uppercase mx-auto">
+        Jetzt zum LAK anmelden
+      </button>
+      </div>
     </div>
   </div>
 </template>
