@@ -10,6 +10,10 @@ $cyan: #009EE3;
 $darker_cyan: #007AAF;
 $yellow: #ffed00;
 
+body *{
+  word-break: break-word;
+}
+
 .text-magenta {
   color: $magenta;
 }
