@@ -1,28 +1,34 @@
 <template>
   <div class="article">
     <div class="title">
-      <h3>{{article.title}}</h3>
+      <h3 class="article-title">{{article.title}}</h3>
+
     </div>
     <div class="body">
-      <a :href="article.link" target="_blank">
+      <a class="article-link" :href="article.link" target="_blank">
         <h3>
           {{article.link}}
         </h3>
       </a>
-      <p class="content" v-html="article.content"></p>
+      <p class="summary" v-html="article.content"></p>
+      <button class="btn" v-if="btn" v-on:click="selected = !selected"> Ganzer Text</button>
+      <p class="full-content" v-if="selected" v-html="article['content:encoded']"></p>
     </div>
     <div class="footer">
       <span v-if="article.isoDate" class="middot">&bull;</span>
       <span class="datetime">{{this.getDateTime()}}</span>
     </div>
   </div>
-</template>
+</template>s
 
 <script>
   const parseDate = tdate => {
     const systemDate = new Date(Date.parse(tdate));
     const userDate = new Date();
     const diff = Math.floor((userDate - systemDate) / 1000);
+
+
+
     if (diff < 59) {
       return diff + "s";
     }
@@ -37,9 +43,16 @@
     }
     return systemDate.toString().substring(4, 10);
   };
+
   export default {
     name: "Article",
-    props: ["article"],
+    props: {
+      article: Object,
+      btn: Boolean,
+      selected: Boolean
+    },
+
+    selected: false,
     methods: {
 
       getDateTime() {
@@ -49,4 +62,6 @@
       }
     }
   };
+
+
 </script>
