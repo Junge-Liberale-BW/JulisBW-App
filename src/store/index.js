@@ -8,9 +8,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    ausgewählterLAK: '',
     headerBilder: {
       'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
       'Landesarbeitskreise': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
+      'LAK-anmelden': 'https://wolke.julis-bw.de/index.php/apps/gallery/preview.public/81264?width=2800&height=2800&c=f5bdf834facbbb6c70c67df521b4a636&requesttoken=Ecw5l7aoNdzquNNRnCoHjcO2TxKcFWG0VzO7qq0pcK4%3D%3AIoVupcT5Up241qMAqH5F%2FY%2FkDmLGcgL7eEmP4J0bJ%2BM%3D&token=WJLQL9NkMyxCcfK',
       'Beschlusssammlung': false,
       'ProgrammatikLexikon': false,
       'WerWirSind': false,
@@ -46,6 +48,10 @@ export default new Vuex.Store({
   actions: {
     wechsel_seite (context, neue_seite) {
       router.push(neue_seite)
+    },
+    LAK_anmelden (store, LAK) {
+      store.state.ausgewählterLAK = LAK;
+      router.push('LAK-anmelden');
     }
   },
   modules: {
@@ -56,6 +62,7 @@ export default new Vuex.Store({
     termine: state => state.termine,
     currentDate: state => state.currentDate,
     landesarbeitskreise: state => state.lak.liste,
-    unsereThemen: state => state.unsereThemen.liste
+    unsereThemen: state => state.unsereThemen.liste,
+    ausgewählterLAK: state => state.ausgewählterLAK
   }
 })

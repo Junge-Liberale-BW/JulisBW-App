@@ -49,7 +49,11 @@
       'leiter',
       'stellvertreter'
     ],
-
+    methods: {
+      anmeldenZumLAK: function () {
+        this.$store.dispatch('LAK_anmelden', this.titel)
+      }
+    }
 
   }
 </script>
