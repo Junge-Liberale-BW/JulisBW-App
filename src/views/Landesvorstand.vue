@@ -1,21 +1,19 @@
 <template>
   <div>
     <Header/>
-    <ThemenSeite
-      thema="Freiheit & Selbstbestimmung"
-      :fixed_content="fixed_content"
-      :foldable_content="foldable_content"
-    />
+    <div v-for="person in landesvorstand" v-bind:key="person.name"
+             class="">
+        <PersonKachel :person="person"/>
   </div>
 </template>
 
 <script>
   import Header from '../components/Header'
-  import ThemenSeite from '../components/ThemenSeite'
+  import PersonKachel from '../components/PersonKachel'
 
   export default {
     name: 'freiheitSelbstbestimmung',
-    components: { Header, ThemenSeite },
+    components: { Header, PersonKachel },
     computed: {
       fixed_content () {
         return {
@@ -52,6 +50,11 @@
     //    this.zeige_details_leitung = !this.zeige_details_leitung
     //  }
     //}
+    computed: {
+      landesvorstand () {
+        return this.$store.getters.landesvorstand
+      }
+    },
 
   }
 </script>
