@@ -23,6 +23,7 @@ export default new Vuex.Store({
       'Kalender': false,
       'Podcast': require('../assets/Header/podcast.png'),
       'Kongresse': require('../assets/Header/kongresse.png'),
+      'Verbandsebenen': require('../assets/Header/verbandsebenen.png'),
       'Juliette': require('../assets/Header/juliette.png'),
       'UnsereThemen': require('../assets/Header/unsereThemen.png'),
       'freiheitSelbstbestimmung': require('../assets/Header/freiheitSelbstbestimmung.png')

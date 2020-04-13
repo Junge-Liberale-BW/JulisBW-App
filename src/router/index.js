@@ -100,6 +100,11 @@ const routes = [
     path: '/Kongresse',
     name: 'Kongresse',
     component: () => import('../views/Kongresse.vue')
+  },
+  {
+    path: '/Verbandsebenen',
+    name: 'Verbandsebenen',
+    component: () => import('../views/Verbandsebenen.vue')
   }
 
 ]

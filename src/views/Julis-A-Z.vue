@@ -33,7 +33,7 @@ export default {
                 'Kürzel-ABC': 'comment-alt',
                 'Kongresse': 'users',
                 'How to LaKo': 'lightbulb',
-                'Verbandsebene': 'layer-group'
+                'Verbandsebenen': 'layer-group'
             }
         }
     },
