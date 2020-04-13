@@ -6,7 +6,6 @@ class JulietteDataService {
   data
 
   constructor(apiBase) {
-
     this.apiBase = apiBase
     this.data = this.getAllArticles()
   }
@@ -32,12 +31,9 @@ class JulietteDataService {
   getAllArticles() {
     return new Promise((resolve, reject) => {
       axios.get(`${this.apiBase}/categories/4`).then(res => {
-
         this.getArticles(`${this.apiBase}/posts`, [], resolve, reject, res.data.count, 1)
       })
     })
-
-
   }
 
   getIssues() {
@@ -45,12 +41,8 @@ class JulietteDataService {
       this.data.then(items => {
         const issues = this.removeDupes(items.map(i => i.title.rendered.replace("/", "-").match(/\[Juliette (.*?)]/i)[1]))
         resolve(issues)
-      }
-    )
-
-
+      })
     })
-
   }
 
   getArticlesOfIssue(issueName) {
@@ -84,7 +76,6 @@ class JulietteDataService {
     });
     return Object.keys(unique);
   }
-
 
 }
 
