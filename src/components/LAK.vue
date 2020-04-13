@@ -10,14 +10,25 @@
       <p>{{ lak.text2 }}</p>
 
       <div class="button-wrapper">
-          <button
-            type="button"
-            class="btn btn-primary text-uppercase mx-auto"
-            @click="lakMail"
-          >LAK Leiter kontaktieren</button>
+        <button
+          type="button"
+          class="btn btn-primary text-uppercase mx-auto"
+          @click="lakMail"
+        >LAK Leiter kontaktieren</button>
       </div>
-      <PersonKachel class="leiter-kachel" :person="lak.leiter" :color="getColor" :foldable="false"/>
-      <PersonKachel class="leiter-kachel" :person="lak.stellvertreter" :color="getColor"/>
+      <PersonKachel
+        class="leiter-kachel"
+        :person="lak.leiter"
+        :position="name+'Leitung'"
+        :color="getColor"
+        :foldable="false"
+      />
+      <PersonKachel
+        class="leiter-kachel"
+        :person="lak.stellvertreter"
+        :position="name +'Stellvertretung'"
+        :color="getColor"
+      />
 
       <p>Du interessierst dich für das Thema Digitales & Medien und möchtest dich im Landesarbeitskreis engagieren?</p>
       <p>Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!</p>
@@ -40,7 +51,7 @@ export default {
   components: { PersonKachel },
   props: ["name"],
   computed: {
-    getColor(){
+    getColor() {
       return "magenta";
     },
     lak() {
@@ -51,15 +62,15 @@ export default {
     anmeldenZumLAK: function() {
       this.$store.dispatch("LAK_anmelden", this.titel);
     },
-    lakMail(){
-      window.open('mailto:'+ this.lak.email +'@julis-bw.de', "_blank");
+    lakMail() {
+      window.open("mailto:" + this.lak.email + "@julis-bw.de", "_blank");
     }
   }
 };
 </script>
 
 <style scoped>
-.leiter-kachel{
+.leiter-kachel {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }

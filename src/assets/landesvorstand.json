@@ -1,5 +1,5 @@
-[
-    {
+{
+    "landesvorsitzender":{
         "position": "Landesvorsitzender",
         "firstname": "Valentin",
         "lastname": "Abel",
@@ -14,7 +14,7 @@
         "twitter": "Valentin_C_Abel",
         "instagram": "valentin_christian_abel"
     },
-    {
+    "stvFinanzen":{
         "position": "Stellv. Landesvorsitzender für Finanzen",
         "firstname": "Dr. Moritz",
         "lastname": "Otto",
@@ -30,7 +30,7 @@
         "twitter": null,
         "instagram": "mo_tto"
     },
-    {
+    "stvOrga":{
         "position": "Stellv. Landesvorsitzender für Organisation",
         "firstname": "Philip",
         "lastname": "Brozé",
@@ -43,7 +43,7 @@
         "twitter": "BrozePhilip",
         "instagram": "phily_bro"
     },
-    {
+    "stvPÖ":{
         "position": "Stellv. Landesvorsitzender für Presse- und Öffentlichkeitsarbeit",
         "firstname": "Pascal",
         "lastname": "Schejnoha",
@@ -57,7 +57,7 @@
         "twitter": "schejnoha",
         "instagram": "pascal.schehnoha"
     },
-    {
+    "stvProgrammatik":{
         "position": "Stellv. Landesvorsitzender für Programmatik",
         "firstname": "Hieronymus",
         "lastname": "Eichengrün",
@@ -71,7 +71,7 @@
         "twitter": null,
         "instagram": "hiero.juliuy"
     },
-    {
+    "beisitzerInternet":{
         "position": "Beisitzer für Internet",
         "firstname": "Daniel",
         "lastname": "Götz",
@@ -86,7 +86,7 @@
         "twitter": "odessa2og",
         "instagram": "odessa2"
     },
-    {
+    "beisitzerPublikationen":{
         "position": "Beisitzer für Publikationen",
         "firstname": "Linus",
         "lastname": "Molin",
@@ -99,7 +99,7 @@
         "twitter": "linus30092141",
         "instagram": "linus.mln"
     },
-    {
+    "beisitzerFinanzen":{
         "position": "Beisitzer für Finanzen",
         "firstname": "Maurice",
         "lastname": "Ehinlanwo",
@@ -113,7 +113,7 @@
         "twitter": null,
         "instagram": "maurice.ehn"
     },
-    {
+    "beisitzerOrga":{
         "position": "Beisitzerin für Organisation",
         "firstname": "Desiree",
         "lastname": "Ortlieb",
@@ -125,7 +125,7 @@
         "twitter": null,
         "instagram": "desireeortlieb"
     },
-    {
+    "beisitzerPÖ":{
         "position": "Beisitzerin für Presse- und Öffentlichkeitsarbeit",
         "firstname": "Lorraine",
         "lastname": "Schönrock",
@@ -139,7 +139,7 @@
         "twitter": null,
         "instagram": "lrrnschnrck"
     },
-    {
+    "beisitzerProgrammatik":{
         "position": "Beisitzer für Programmatik",
         "firstname": "Paul",
         "lastname": "Thies",
@@ -153,4 +153,4 @@
         "twitter": null,
         "instagram": null
     }
-]
+}

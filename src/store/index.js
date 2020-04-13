@@ -10,6 +10,21 @@ export default new Vuex.Store({
   state: {
     ausgewählterLAK: '',
     landesvorstand: require('../assets/landesvorstand.json'),
+    personBilder: {
+      "landesvorsitzender": require('../assets/landesvorsitzender.jpg'),
+      "stvFinanzen": require('../assets/stvFinanzen.jpg'),
+      "stvOrga": require('../assets/stvOrga.jpg'),
+      "stvPÖ": require('../assets/stvPÖ.jpg'),
+      "stvProgrammatik": require('../assets/stvProgrammatik.jpg'),
+      "beisitzerInternet": require('../assets/beisitzerInternet.jpg'),
+      "beisitzerPublikationen": require('../assets/beisitzerPublikationen.jpg'),
+      "beisitzerFinanzen": require('../assets/beisitzerFinanzen.jpg'),
+      "beisitzerOrga": require('../assets/beisitzerOrga.jpg'),
+      "beisitzerPÖ": require('../assets/beisitzerPÖ.jpg'),
+      "beisitzerProgrammatik": require('../assets/beisitzerProgrammatik.jpg'),
+      "digitalesLeitung": require('../assets/beisitzerProgrammatik.jpg'),
+      "digitalesStellvertretung": require('../assets/beisitzerProgrammatik.jpg'),
+    },
     laks: require('../assets/laks'),
     headerBilder: {
       'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
@@ -43,15 +58,15 @@ export default new Vuex.Store({
     currentDate: new Date(),
   },
   mutations: {
-    setze_datum (state, neues_datum) {
+    setze_datum(state, neues_datum) {
       state.currentDate = neues_datum
     }
   },
   actions: {
-    wechsel_seite (context, neue_seite) {
+    wechsel_seite(context, neue_seite) {
       router.push(neue_seite)
     },
-    LAK_anmelden (store, LAK) {
+    LAK_anmelden(store, LAK) {
       store.state.ausgewählterLAK = LAK;
       router.push('LAK-anmelden');
     }

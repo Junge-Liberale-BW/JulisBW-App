@@ -2,15 +2,17 @@
   <div>
     <Header />
     <div
-      v-for="(person, index) in landesvorstand"
-      v-bind:key="person.name"
+      v-for="(k, index) in Object.keys(landesvorstand)"
+      v-bind:key="index"
       class="landesvorstand-kacheln"
     >
       <PersonKachel
         class="landesvorstand-kachel"
         :id="index"
-        :person="person"
+        :person="landesvorstand[k]"
+        :position="k"
         :color="getColor(index)"
+        :foldable="true"
         :folded="index !== activeId"
         v-on:childUnfold="childUnfold($event)"
       />
@@ -47,7 +49,6 @@ export default {
       }
     },
     childUnfold(id) {
-      console.log(id);
       this.activeId = id;
     }
   }

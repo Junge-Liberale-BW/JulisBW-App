@@ -1,7 +1,7 @@
 <template>
   <div :class="colorScheme">
     <div class="person-box">
-      <img :src="person.img" class="person-img" />
+      <img :src="getImage" class="person-img" />
       <div class="person-text">
         <p class="position">{{ person.position }}</p>
         <div class="wrapper">
@@ -50,8 +50,11 @@
 <script>
 export default {
   name: "PersonKachel",
-  props: ["id", "person", "color", "foldable", "folded"],
+  props: ["id", "person", "position", "color", "foldable", "folded"],
   computed: {
+    getImage(){
+      return this.$store.state.personBilder[this.position]
+    },
     colorScheme() {
       if (this.color === "magenta") {
         return "color-scheme-magenta";
