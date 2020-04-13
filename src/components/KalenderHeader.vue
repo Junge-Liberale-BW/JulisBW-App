@@ -21,7 +21,7 @@
 
     methods: {
       zeige_liste () {
-        this.$store.dispatch('wechsel_seite', 'Terminliste')
+        this.$store.dispatch('wechsel_seite', {'name':'Terminliste'})
       }
     }
   }

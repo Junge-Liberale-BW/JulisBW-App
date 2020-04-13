@@ -27,6 +27,10 @@ export default new Vuex.Store({
       'UnsereThemen': require('../assets/Header/unsereThemen.png'),
       'freiheitSelbstbestimmung': require('../assets/Header/freiheitSelbstbestimmung.png')
     },
+    merchBilder: [
+      require('../assets/img/merch/merchshop-1.png'),
+      require('../assets/img/merch/merchshop-2.png'),
+    ],
     termine: [
       {
         'Titel': 'Go-Live Hackathon TI',
@@ -48,7 +52,7 @@ export default new Vuex.Store({
   },
   actions: {
     wechsel_seite (context, neue_seite) {
-      router.push(neue_seite)
+      router.push({name: neue_seite.name, params: neue_seite.params})
     },
     LAK_anmelden (store, LAK) {
       store.state.ausgewählterLAK = LAK;
@@ -66,6 +70,7 @@ export default new Vuex.Store({
     landesarbeitskreise: state => state.lak.liste,
     unsereThemen: state => state.unsereThemen.liste,
     landesvorstand: state => state.person.landesvorstand,
-    ausgewählterLAK: state => state.ausgewählterLAK
+    ausgewählterLAK: state => state.ausgewählterLAK,
+    merchBilder: state => state.merchBilder
   }
 })

@@ -19,8 +19,8 @@
       'year',
     ],
 
-    computed:{
-      get_icon_classes(){
+    computed: {
+      get_icon_classes () {
         return {
           'switch-icon': true,
           'clickable': true,
@@ -35,10 +35,10 @@
     methods: {
       wechsel_ansicht () {
 
-        if(this.$route.name === 'Kalender'){
-          this.$store.dispatch('wechsel_seite', 'Terminliste')
-        }else {
-          this.$store.dispatch('wechsel_seite', 'Kalender')
+        if (this.$route.name === 'Kalender') {
+          this.$store.dispatch('wechsel_seite', { 'name': 'Terminliste' })
+        } else {
+          this.$store.dispatch('wechsel_seite', { 'name': 'Kalender' })
         }
       }
     }
