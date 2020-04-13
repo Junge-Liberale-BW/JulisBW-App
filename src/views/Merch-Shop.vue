@@ -1,12 +1,14 @@
 <template>
   <div>
-
+    <MerchSlider />
   </div>
 </template>
 
 <script>
+import MerchSlider from '../components/MerchSlider'
   export default {
-    name: 'Merch-Shop'
+    name: 'Merch-Shop',
+    components: { MerchSlider }
   }
 </script>
 
