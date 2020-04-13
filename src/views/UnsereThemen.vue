@@ -3,9 +3,9 @@
 
     <Header/>
     <div class="kachel-wrapper">
-        <div v-for="(properties, titel) in themen_liste" v-bind:key="titel"
-             class="wide-kachel-wrapper"
-        >
+      <div v-for="(properties, titel) in themen_liste" v-bind:key="titel"
+           class="wide-kachel-wrapper"
+      >
           <div class="wide-kachel"
                @click="wechsel_seite(titel)"
           >
@@ -14,6 +14,7 @@
             {{properties.title}}
           </div>
         </div>
+      </div>
     </div>
   </div>
 
@@ -32,7 +33,7 @@
 
     methods: {
       wechsel_seite (titel) {
-        this.$store.dispatch('wechsel_seite', "themen/" + titel)
+        this.$store.dispatch('wechsel_seite', { 'name': "themen/" + titel })
       }
     }
   }

@@ -95,8 +95,27 @@ const routes = [
     path: '/Julis-A-Z',
     name: 'Julis-A-Z',
     component: () => import('../views/Julis-A-Z.vue')
+  },
+  {
+    path: '/Kongresse',
+    name: 'Kongresse',
+    component: () => import('../views/Kongresse.vue')
+  },
+  {
+    path: '/Verbandsebenen',
+    name: 'Verbandsebenen',
+    component: () => import('../views/Verbandsebenen.vue')
+  },
+  {
+    path: '/Kürzel-ABC',
+    name: 'Kürzel-ABC',
+    component: () => import('../views/Kürzel-ABC.vue')
+  },
+  {
+    path: '/How-To-LaKo',
+    name: 'How to LaKo',
+    component: () => import('../views/HowToLaKo.vue')
   }
-
 ]
 
 const router = new VueRouter({

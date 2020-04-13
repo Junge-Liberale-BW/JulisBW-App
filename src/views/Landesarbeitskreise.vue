@@ -36,7 +36,7 @@
 
     methods: {
       wechsel_seite (titel) {
-        this.$store.dispatch('wechsel_seite', "lak/" + titel)
+        this.$store.dispatch('wechsel_seite', {'name': "lak/" + titel})
       }
     }
   }
