@@ -1,14 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-  font-family: 'Montserrat', sans-serif;
+@font-face{
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Black.otf) format('truetype');
+  font-weight: 900;
 }
+@font-face{
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-ExtraBold.otf) format('truetype');
+  font-weight: 800;
+}
+@font-face{
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Bold.otf) format('truetype');
+  font-weight: 700;
+}
+@font-face{
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.otf) format('truetype');
+  font-weight: 400;
+}
+
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 $magenta: #e5007d;
 $darker_magenta: #c10069;
 $cyan: #009EE3;
 $darker_cyan: #007AAF;
 $yellow: #ffed00;
+
+* {
+  font-family: 'Montserrat';
+}
 
 body *{
   word-break: break-word;
