@@ -1,5 +1,7 @@
 <template>
-  <div class="article">
+  <div class="article"
+  @click="openPlayer()"
+  >
     <div class="title">
       <h3 class="article-title">{{article.title}}</h3>
     </div>
@@ -42,7 +44,9 @@
 
     selected: false,
     methods: {
-
+        openPlayer(){
+          //playPodcast
+        }
     }
   };
 
