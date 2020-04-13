@@ -59,7 +59,7 @@ const routes = [
   {
     path: '/TerminDetails',
     name: 'TerminDetails',
-    component: () => import('../content/Kalender/TerminDetailText.vue')
+    component: () => import('../content/Kalender/TerminDetails.vue')
   },
   {
     path: '/Merch',
