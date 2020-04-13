@@ -102,7 +102,6 @@ export default new Vuex.Store({
   getters: {
     termine: state => state.termine,
     currentDate: state => state.currentDate,
-    landesarbeitskreise: state => state.laks,
     unsereThemen: state => state.unsereThemen,
     ausgewählterLAK: state => state.ausgewählterLAK,
     landesvorstand: state => state.landesvorstand,

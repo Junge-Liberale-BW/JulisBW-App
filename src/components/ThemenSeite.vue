@@ -21,7 +21,7 @@
     props: ["thema"],
     computed:{
       siteInfo(){
-        console.log(this.$route.name);
+        console.log(this.$route.id);
         return this.$store.getters.unsereThemen[this.thema];
       }
     }

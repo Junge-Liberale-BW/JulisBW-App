@@ -30,7 +30,7 @@
     components: { Header },
     computed: {
       lak_liste () {
-        return this.$store.getters.landesarbeitskreise
+        return this.$store.getters.laks
       }
     },
 
