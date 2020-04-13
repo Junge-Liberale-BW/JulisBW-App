@@ -2,7 +2,7 @@
   <div class="lak-seite">
     <div class="lak-header">
       <i class="las la-sitemap la-8x"></i>
-      <h1 class="text-center text-uppercase">LAK {{ lak.titel }}</h1>
+      <h1 class="text-center text-uppercase">LAK {{ lak.title }}</h1>
     </div>
 
     <div class="container lak-content">
