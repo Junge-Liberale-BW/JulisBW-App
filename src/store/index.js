@@ -3,13 +3,14 @@ import Vuex from 'vuex'
 import router from '../router'
 import lak from './modules/lak'
 import unsereThemen from './modules/unsereThemen'
-import person from './modules/person'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     ausgewählterLAK: '',
+    landesvorstand: require('../assets/landesvorstand.json'),
+    laks: require('../assets/laks'),
     headerBilder: {
       'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
       'Landesarbeitskreise': require('../assets/Header/landesarbeitskreise.png'),
@@ -57,15 +58,15 @@ export default new Vuex.Store({
   },
   modules: {
     lak: lak,
-    unsereThemen: unsereThemen,
-    person: person
+    unsereThemen: unsereThemen
   },
   getters: {
     termine: state => state.termine,
     currentDate: state => state.currentDate,
     landesarbeitskreise: state => state.lak.liste,
     unsereThemen: state => state.unsereThemen.liste,
-    landesvorstand: state => state.person.landesvorstand,
-    ausgewählterLAK: state => state.ausgewählterLAK
+    ausgewählterLAK: state => state.ausgewählterLAK,
+    landesvorstand: state => state.landesvorstand,
+    laks: state => state.laks
   }
 })

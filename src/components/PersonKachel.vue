@@ -10,34 +10,34 @@
             <br />
             {{person.lastname}}
           </p>
-          <i v-if="folded" class="la la-lg la-angle-down" @click="foldSection" />
-          <i v-else class="la la-lg la-angle-up" @click="foldSection" />
+          <i v-if="folded && foldable" class="la la-lg la-angle-down" @click="foldSection" />
+          <i v-else-if="foldable" class="la la-lg la-angle-up" @click="foldSection" />
         </div>
       </div>
     </div>
-    <div v-if="!folded" class="person-info">
+    <div v-if="!folded && foldable" class="person-info">
       Aufgaben:
       <br />
       <ul>
         <li v-for="item in person.tasks" v-bind:key="item">{{item}}</li>
       </ul>
       <div class="socials">
-        <div v-if="person.email !== undefined">
+        <div v-if="person.email !== null">
           <a :href="'mailto:' + person.email + '@julis-bw.de'">
             <i class="la la-lg la-envelope" />
           </a>
         </div>
-        <div v-if="person.facebook !== undefined">
+        <div v-if="person.facebook !== null">
           <a :href="'https://www.facebook.com/' + person.facebook">
             <i class="la la-lg la-facebook" />
           </a>
         </div>
-        <div v-if="person.twitter !== undefined">
+        <div v-if="person.twitter !== null">
           <a :href="'https://www.twitter.com/' + person.twitter">
             <i class="la la-lg la-twitter" />
           </a>
         </div>
-        <div v-if="person.instagram !== undefined">
+        <div v-if="person.instagram !== null">
           <a :href="'https://www.instagram.com/' + person.instagram">
             <i class="la la-lg la-instagram" />
           </a>
@@ -50,7 +50,7 @@
 <script>
 export default {
   name: "PersonKachel",
-  props: ["id", "person", "color", "folded"],
+  props: ["id", "person", "color", "foldable", "folded"],
   computed: {
     colorScheme() {
       if (this.color === "magenta") {

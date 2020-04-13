@@ -1,0 +1,34 @@
+{
+    "soziales":{
+        "title": "Arbeit & Soziales",
+        "text1": "text1",
+        "text2": "text2",
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Anja",
+            "lastname": "Milde"
+        },
+        "stellvertreter":{
+            "position": "Stellvertretung",
+            "firstname": "Anja",
+            "lastname": "Milde"
+        },
+        "email":"lak-leiter-soziales"
+    },
+    "digitales":{
+        "title": "Digitales & Medien",
+        "text1": "Dieser LAK befasst sich mit der Frage was Politik tun oder lassen sollte,\num IT zum Wohle der Gesellschaft und nicht zu ihrem Schaden zu gebrauchen.",
+        "text2": "IT ist ein essentieller Bestandteil unseres Lebensalltags.\nSie kann individuelle Freiheit beflügeln und Innovation fördern, aber auch Menschen unterdrücken und wenigen\nAkteuren überproportional viel Macht über unsere gesellschaft verleihen",
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Timo",
+            "lastname": "Breuninger"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Mirjam",
+            "lastname": "Aron"
+        },
+        "email": "lak-leiter-digitales"
+    }
+}

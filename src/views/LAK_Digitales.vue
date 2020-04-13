@@ -1,11 +1,7 @@
 <template>
   <div>
     <LAK
-      titel="Digitales und Medien"
-      :textbaustein_1="textbaustein_1"
-      :textbaustein_2="textbaustein_2"
-      :leiter="leiter"
-      :stellvertreter="stellvertreter"
+      name="digitales"
     />
   </div>
 </template>
@@ -29,8 +25,7 @@
           '        Akteuren überproportional viel Macht über unsere gesellschaft verleihen'
       },
       textbaustein_2 () {
-        return '      Dieser LAK befasst sich mit der Frage was Politik tun oder lassen sollte,\n' +
-          '      um IT zum Wohle der Gesellschaft und nicht zu ihrem Schaden zu gebrauchen.'
+        return 'd'
       },
       leiter(){
         return {
