@@ -105,8 +105,12 @@ const routes = [
     path: '/Verbandsebenen',
     name: 'Verbandsebenen',
     component: () => import('../views/Verbandsebenen.vue')
+  },
+  {
+    path: '/Kürzel-ABC',
+    name: 'Kürzel-ABC',
+    component: () => import('../views/Kürzel-ABC.vue')
   }
-
 ]
 
 const router = new VueRouter({
