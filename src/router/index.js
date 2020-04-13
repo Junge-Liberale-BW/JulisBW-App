@@ -57,11 +57,6 @@ const routes = [
     component: () => import('../views/Terminliste.vue')
   },
   {
-    path: '/Merch',
-    name: 'Merch',
-    component: () => import('../views/Merch-Shop.vue')
-  },
-  {
     path: '/Podcast',
     name: 'Podcast',
     component: () => import('../views/Podcast.vue')
