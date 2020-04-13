@@ -97,6 +97,12 @@ const routes = [
     component: () => import('../views/Julis-A-Z.vue')
   },
   {
+
+    path: '/WerWirSind',
+    name: 'WerWirSind',
+    component: () => import('../views/WerWirSind.vue')
+  },
+  {
     path: '/Kongresse',
     name: 'Kongresse',
     component: () => import('../views/Kongresse.vue')

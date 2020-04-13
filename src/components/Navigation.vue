@@ -32,9 +32,6 @@
             <li class="nav-subitem" @click="changeSite('UnsereThemen')">
               <i class="la la-angle-right la-lg" /> Unsere Themen
             </li>
-            <li class="nav-subitem">
-              <i class="la la-angle-right la-lg" /> Beschlusssammlung
-            </li>
             <li class="nav-subitem" @click="changeSite('Landesarbeitskreise')">
               <i class="la la-angle-right la-lg" /> Landesarbeitskreise
             </li>
@@ -47,7 +44,7 @@
             />
           </li>
           <ul v-if="unfold.verband" class="unfoldList">
-            <li class="nav-subitem">
+            <li class="nav-subitem" @click="changeSite('WerWirSind')">
               <i class="la la-angle-right" /> Wer wir sind
             </li>
             <li class="nav-subitem" @click="changeSite('Landesvorstand')">
