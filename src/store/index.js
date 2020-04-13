@@ -22,6 +22,7 @@ export default new Vuex.Store({
       'Merch': false,
       'Kalender': false,
       'Podcast': require('../assets/Header/podcast.png'),
+      'Arbeitskreise': require('../assets/Header/arbeitskreise.png'),
       'Kongresse': require('../assets/Header/kongresse.png'),
       'Verbandsebenen': require('../assets/Header/verbandsebenen.png'),
       'Kürzel-ABC': require('../assets/Header/kürzelABC.png'),

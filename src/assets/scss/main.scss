@@ -178,3 +178,17 @@ body *{
     top: 3.5rem;
   }
 }
+
+a.button_big, button.button_big{
+  width: 80vw;
+  margin: 20px auto;
+  padding-top: 5px;
+  display: block;
+  text-align: center;
+  height: 50px;
+  font-weight: bold;
+  color: #fff !important;
+  background-color: #009EE3;
+  font-size: 25px;
+  text-transform: uppercase; 
+}

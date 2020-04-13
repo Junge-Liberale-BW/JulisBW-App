@@ -115,6 +115,11 @@ const routes = [
     path: '/How-To-LaKo',
     name: 'How to LaKo',
     component: () => import('../views/HowToLaKo.vue')
+  },
+  {
+    path: '/Arbeitskreise',
+    name: 'Arbeitskreise',
+    component: () => import('../views/Arbeitskreise.vue')
   }
 ]
 
