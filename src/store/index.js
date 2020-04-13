@@ -11,7 +11,7 @@ export default new Vuex.Store({
   state: {
     ausgewählterLAK: '',
     headerBilder: {
-      'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
+      'Home': require('../assets/Header/startseite.png'),
       'Landesarbeitskreise': require('../assets/Header/landesarbeitskreise.png'),
       'LAK-anmelden': require('../assets/Header/landesarbeitskreise.png'),
       'Beschlusssammlung': false,
