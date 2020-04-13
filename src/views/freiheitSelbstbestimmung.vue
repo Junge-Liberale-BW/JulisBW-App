@@ -46,13 +46,6 @@
           }
         }
     },
-
-    //methods: {
-    //  schalte_leitung_anzeigen_um () {
-    //    this.zeige_details_leitung = !this.zeige_details_leitung
-    //  }
-    //}
-
   }
 </script>
 
