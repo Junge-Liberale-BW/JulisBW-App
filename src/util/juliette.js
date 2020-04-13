@@ -48,23 +48,20 @@ class JulietteDataService {
   getArticlesOfIssue(issueName) {
     return new Promise((resolve) => {
       this.data.then(items => {
-          const articles = (items.filter(i => i.title.rendered.replace("/", "-").includes(issueName)))
-          console.log(articles)
-          resolve(articles)
-        }
-      );
+        const articles = (items.filter(i => i.title.rendered.replace("/", "-").includes(issueName)))
+        console.log(articles)
+        resolve(articles)
+      })
     })
   }
 
   getArticle(articleId) {
     return new Promise((resolve) => {
       this.data.then(items => {
-            const article = (items.find(i => i.id + "" === "" + articleId))
-            resolve(article)
-          }
-        );
-      }
-    )
+        const article = (items.find(i => i.id + "" === "" + articleId))
+        resolve(article)
+      })
+    })
   }
 
   removeDupes(names) {
@@ -76,8 +73,6 @@ class JulietteDataService {
     });
     return Object.keys(unique);
   }
-
 }
-
 
 export default new JulietteDataService("https://www.julis-bw.de/wp-json/wp/v2")
