@@ -1,10 +1,10 @@
 <template>
   <div v-if="error" class="error">{{error}}</div>
   <div v-else class="feed">
-    <h1 v-if="name">{{name}}</h1>
-    <h1 v-else>{{feed.title}}</h1>
-    <div class = "feed">
-     {{feed.description}}
+    <h1 v-if="name" class="name">{{name}}</h1>
+    <h1 v-else class="title">{{feed.title}}</h1>
+    <div class="feed">
+      {{feed.description}}
     </div>
     <div v-if="loading" class="spinner">
       <div class="bounce1"></div>
@@ -16,6 +16,7 @@
         v-for="(article, index) of getArticles()"
         v-bind:key="index"
         v-bind:article="article"
+        v-bind:btn="btn"
       />
     </div>
   </div>
@@ -24,6 +25,8 @@
 <script>
   import Article from "./Article.vue";
   import RSSParser from "rss-parser";
+
+
   export default {
     name: "Feed",
     components: {
@@ -33,7 +36,8 @@
       feedUrl: String,
       name: String,
       limit: Number,
-      loadMore: Boolean
+      loadMore: Boolean,
+      btn: Boolean
     },
     data() {
       return {
@@ -60,12 +64,14 @@
         this.error = "";
         this.loading = true;
         this.feed = {};
+
         try {
           const data = await fetch(this.feedUrl);
           if (data.ok) {
             const text = await data.text();
             const parser = new RSSParser();
-            //console.log(text)
+
+
             parser.parseString(text, (err, parsed) => {
               this.loading = false;
               if (err) {

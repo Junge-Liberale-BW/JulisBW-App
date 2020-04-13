@@ -2,24 +2,30 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import router from '../router'
 import lak from './modules/lak'
+import unsereThemen from './modules/unsereThemen'
+import person from './modules/person'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    ausgewählterLAK: '',
     headerBilder: {
       'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
-      'Landesarbeitskreise': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
+      'Landesarbeitskreise': require('../assets/Header/landesarbeitskreise.png'),
+      'LAK-anmelden': require('../assets/Header/landesarbeitskreise.png'),
       'Beschlusssammlung': false,
       'ProgrammatikLexikon': false,
       'WerWirSind': false,
-      'Landesvorstand': false,
-      'Julis-A-Z': 'https://wolke.julis-bw.de/index.php/apps/gallery/preview.public/81266?width=2000&height=2000&c=0526ccfd17e86db49aeeb5e6055b8848&requesttoken=k61ZTe4qboSJmXnsTP02GrTU3K9IiKWweyhUyyA2eZA%3D%3Awd5uKaBuCt3h6Rq8CZUHafe9psYKp%2BjVKH0ZoW1XTd0%3D&token=WJLQL9NkMyxCcfK',
+      'Landesvorstand': require('../assets/Header/landesvorstand.png'),
+      'Julis-A-Z': require('../assets/Header/julisaz.png'),
       'Merch': false,
       'Kalender': false,
-      'Podcast': false,
+      'Podcast': require('../assets/Header/podcast.png'),
       'Newsletter': false,
-      'Juliette': false
+      'Juliette': require('../assets/Header/juliette.png'),
+      'UnsereThemen': require('../assets/Header/unsereThemen.png'),
+      'freiheitSelbstbestimmung': require('../assets/Header/freiheitSelbstbestimmung.png')
     },
     termine: [
       {
@@ -50,15 +56,23 @@ export default new Vuex.Store({
   actions: {
     wechsel_seite (context, neue_seite) {
       router.push(neue_seite)
+    },
+    LAK_anmelden (store, LAK) {
+      store.state.ausgewählterLAK = LAK;
+      router.push('LAK-anmelden');
     }
   },
   modules: {
-    lak: lak
+    lak: lak,
+    unsereThemen: unsereThemen,
+    person: person
   },
   getters: {
     termine: state => state.termine,
     currentDate: state => state.currentDate,
     landesarbeitskreise: state => state.lak.liste,
-    umfrageDerWoche: state => state.umfrageDerWoche
+    unsereThemen: state => state.unsereThemen.liste,
+    landesvorstand: state => state.person.landesvorstand,
+    ausgewählterLAK: state => state.ausgewählterLAK
   }
 })

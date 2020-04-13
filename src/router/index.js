@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -39,6 +38,13 @@ const routes = [
     path: '/Juliette',
     name: 'Juliette',
     component: () => import('../views/Juliette.vue')
+  }, {
+    path: '/Juliette/issue/:id',
+    component: () => import('../content/juliette/JulietteIssue.vue')
+  }, {
+    path: '/Juliette/article/:id',
+    component: () => import('../content/juliette/JulietteArticle.vue')
+
   },
   {
     path: '/Kalender',
@@ -61,9 +67,29 @@ const routes = [
     component: () => import('../views/Podcast.vue')
   },
   {
+    path: '/UnsereThemen',
+    name: 'UnsereThemen',
+    component: () => import('../views/UnsereThemen.vue')
+  },
+  {
+    path: '/freiheitSelbstbestimmung',
+    name: 'freiheitSelbstbestimmung',
+    component: () => import('../views/freiheitSelbstbestimmung.vue')
+  },
+  {
     path: '/Verband',
     name: 'Verband',
     component: () => import('../views/Verband.vue')
+  },
+  {
+    path: '/Landesvorstand',
+    name: 'Landesvorstand',
+    component: () => import('../views/Landesvorstand.vue')
+  },
+  {
+    path: '/LAK-anmelden',
+    name: 'LAK-anmelden',
+    component: () => import('../views/LAK-Anmeldung')
   },
   {
     path: '/Julis-A-Z',
