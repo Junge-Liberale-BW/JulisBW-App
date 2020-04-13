@@ -27,7 +27,7 @@
     <p class="alignCenter">
         Dann besuche jetzt unsere Website und beantrage jetzt deine persönliche Unabhängigkeitserklärung!
     </p>
-    <a href="https://www.julis-bw.de/service/mitmachen/mitglied-werden/" target="_blank" id="mitgliedWerden">Jetzt Mitglied werden</a>
+    <a href="https://www.julis-bw.de/service/mitmachen/mitglied-werden/" target="_blank" class="button_big">Jetzt Mitglied werden</a>
   </div>
 </template>
 
@@ -91,18 +91,6 @@ hr {
     margin: 10px 25px;
     border: none;
     border-bottom: 3px solid grey;
-}
-
-#mitgliedWerden {
-    width: 80vw;
-    margin: 20px auto;
-    padding-top: 7px;
-    display: block;
-    text-align: center;
-    height: 50px;
-    color: #fff;
-    background-color: #009EE3;
-    font-size: 20px; 
 }
 
 a:active, a:focus, a:hover {
