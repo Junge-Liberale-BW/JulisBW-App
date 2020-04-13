@@ -30,9 +30,9 @@ const routes = [
     component: () => import('../views/Landesarbeitskreise.vue')
   },
   {
-    path: '/Digitales & Medien',
-    name: 'Digitales & Medien',
-    component: () => import('../views/LAK_Digitales.vue')
+    path: '/lak/:id',
+    name: 'LAK-Ansicht',
+    component: () => import('../views/LAK-Ansicht.vue')
   },
   {
     path: '/Juliette',
@@ -57,11 +57,6 @@ const routes = [
     component: () => import('../views/Terminliste.vue')
   },
   {
-    path: '/Merch',
-    name: 'Merch',
-    component: () => import('../views/Merch-Shop.vue')
-  },
-  {
     path: '/Podcast',
     name: 'Podcast',
     component: () => import('../views/Podcast.vue')
@@ -72,9 +67,9 @@ const routes = [
     component: () => import('../views/UnsereThemen.vue')
   },
   {
-    path: '/freiheitSelbstbestimmung',
-    name: 'freiheitSelbstbestimmung',
-    component: () => import('../views/freiheitSelbstbestimmung.vue')
+    path: '/themen/:id',
+    name: 'Themen-Ansicht',
+    component: () => import('../views/Themen-Ansicht.vue')
   },
   {
     path: '/Verband',
@@ -95,6 +90,12 @@ const routes = [
     path: '/Julis-A-Z',
     name: 'Julis-A-Z',
     component: () => import('../views/Julis-A-Z.vue')
+  },
+  {
+
+    path: '/WerWirSind',
+    name: 'WerWirSind',
+    component: () => import('../views/WerWirSind.vue')
   },
   {
     path: '/Kongresse',

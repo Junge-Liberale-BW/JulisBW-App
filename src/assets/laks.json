@@ -1,0 +1,219 @@
+{
+    "soziales": {
+        "title": "Arbeit & Soziales",
+        "icon": "suitcase",
+        "text1": "Im Landesarbeitskreis Arbeit & Soziales greifen wir gesellschaftliche Kernthemen auf und betrachten unter anderem die Gründe für die ungleichen Zugangschancen zum Arbeitsmarkt. Dabei berücksichtigen wir auch verschiedene Zielgruppen und erarbeiten liberale Lösungen für eine bessere Chancengerechtigkeit. Wir wollen Menschen zu eigener Leistung motivieren und befähigen. Des Weiteren steht die Ausgestaltung unserer Sozialsysteme, gerade im Hinblick auf den Demografischen Wandel im Fokus.",
+        "text2": null,
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Anja",
+            "lastname": "Milde"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Sascha",
+            "lastname": "Kemper"
+        },
+        "email": "lak-leiter-soziales"
+    },
+    "bildung": {
+        "title": "Bildung & Forschung",
+        "icon": "school",
+        "text1": "Unser Ziel ist eine hervorragende Bildung in allen Bereichen, von der frühkindlichen Erziehung bis hin zum lebenslangen Lernen.",
+        "text2": "Du siehst die Schwachstellen in unserem Bildungssystem? Dann bist du beim Landesarbeitskreis Bildung genau richtig. Bring deine Ideen für ein optimiertes und fortschrittliches Lernen ein und lasst uns gemeinsam für weltbeste Bildung in Baden-Württemberg kämpfen.",
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Irene",
+            "lastname": "Schuster"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Nikolai",
+            "lastname": "Ditzenbach"
+        },
+        "email": "lak-leiter-bildung"
+    },
+    "digitales": {
+        "title": "Digitales & Medien",
+        "icon": "server",
+        "text1": "Dieser LAK befasst sich mit der Frage was Politik tun oder lassen sollte,\num IT zum Wohle der Gesellschaft und nicht zu ihrem Schaden zu gebrauchen.",
+        "text2": "IT ist ein essentieller Bestandteil unseres Lebensalltags.\nSie kann individuelle Freiheit beflügeln und Innovation fördern, aber auch Menschen unterdrücken und wenigen\nAkteuren überproportional viel Macht über unsere gesellschaft verleihen",
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Timo",
+            "lastname": "Breuninger"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Mirjam",
+            "lastname": "Aron"
+        },
+        "email": "lak-leiter-digitales"
+    },
+    "aussen": {
+        "title": "Europa, Aussen & Verteidigung",
+        "icon": "globe",
+        "text1": "Unsere internationale Ordnung befindet sich im Wandel. Krisen, Kriege und Konflikte erschüttern die internationale liberale Nachkriegsordnung, und neue Akteure drängen sich auf die Weltbühne. Auch die Europäische Union hat dringenden Reformbedarf. Es ist an uns, liberale Lösungen für internationale Konflikte zu finden und das internationale Regelsystem fit für das 21. Jahrhundert zu machen!",
+        "text2": null,
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Florian",
+            "lastname": "Ratzel"
+        },
+        "stellvertreter": null,
+        "email": "lak-leiter-aussen"
+    },
+    "finanzen": {
+        "title": "Finanzen & Steuern",
+        "icon": "money-bill",
+        "text1": "Im LAK Finanzen diskutieren wir aktuelle Themen rund um die Finanzpolitik. Wir sprechen unter anderem über das Steuersystem, den Länderfinanzausgleich, die Zinspolitik, nationale und internationale Kapitalmarktregulierung und vieles mehr. Geleitet wird die Diskussion von der Frage, wie wir diese Themenfelder aus der Perspektive junger Menschen im Sinne einer liberalen Politik gestalten können.",
+        "text2": null,
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Patrick",
+            "lastname": "Leismann"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Benjamin",
+            "lastname": "Kurtz"
+        },
+        "email": "lak-leiter-finanzen"
+    },
+    "gesellschaft": {
+        "title": "Gesellschaft & Kultur",
+        "icon": "users",
+        "text1": "„Leitkultur“, „Islam“, „drittes Geschlecht“ — solche Stichwörter reichen oft aus, um hitzige Debatten auszulösen. Gesellschaftliche Fragen bewegen die Menschen stark. Dieser Landesarbeitskreis möchte sich weiterhin programmatisch den Fragen um die liberale Gesellschaft zuwenden, sowie diskutieren, wie wir unsere Überzeugung von einer offenen und damit diversen Gesellschaft innerverbandlich besser repräsentieren und kommunizieren können.",
+        "text2": null,
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Dr. Marvin Anas",
+            "lastname": "Hahn"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Katharina",
+            "lastname": "Geissler"
+        },
+        "email": "lak-leiter-gesellschaft"
+    },
+    "gesundheit": {
+        "title": "Gesundheit",
+        "icon": "hospital",
+        "text1": "Inwiefern hat der Staat ein berechtigtes Interesse an der Gesundheit seiner Bevölkerung, und welche Maßnahmen werden dadurch gerechtfertigt? In diesem LAK diskutieren wir nicht nur über die Drogenpolitik oder das System der gesetzlichen Krankenkassen, sondern auch wie Beeinträchtigten Menschen die Teilhabe am sozialen Leben ermöglicht werden kann. Dabei fassen wir „beeinträchtigt“ weit und schließen auch Menschen mit psych. Störungen und alte Menschen ein.",
+        "text2": null,
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Marvin",
+            "lastname": "Ellsässer"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Laura",
+            "lastname": "Gareiss"
+        },
+        "email": "lak-leiter-gesundheit"
+    },
+    "wirtschaft": {
+        "title": "Handwerk & Wirtschaft",
+        "icon":"industry",
+        "text1": "Egal, ob du über die Zukunft des Handwerks und der beruflichen Bildung, Meisterpflicht und Kammerzwang reden willst, über Arbeit 4.0 und Wettbewerbsrecht in der Digitalisierung – oder dich vielleicht Subventionen nerven und du über Privatisierung diskutieren möchtest; egal ob Wohnungsmarkt, die Verteilung von Wohlstand oder doch Start-Ups: Bei uns bist du richtig!",
+        "text2": null,
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Julian",
+            "lastname": "Grünke"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Julian",
+            "lastname": "Barazi"
+        },
+        "email": "lak-leiter-wirtschaft"
+    },
+    "innen": {
+        "title": "Innen & Recht",
+        "icon": "balance-scale",
+        "text1": "Der Landesarbeitskreis Innen & Recht beschäftigt sich mit vielfältigen rechtspolitischen Fragen. Dazu gehören Steuern, Recht, Polizei und innere Sicherheit. Mit Priorität behandeln wir die verwiesenen Anträge der letzten Landeskongresse.",
+        "text2": null,
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Domenico",
+            "lastname": "Burkart"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Leonie",
+            "lastname": "Kraus"
+        },
+        "email": "lak-leiter-innen"
+    },
+    "laendliches": {
+        "title": "Kommunales",
+        "icon": "city",
+        "text1": "Der Landesarbeitskreis Kommunales beschäftigt sich mit aktuellen Themen aus den Bereichen Landwirtschaft, ländlicher Raum und Verbraucherschutz. Wir müssen uns in einem Land wie Baden-Württemberg, wo 35% der Bevölkerung auf dem Land leben, auch mit den ländlichen Räumen auseinandersetzen. Diese Gebiete müssen weiterhin attraktiv bleiben und die Menschen, die dort wohnen, dieselben Chancen und Möglichkeiten bekommen wie die in Städten.",
+        "text2": null,
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Maximilian",
+            "lastname": "Reinhardt"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Benedikt",
+            "lastname": "Eisele"
+        },
+        "email": "lak-leiter-laendliches"
+    },
+    "umwelt": {
+        "title": "Umwelt & Verkehr",
+        "icon": "road",
+        "text1": "Zum einen werden wir liberale Lösungsvorschläge für das drängende Problem Klimawandel suchen. Ebenfalls sprechen wir andere Herausforderungen an, etwa die Artenvielfalt oder die Vermüllung der Weltmeere.",
+        "text2": "Zum anderen werden Dieselfahrverbote und der Wandel hin zur Elektromobilität diskutiert. Aber auch ganzheitliche Mobilitätskonzepte, autofreie Innenstädte und Infrastrukturmaßnahmen sind ein Thema.",
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Yannick",
+            "lastname": "Kalupke"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Andrey",
+            "lastname": "Belkin"
+        },
+        "email": "lak-leiter-umwelt"
+    },
+    "struktur": {
+        "title": "Verbandsentwicklung",
+        "icon": "dna",
+        "text1": "Ein dynamischer Verband wie die JuLis Baden-Württemberg ist laufend im Wandel. Der Landesarbeitskreis Verbandsentwicklung beschäftigt sich mit der Frage, wie man die Struktur des Landesverbands anpassen kann, um den Spaß am Mitmachen zu steigern und die Strukturen effizient zu halten. Es geht dabei auch darum, zu überlegen, wie digitale Möglichkeiten unsere Arbeit unterstützen können.",
+        "text2": null,
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Daniel",
+            "lastname": "Karrais MdL"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Eileen",
+            "lastname": "Lerche"
+        },
+        "email": "lak-leiter-struktur"
+    },
+    "schueler": {
+        "title": "Verbandsentwicklung",
+        "icon": "graduation-cap",
+        "text1": "Das hier ist ein Blanko Text. Der tatsächliche Text über den LAK Liberale Schüler wird zeitnah nachgereicht.",
+        "text2": null,
+        "leiter": {
+            "position": "Leitung",
+            "firstname": "Sebastian",
+            "lastname": "Weiss"
+        },
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Peeke",
+            "lastname": "Zajonc"
+        },
+        "email": "lak-leiter-schueler"
+    }
+}
