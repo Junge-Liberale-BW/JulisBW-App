@@ -13,7 +13,7 @@
         <div id="nav-header">
           <img
             height="100%"
-            src="https://www.julis.de/wp-content/uploads/2017/03/Logo-Junge-Liberale-web.png"
+            src="../assets/img/julisBW-banner.png"
           />
         </div>
 

@@ -61,7 +61,6 @@ a:hover {
   top: 3em;
   z-index: 100;
   border-style: none;
-
   padding-top: .3rem;
   padding-bottom: .3rem;
 }
@@ -87,14 +86,17 @@ a:hover {
 
 
 #nav-header {
-  height: 20vh;
-  width: 280px;
+  width: 100%;
   font-size: 40px;
+  min-height: 100px;
   background-color: #fff;
+  text-align: center;
 }
 
 #nav-header img {
   max-width: 100%;
+  width: calc(100% - 75px);
+  height: auto;
   max-height: 100%;
 }
 
