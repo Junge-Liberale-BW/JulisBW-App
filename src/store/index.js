@@ -48,12 +48,7 @@ export default new Vuex.Store({
   },
   actions: {
     wechsel_seite (context, neue_seite) {
-      let up = router.currentRoute.fullPath.split('/').length - 2;
-      while (up > 0) {
-        neue_seite = '../' + neue_seite;
-        up--;
-      }
-      router.push(neue_seite)
+      router.push({name: neue_seite})
     },
     LAK_anmelden (store, LAK) {
       store.state.ausgewählterLAK = LAK;
