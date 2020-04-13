@@ -48,7 +48,7 @@ export default new Vuex.Store({
   },
   actions: {
     wechsel_seite (context, neue_seite) {
-      router.push(neue_seite)
+      router.push({name: neue_seite})
     },
     LAK_anmelden (store, LAK) {
       store.state.ausgewählterLAK = LAK;
