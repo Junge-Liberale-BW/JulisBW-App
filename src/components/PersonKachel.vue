@@ -143,8 +143,8 @@ export default {
     margin-bottom: 0.5rem;
   }
   .name {
-    font-size: 1.7rem;
-    line-height: 1.7rem;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
     font-weight: 900;
     text-transform: uppercase;
     margin-top: 0rem;
@@ -156,7 +156,7 @@ export default {
     align-items: center !important;
     justify-content: space-between;
     i {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
   }
 }
