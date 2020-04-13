@@ -44,7 +44,7 @@
             />
           </li>
           <ul v-if="unfold.verband" class="unfoldList">
-            <li class="nav-subitem">
+            <li class="nav-subitem" @click="changeSite('WerWirSind')">
               <i class="la la-angle-right" /> Wer wir sind
             </li>
             <li class="nav-subitem" @click="changeSite('Landesvorstand')">

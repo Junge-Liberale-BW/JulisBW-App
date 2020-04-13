@@ -95,8 +95,12 @@ const routes = [
     path: '/Julis-A-Z',
     name: 'Julis-A-Z',
     component: () => import('../views/Julis-A-Z.vue')
+  },
+  {
+    path: '/WerWirSind',
+    name: 'WerWirSind',
+    component: () => import('../views/WerWirSind.vue')
   }
-
 ]
 
 const router = new VueRouter({

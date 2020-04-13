@@ -14,15 +14,11 @@ export default new Vuex.Store({
       'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
       'Landesarbeitskreise': require('../assets/Header/landesarbeitskreise.png'),
       'LAK-anmelden': require('../assets/Header/landesarbeitskreise.png'),
-      'Beschlusssammlung': false,
-      'ProgrammatikLexikon': false,
-      'WerWirSind': false,
+      'WerWirSind': require('../assets/Header/werwirsind.png'),
       'Landesvorstand': require('../assets/Header/landesvorstand.png'),
       'Julis-A-Z': require('../assets/Header/julisaz.png'),
-      'Merch': false,
-      'Kalender': false,
       'Podcast': require('../assets/Header/podcast.png'),
-      'Newsletter': false,
+      
       'Juliette': require('../assets/Header/juliette.png'),
       'UnsereThemen': require('../assets/Header/unsereThemen.png'),
       'freiheitSelbstbestimmung': require('../assets/Header/freiheitSelbstbestimmung.png')
