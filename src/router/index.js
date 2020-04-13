@@ -95,6 +95,11 @@ const routes = [
     path: '/Julis-A-Z',
     name: 'Julis-A-Z',
     component: () => import('../views/Julis-A-Z.vue')
+  },
+  {
+    path: '/Kongresse',
+    name: 'Kongresse',
+    component: () => import('../views/Kongresse.vue')
   }
 
 ]
