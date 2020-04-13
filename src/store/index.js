@@ -11,19 +11,9 @@ export default new Vuex.Store({
   state: {
     ausgewählterLAK: '',
     headerBilder: {
-<<<<<<< HEAD
-      'Home': [
-        ['https://wolke.julis-bw.de/index.php/apps/gallery/preview.public/81346?width=2800&height=2800&c=145acf899061c984740d8d0c2b21e741&requesttoken=Ecw5l7aoNdzquNNRnCoHjcO2TxKcFWG0VzO7qq0pcK4%3D%3AIoVupcT5Up241qMAqH5F%2FY%2FkDmLGcgL7eEmP4J0bJ%2BM%3D&token=WJLQL9NkMyxCcfK', 'Terminliste'],
-        ['https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png', 'Landesarbeitskreise'],
-        ['https://wolke.julis-bw.de/index.php/apps/gallery/preview.public/81346?width=2800&height=2800&c=145acf899061c984740d8d0c2b21e741&requesttoken=Ecw5l7aoNdzquNNRnCoHjcO2TxKcFWG0VzO7qq0pcK4%3D%3AIoVupcT5Up241qMAqH5F%2FY%2FkDmLGcgL7eEmP4J0bJ%2BM%3D&token=WJLQL9NkMyxCcfK', 'Terminliste'],
-        ['https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png', 'Landesarbeitskreise']
-      ],
-      'Landesarbeitskreise': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
-=======
       'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
       'Landesarbeitskreise': require('../assets/Header/landesarbeitskreise.png'),
       'LAK-anmelden': require('../assets/Header/landesarbeitskreise.png'),
->>>>>>> master
       'Beschlusssammlung': false,
       'ProgrammatikLexikon': false,
       'WerWirSind': false,
@@ -37,6 +27,10 @@ export default new Vuex.Store({
       'UnsereThemen': require('../assets/Header/unsereThemen.png'),
       'freiheitSelbstbestimmung': require('../assets/Header/freiheitSelbstbestimmung.png')
     },
+    merchBilder: [
+      require('../assets/img/merch/merchshop-1.png'),
+      require('../assets/img/merch/merchshop-2.png'),
+    ],
     termine: [
       {
         'Titel': 'Go-Live Hackathon TI',
@@ -76,6 +70,7 @@ export default new Vuex.Store({
     landesarbeitskreise: state => state.lak.liste,
     unsereThemen: state => state.unsereThemen.liste,
     landesvorstand: state => state.person.landesvorstand,
-    ausgewählterLAK: state => state.ausgewählterLAK
+    ausgewählterLAK: state => state.ausgewählterLAK,
+    merchBilder: state => state.merchBilder
   }
 })
