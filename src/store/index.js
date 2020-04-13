@@ -22,6 +22,10 @@ export default new Vuex.Store({
       "beisitzerOrga": 'http://s.julisbw.de/app/person/beisitzerOrga.jpg',
       "beisitzerPO": 'http://s.julisbw.de/app/person/beisitzerPO.jpg',
       "beisitzerProgrammatik": 'http://s.julisbw.de/app/person/beisitzerProgrammatik.jpg',
+      "sozialesLeitung": 'http://s.julisbw.de/app/person/sozialesLeitung.jpg',
+      "sozialesStellvertretung": 'http://s.julisbw.de/app/person/sozialesStellvertretung.jpg',
+      "bildungLeitung": 'http://s.julisbw.de/app/person/bildungLeitung.jpg',
+      "bildungStellvertretung": 'http://s.julisbw.de/app/person/bildungStellvertretung.jpg',
       "digitalesLeitung": 'http://s.julisbw.de/app/person/digitalesLeitung.jpg',
       "digitalesStellvertretung": 'http://s.julisbw.de/app/person/digitalesStellvertretung.jpg'
     },
