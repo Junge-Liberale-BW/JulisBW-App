@@ -5,6 +5,9 @@ import store from './store'
 
 import julietteService from './util/juliette'
 
+import VueTouch from 'vue-touch';
+Vue.use(VueTouch);
+
 
 import './assets/scss/main.scss'
 import './assets/scss/nav.scss'
