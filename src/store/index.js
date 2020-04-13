@@ -7,9 +7,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     ausgewählterLAK: '',
-    landesvorstand: require('../assets/landesvorstand.json'),
-    laks: require('../assets/laks.json'),
-    unsereThemen: require('../assets/themen.json'),
+    landesvorstand: require('../assets/landesvorstand.json'), // hol von da "http://s.julisbw.de/app/landesvorstand.json"
+    laks: require('../assets/laks.json'), // hol von da "http://s.julisbw.de/app/laks.json"
+    unsereThemen: require('../assets/themen.json'), // hol von da "http://s.julisbw.de/app/themen.json"
     personBilder: {
       "landesvorsitzender": 'http://s.julisbw.de/app/person/landesvorsitzender.jpg',
       "stvFinanzen": 'http://s.julisbw.de/app/person/stvFinanzen.jpg',
@@ -27,7 +27,27 @@ export default new Vuex.Store({
       "bildungLeitung": 'http://s.julisbw.de/app/person/bildungLeitung.jpg',
       "bildungStellvertretung": 'http://s.julisbw.de/app/person/bildungStellvertretung.jpg',
       "digitalesLeitung": 'http://s.julisbw.de/app/person/digitalesLeitung.jpg',
-      "digitalesStellvertretung": 'http://s.julisbw.de/app/person/digitalesStellvertretung.jpg'
+      "digitalesStellvertretung": 'http://s.julisbw.de/app/person/digitalesStellvertretung.jpg',
+      "aussenLeitung": 'http://s.julisbw.de/app/person/aussenLeitung.jpg',
+      "aussenStellvertretung": 'http://s.julisbw.de/app/person/aussenStellvertretung.jpg',
+      "finanzenLeitung": 'http://s.julisbw.de/app/person/finanzenLeitung.jpg',
+      "finanzenStellvertretung": 'http://s.julisbw.de/app/person/finanzenStellvertretung.jpg',
+      "gesellschaftLeitung": 'http://s.julisbw.de/app/person/gesellschaftLeitung.jpg',
+      "gesellschaftStellvertretung": 'http://s.julisbw.de/app/person/gesellschaftStellvertretung.jpg',
+      "gesundheitLeitung": 'http://s.julisbw.de/app/person/gesundheitLeitung.jpg',
+      "gesundheitStellvertretung": 'http://s.julisbw.de/app/person/gesundheitStellvertretung.jpg',
+      "wirtschaftLeitung": 'http://s.julisbw.de/app/person/wirtschaftLeitung.jpg',
+      "wirtschaftStellvertretung": 'http://s.julisbw.de/app/person/wirtschaftStellvertretung.jpg',
+      "innenLeitung": 'http://s.julisbw.de/app/person/innenLeitung.jpg',
+      "innenStellvertretung": 'http://s.julisbw.de/app/person/innenStellvertretung.jpg',
+      "laendlichesLeitung": 'http://s.julisbw.de/app/person/laendlichesLeitung.jpg',
+      "laendlichesStellvertretung": 'http://s.julisbw.de/app/person/laendlichesStellvertretung.jpg',
+      "umweltLeitung": 'http://s.julisbw.de/app/person/umweltLeitung.jpg',
+      "umweltStellvertretung": 'http://s.julisbw.de/app/person/umweltStellvertretung.jpg',
+      "strukturLeitung": 'http://s.julisbw.de/app/person/strukturLeitung.jpg',
+      "strukturStellvertretung": 'http://s.julisbw.de/app/person/strukturStellvertretung.jpg',
+      "schuelerLeitung": 'http://s.julisbw.de/app/person/schuelerLeitung.jpg',
+      "schuelerStellvertretung": 'http://s.julisbw.de/app/person/schuelerStellvertretung.jpg',
     },
     headerBilder: {
       'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',

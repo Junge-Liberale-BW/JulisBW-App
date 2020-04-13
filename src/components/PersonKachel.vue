@@ -52,8 +52,8 @@ export default {
   name: "PersonKachel",
   props: ["id", "person", "position", "color", "foldable", "folded"],
   computed: {
-    getImage(){
-      return this.$store.state.personBilder[this.position]
+    getImage() {
+      return this.$store.state.personBilder[this.position];
     },
     colorScheme() {
       if (this.color === "magenta") {
@@ -67,11 +67,11 @@ export default {
   },
   methods: {
     foldSection() {
-        if(this.folded){
-            this.$emit('childUnfold', this.id);
-        }else{
-            this.$emit('childUnfold', undefined)
-        }
+      if (this.folded) {
+        this.$emit("childUnfold", this.id);
+      } else {
+        this.$emit("childUnfold", undefined);
+      }
     }
   }
 };
