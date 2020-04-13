@@ -27,7 +27,8 @@
           'la': true,
           'la-2x': true,
           'la-list': this.$route.name === 'Kalender',
-          'la-calendar': this.$route.name === 'Terminliste'
+          'la-calendar': this.$route.name === 'Terminliste',
+          'la-calendar-plus': this.$route.name === 'TerminDetails'
         }
       }
     },
@@ -36,9 +37,9 @@
       wechsel_ansicht () {
 
         if(this.$route.name === 'Kalender'){
-          this.$store.dispatch('wechsel_seite', 'Terminliste')
+          this.$store.dispatch('wechsel_seite', {'name':'Terminliste'})
         }else {
-          this.$store.dispatch('wechsel_seite', 'Kalender')
+          this.$store.dispatch('wechsel_seite', {'name':'Kalender'})
         }
       }
     }

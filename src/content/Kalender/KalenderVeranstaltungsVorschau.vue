@@ -41,18 +41,18 @@
       'max_items'
     ],
 
-    watch:{
-        'selected_date': function () {
-          this.gib_anstehende_veranstaltungen();
-          this.$forceUpdate();
-        }
+    watch: {
+      'selected_date': function () {
+        this.gib_anstehende_veranstaltungen()
+        this.$forceUpdate()
+      }
     },
 
     mounted () {
-      this.gib_anstehende_veranstaltungen();
+      this.gib_anstehende_veranstaltungen()
     },
 
-    data(){
+    data () {
       return {
         'anstehende_veranstaltungen': this.veranstaltungen_liste,
         'mindestens_eine_veranstaltung': false
@@ -65,29 +65,30 @@
         return this.$store.getters.termine
       },
 
-
     },
-    methods:{
+    methods: {
       gib_anstehende_veranstaltungen () {
-        this.anstehende_veranstaltungen = [];
-        this.mindestens_eine_veranstaltung = false;
+        this.anstehende_veranstaltungen = []
+        this.mindestens_eine_veranstaltung = false
 
         for (let veranstaltung in this.veranstaltungen_liste) {
 
           veranstaltung = this.veranstaltungen_liste[veranstaltung]
           let veranstaltung_datum = new Date(veranstaltung.Datum)
 
-          if ( (veranstaltung_datum.getDate() > this.selected_date.getDate()
-            && veranstaltung_datum.getMonth() > this.selected_date.getMonth())
-            || this.anstehende_veranstaltungen.length > this.max_items) {
+          if ((veranstaltung_datum.getDate() < this.selected_date.getDate()
+            || veranstaltung_datum.getMonth() < this.selected_date.getMonth())) {
             continue
           }
-          if(veranstaltung_datum.getDate() === this.selected_date.getDate()
-            && veranstaltung_datum.getMonth() === this.selected_date.getMonth()
-          ){
-            this.mindestens_eine_veranstaltung = true;
+          if (this.anstehende_veranstaltungen.length > this.max_items) {
+            continue
           }
-          veranstaltung.Datum = veranstaltung_datum;
+          if (veranstaltung_datum.getDate() === this.selected_date.getDate()
+            && veranstaltung_datum.getMonth() === this.selected_date.getMonth()
+          ) {
+            this.mindestens_eine_veranstaltung = true
+          }
+          veranstaltung.Datum = veranstaltung_datum
           this.anstehende_veranstaltungen.push(veranstaltung)
         }
 
