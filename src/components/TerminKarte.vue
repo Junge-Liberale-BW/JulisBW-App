@@ -1,13 +1,13 @@
 <template>
   <div>
-      <h2>Aktuelle Termin</h2>
+      <h2>Aktuelle Termine</h2>
 
       <div id="terminKarte" class="row" :key="key">
           <div id="terminKarteDatum">
               
               <span id="tag">{{ new Date(termine[terminIndex].Datum).getDate() }}</span>
               <span id="monat">{{ months[new Date(termine[terminIndex].Datum).getMonth()] }}</span>
-          
+
           </div>
           <div id="terminKarteInfos">
 
@@ -85,7 +85,7 @@ h2 {
     padding: 20px 0;
     width: 80vw;
     margin: 0 auto;
-    border-bottom: 3px solid #aeaeae;
+    font-size: 28px;
 }
 
 #terminKarte {
