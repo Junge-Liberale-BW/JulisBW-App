@@ -72,9 +72,9 @@ const routes = [
     component: () => import('../views/UnsereThemen.vue')
   },
   {
-    path: '/freiheitSelbstbestimmung',
-    name: 'freiheitSelbstbestimmung',
-    component: () => import('../views/freiheitSelbstbestimmung.vue')
+    path: '/themen/:id',
+    name: 'Themen-Ansicht',
+    component: () => import('../views/Themen-Ansicht.vue')
   },
   {
     path: '/Verband',

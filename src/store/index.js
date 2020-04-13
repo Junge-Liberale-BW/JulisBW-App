@@ -1,32 +1,31 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import router from '../router'
-import unsereThemen from './modules/unsereThemen'
-import axios from 'axios'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
     ausgewählterLAK: '',
-    landesvorstand: axios.get('http://s.julisbw.de/app/landesvorstand.json').then(response => {return response;}),
-      personBilder: {
+    landesvorstand: require('../assets/landesvorstand.json'),
+    laks: require('../assets/laks.json'),
+    unsereThemen: require('../assets/themen.json'),
+    personBilder: {
       "landesvorsitzender": 'http://s.julisbw.de/app/person/landesvorsitzender.jpg',
-        "stvFinanzen": 'http://s.julisbw.de/app/person/stvFinanzen.jpg',
-        "stvOrga": 'http://s.julisbw.de/app/person/stvOrga.jpg',
-        "stvPO": 'http://s.julisbw.de/app/person/stvPO.jpg',
-        "stvProgrammatik": 'http://s.julisbw.de/app/person/stvProgrammatik.jpg',
-        "beisitzerInternet": 'http://s.julisbw.de/app/person/beisitzerInternet.jpg',
-        "beisitzerPublikationen": 'http://s.julisbw.de/app/person/beisitzerPublikationen.jpg',
-        "beisitzerFinanzen": 'http://s.julisbw.de/app/person/beisitzerFinanzen.jpg',
-        "beisitzerOrga": 'http://s.julisbw.de/app/person/beisitzerOrga.jpg',
-        "beisitzerPO": 'http://s.julisbw.de/app/person/beisitzerPO.jpg',
-        "beisitzerProgrammatik": 'http://s.julisbw.de/app/person/beisitzerProgrammatik.jpg',
-        "digitalesLeitung": 'http://s.julisbw.de/app/person/digitalesLeitung.jpg',
-        "digitalesStellvertretung": 'http://s.julisbw.de/app/person/digitalesStellvertretung.jpg',
+      "stvFinanzen": 'http://s.julisbw.de/app/person/stvFinanzen.jpg',
+      "stvOrga": 'http://s.julisbw.de/app/person/stvOrga.jpg',
+      "stvPO": 'http://s.julisbw.de/app/person/stvPO.jpg',
+      "stvProgrammatik": 'http://s.julisbw.de/app/person/stvProgrammatik.jpg',
+      "beisitzerInternet": 'http://s.julisbw.de/app/person/beisitzerInternet.jpg',
+      "beisitzerPublikationen": 'http://s.julisbw.de/app/person/beisitzerPublikationen.jpg',
+      "beisitzerFinanzen": 'http://s.julisbw.de/app/person/beisitzerFinanzen.jpg',
+      "beisitzerOrga": 'http://s.julisbw.de/app/person/beisitzerOrga.jpg',
+      "beisitzerPO": 'http://s.julisbw.de/app/person/beisitzerPO.jpg',
+      "beisitzerProgrammatik": 'http://s.julisbw.de/app/person/beisitzerProgrammatik.jpg',
+      "digitalesLeitung": 'http://s.julisbw.de/app/person/digitalesLeitung.jpg',
+      "digitalesStellvertretung": 'http://s.julisbw.de/app/person/digitalesStellvertretung.jpg',
     },
-      laks: require('../assets/laks'),
-      headerBilder: {
+    headerBilder: {
       'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
       'Landesarbeitskreise': require('../assets/Header/landesarbeitskreise.png'),
       'LAK-anmelden': require('../assets/Header/landesarbeitskreise.png'),
@@ -41,9 +40,10 @@ export default new Vuex.Store({
       'Newsletter': false,
       'Juliette': require('../assets/Header/juliette.png'),
       'UnsereThemen': require('../assets/Header/unsereThemen.png'),
-      'freiheitSelbstbestimmung': require('../assets/Header/freiheitSelbstbestimmung.png')
+      'freiheit': require('../assets/Header/freiheitSelbstbestimmung.png'),
+      'bildung': require('../assets/Header/bildungForschung.png')
     },
-      termine: [
+    termine: [
       {
         'Titel': 'Go-Live Hackathon TI',
         'Datum': '2020-04-14T14:00:00',
@@ -55,7 +55,7 @@ export default new Vuex.Store({
         'Ort': 'Stuttgart'
       }
     ],
-      currentDate: new Date(),
+    currentDate: new Date(),
   },
   mutations: {
     setze_datum(state, neues_datum) {
@@ -71,14 +71,11 @@ export default new Vuex.Store({
       router.push('LAK-anmelden');
     }
   },
-  modules: {
-    unsereThemen: unsereThemen
-  },
   getters: {
     termine: state => state.termine,
     currentDate: state => state.currentDate,
     landesarbeitskreise: state => state.laks,
-    unsereThemen: state => state.unsereThemen.liste,
+    unsereThemen: state => state.unsereThemen,
     ausgewählterLAK: state => state.ausgewählterLAK,
     landesvorstand: state => state.landesvorstand,
     laks: state => state.laks

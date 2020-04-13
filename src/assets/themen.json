@@ -1,0 +1,74 @@
+{
+  "freiheit": {
+    "title": "Freiheit & Selbstbestimmung",
+    "icon": "dove",
+    "fixed_content": [
+      {
+        "title": "„Wir kämpfen dafür, dass du dein Leben leben kannst, wie du es willst!“",
+        "text": "Unsere Leitkultur ist das Grundgesetz und wir respektieren jeden Menschen wie er ist. Wir wollen, dass jeder in Deutschland – unabhängig von Religion, sexueller Orientierung, Herkunft oder Aussehen – nach seiner Façon selig werden kann. Unser Ziel ist eine Gesellschaft die die Prinzipien von Gleichheit und Gleichberechtigung uneingeschränkt anerkennt und verteidigt."
+      }
+    ],
+    "foldable_content": [
+      {
+        "title": "Lieb’ doch, wen du willst!",
+        "text": "Darum setzen wir uns für die vollständige Gleichstellung gleichgeschlechtlicher Ehen und das Adoptionsrecht für Regenbogenfamilien ein.Der Abbau von Vorurteilen und die Beseitigung von Diskriminierungen gegenüber der LGBTQ-Community ist für uns Aufgabe einer offenen Gesellschaft. Liebe ist nicht, was der Staat definiert – Liebe ist, wo Menschen füreinander Verantwortung übernehmen wollen."
+      },
+      {
+        "title": "Gebt das Hanf frei!",
+        "text": "Cannabis ist eine Droge und bedarf eines verantwortungsvollen Umgangs. Fakt ist aber, dass die restriktive Verbotspolitik gescheitert ist, Menschenleben zerstört und den Staat Milliarden gekostet hat. Wir setzen stattdessen auf Aufklärung, Prävention und eine kontrollierte Freigabe von Cannabis für Volljährige. Damit entlasten wir die Behörden und legen den Schwarzmarkt trocken. Legalize it!"
+      },
+      {
+        "title": "Überwachungsstaat? How about no!",
+        "text": "„Was stört mich Überwachung? Ich habe doch nichts zu verbergen!“ Wir finden: du hast sehr wohl etwas zu verbergen – deine Privatsphäre. Denn nicht nur Facebook, Google und Co. haben es auf deine Daten abgesehen. Auch der Staat verfügt über immer mehr Informationen von dir, ohne dass du Einfluss auf deren Schutz hast. Daher stellen wir uns gegen die anlasslose Vorratsdatenspeicherung und flächendeckende Videoüberwachung."
+      },
+      {
+        "title": "Verbote verbieten!",
+        "text": "Generelles Rauchverbot? Tanzverbot an „stillen“ Feiertagen? Wir möchten, dass du dein Leben selbstbestimmt gestalten kannst. Darum treten wir staatlichen Eingriffen in deine Lebensgestaltung entschlossen entgegen."
+      }
+    ]
+  },
+  "bildung": {
+    "title": "Bildung & Forschung",
+    "icon": "school",
+    "fixed_content": [
+      {
+        "title": "„Wir wollen die nächste Generation „Käpsele“ in Baden-Württemberg!“",
+        "text": "Aufstieg durch eigene Leistung ist das zentrale Versprechen der Sozialen Marktwirtschaft. Dies kann jedoch nur gelingen, wenn wir jungen Menschen das nötige Rüstzeug dafür an die Hand geben. Unser Ziel ist exzellente Bildung für alle – unabhängig ihrer Herkunft! Bildung beginnt für uns dabei genauso wenig erst mit der Schultüte, wie sie mit dem Abschlusszeugnis endet. Für uns ist Lernen ein lebenslanger Prozess – und ein Prozess, der sich lohnt."
+      }
+    ],
+    "foldable_content": [
+      {
+        "title": "Freiheit für die Schulen!",
+        "text": "Jeder von uns ist einzigartig – darum glauben wir auch nicht an die eine Schule für alle. Vielmehr bekennen wir uns zu einem vielgliedrigen Schulsystem, das jedem Schüler und jeder Schülerin das passende Angebot machen kann. Dazu bedarf es mehr Autonomie bei der Verwendung der Mittel und der Gestaltung der Lehrpläne."
+      },
+      {
+        "title": "Mehr Geld für Bildung!",
+        "text": "Wie Schulen aussehen, sagt viel über die Wertschätzung einer Gesellschaft für kommende Generationen aus. Landkarten im Erdkunderaum auf dem Stand der 1980er oder Computer mit Windows 98 als Betriebssystem, sind leider vielerorts noch Standard. Wir fordern mehr Investitionen in die Bildungsinfrastruktur, damit Schulen endlich das werden können, was sie sein müssen: ausgezeichnete Lernumgebungen."
+      },
+      {
+        "title": "Mut zur Digitalisierung!",
+        "text": "Neue Technologien haben Einzug in unseren Alltag gehalten. Egal ob im Beruf oder privat, überall sind wir von IT umgeben. Überall, bis auf das Klassenzimmer. Wir JuLis wollen, dass digitale Lerninhalte – ob per Smartboard oder Tablet – den Unterricht sinnvoll ergänzen und IT-Kompetenz mehr Aufmerksamkeit entgegengebracht wird."
+      },
+      {
+        "title": "Master oder Meister? Uns doch egal!",
+        "text": "Sein Glück im Studium zu finden, ist etwas Tolles! Aber nicht für jeden ist ein Studium die beste Wahl. Gerade hier in Baden-Württemberg leben wir von einem soliden Mittelstand und kleinen Handwerksbetrieben. Wir möchten die berufliche Ausbildung stärken, damit auch nichtakademische Berufe endlich die Wertschätzung bekommen, die ihnen zusteht."
+      }
+    ]
+  },
+  "wirtschaft": {
+    "title": "Wirtschaft & Gründergeist",
+    "icon": "chart-line"
+  },
+  "umwelt": {
+    "title": "Umwelt & Nachhaltigkeit",
+    "icon": "tree"
+  },
+  "europa": {
+    "title": "Deutschland & Europa",
+    "icon": "globe"
+  },
+  "partizipation": {
+    "title": "Demokratie & Partizipation",
+    "icon": "vote-yea"
+  }
+}
