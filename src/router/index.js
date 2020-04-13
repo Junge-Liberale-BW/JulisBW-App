@@ -30,9 +30,9 @@ const routes = [
     component: () => import('../views/Landesarbeitskreise.vue')
   },
   {
-    path: '/Digitales & Medien',
-    name: 'Digitales & Medien',
-    component: () => import('../views/LAK_Digitales.vue')
+    path: '/lak/:id',
+    name: 'LAK-Ansicht',
+    component: () => import('../views/LAK-Ansicht.vue')
   },
   {
     path: '/Juliette',
@@ -72,9 +72,9 @@ const routes = [
     component: () => import('../views/UnsereThemen.vue')
   },
   {
-    path: '/freiheitSelbstbestimmung',
-    name: 'freiheitSelbstbestimmung',
-    component: () => import('../views/freiheitSelbstbestimmung.vue')
+    path: '/themen/:id',
+    name: 'Themen-Ansicht',
+    component: () => import('../views/Themen-Ansicht.vue')
   },
   {
     path: '/Verband',
@@ -97,9 +97,30 @@ const routes = [
     component: () => import('../views/Julis-A-Z.vue')
   },
   {
+
     path: '/WerWirSind',
     name: 'WerWirSind',
     component: () => import('../views/WerWirSind.vue')
+  },
+  {
+    path: '/Kongresse',
+    name: 'Kongresse',
+    component: () => import('../views/Kongresse.vue')
+  },
+  {
+    path: '/Verbandsebenen',
+    name: 'Verbandsebenen',
+    component: () => import('../views/Verbandsebenen.vue')
+  },
+  {
+    path: '/Kürzel-ABC',
+    name: 'Kürzel-ABC',
+    component: () => import('../views/Kürzel-ABC.vue')
+  },
+  {
+    path: '/How-To-LaKo',
+    name: 'How to LaKo',
+    component: () => import('../views/HowToLaKo.vue')
   }
 ]
 

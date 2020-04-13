@@ -1,25 +1,27 @@
 <template>
   <div>
-      <h2>Aktuelle Termin</h2>
+    <h2>Aktuelle Termin</h2>
+    <v-touch @swipeleft="nextIMG()">
+        <div id="terminKarte" class="row" :key="key">
+            <div id="terminKarteDatum">
+                
+                <span id="tag">{{ new Date(termine[terminIndex].Datum).getDate() }}</span>
+                <span id="monat">{{ months[new Date(termine[terminIndex].Datum).getMonth()] }}</span>
+            
+            </div>
+            <div id="terminKarteInfos">
 
-      <div id="terminKarte" class="row" :key="key">
-          <div id="terminKarteDatum">
-              
-              <span id="tag">{{ new Date(termine[terminIndex].Datum).getDate() }}</span>
-              <span id="monat">{{ months[new Date(termine[terminIndex].Datum).getMonth()] }}</span>
-          
-          </div>
-          <div id="terminKarteInfos">
+                <h3>{{ termine[terminIndex].Titel }}</h3>
+                <div><i class="la la-clock"></i>{{ getTime }}</div>
+                <div><i class="la la-map-marker"></i>{{ termine[terminIndex].Ort }}</div>
 
-              <h3>{{ termine[terminIndex].Titel }}</h3>
-              <div><i class="la la-clock"></i>{{ getTime }}</div>
-              <div><i class="la la-map-marker"></i>{{ termine[terminIndex].Ort }}</div>
-
-          </div>
-      </div>
-      <div id="points">
-            <div v-bind:class="{point: true, active: indexTermin === terminIndex}" @click="neuerTermin(indexTermin)" v-for="(each, indexTermin) in termine" v-bind:key="indexTermin"></div>
+            </div>
         </div>
+    
+    </v-touch>
+    <div id="points">
+        <div v-bind:class="{point: true, active: indexTermin === terminIndex}" @click="neuerTermin(indexTermin)" v-for="(each, indexTermin) in termine" v-bind:key="indexTermin"></div>
+    </div>
   </div>
 </template>
 
@@ -49,7 +51,12 @@ export default {
     methods: {
         neuerTermin: function (neuerIndex) {
             this.terminIndex = neuerIndex;
-            this.key++;
+        },
+        nextIMG: function () {
+            this.terminIndex++;
+            if (this.termine.length === this.terminIndex) {
+                this.terminIndex = 0;
+            }
         }
     },
     computed: {
