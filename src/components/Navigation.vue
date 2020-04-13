@@ -124,7 +124,7 @@ export default {
       this.unfold[index] = !this.unfold[index];
     },
     changeSite: function(site) {
-      this.$store.dispatch("wechsel_seite", site);
+      this.$store.dispatch("wechsel_seite", {'name': site});
       this.changeNavigationState();
     }
   }
