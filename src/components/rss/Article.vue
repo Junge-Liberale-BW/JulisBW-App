@@ -26,13 +26,7 @@
 </template>
 
 <script>
-
-  //import Media from "cordova-plugin-media";
-  //let myMedia = new Media(this.article.link);
-  //myMedia.play();
-
-
-  /*
+/*
   TODO: MP3Player aufruf
 
   Übergabe an den musikplayer:
