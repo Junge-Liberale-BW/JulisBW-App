@@ -1,16 +1,29 @@
 <template>
-  <div class="article"
-  @click="openPlayer()"
-  >
-    <div class="title">
-      <h3 class="article-title">{{article.title}}</h3>
+  <div class="article">
+    <div id="all" class="justify-content-center">
+      <table cellpadding="20px">
+        <tr>
+          <td>
+            <div class="title">
+              <h3 class="article-title">Folge {{article.title}}</h3>
+            </div>
+          </td>
+          <td class="durationtd align-items-lg-center">
+            <div class="durationbody">
+              {{article['itunes:duration']}}
+            </div>
+            <i class="la la-arrow-circle-right la-lg" id="icon"
+               @click="openPlayer()"
+            />
+          </td>
+        </tr>
+      </table>
+
+
+      <hr class="row"/>
     </div>
-    <div class="durationbody">
-      {{article['itunes:duration']}}
-    </div>
-    <hr class="row"/>
   </div>
-</template>s
+</template>
 
 <script>
 
@@ -20,7 +33,7 @@
 
 
   /*
-  TODO: Css, MP3Player aufruf
+  TODO: MP3Player aufruf
 
   Übergabe an den musikplayer:
       article.link //link der mp3
@@ -33,7 +46,6 @@
 
    */
 
-
   export default {
     name: "Article",
     props: {
@@ -44,11 +56,27 @@
 
     selected: false,
     methods: {
-        openPlayer(){
-          //playPodcast
-        }
+      openPlayer() {
+        //playPodcast
+      }
     }
   };
 
 
 </script>
+<style scoped>
+  .article-title {
+    font-size: 15px;
+  }
+
+  .durationbody {
+    white-space: nowrap;
+    color: gray;
+  }
+
+
+  #all {
+    padding: 10px;
+  }
+
+</style>

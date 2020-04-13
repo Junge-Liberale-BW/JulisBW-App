@@ -1,10 +1,8 @@
 <template>
   <div v-if="error" class="error">{{error}}</div>
   <div v-else class="feed">
-    <div v-if="loading" class="spinner">
-      <div class="bounce1"></div>
-      <div class="bounce2"></div>
-      <div class="bounce3"></div>
+    <div v-if="loading" class="loading">
+      <!--LoadingAnimation-->
     </div>
     <div class="articles-container">
       <Article
