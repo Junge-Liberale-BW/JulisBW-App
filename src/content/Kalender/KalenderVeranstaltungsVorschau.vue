@@ -27,7 +27,7 @@
 
 <script>
 
-  import VeranstaltungsVorschauItem from '../components/VeranstaltungsVorschauItem'
+  import VeranstaltungsVorschauItem from '../../components/VeranstaltungsVorschauItem'
 
   export default {
     name: 'KalenderVeranstaltungsVorschau',

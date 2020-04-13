@@ -13,8 +13,8 @@
 </template>
 
 <script>
-  import KalenderHeader from '../content/KalenderHeader'
-  import KalenderVeranstaltungsVorschau from '../content/KalenderVeranstaltungsVorschau'
+  import KalenderHeader from './KalenderHeader'
+  import KalenderVeranstaltungsVorschau from './KalenderVeranstaltungsVorschau'
 
   export default {
     name: 'Terminliste',

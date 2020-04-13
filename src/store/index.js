@@ -30,12 +30,22 @@ export default new Vuex.Store({
       {
         'Titel': 'Go-Live Hackathon TI',
         'Datum': '2020-04-14T14:00:00',
-        'Ort': 'WebEx'
+        'Ort': 'WebEx',
+        'Text': ' 12 files changed, 406 insertions(+), 50 deletions(-)\n' +
+          ' create mode 100644 src/assets/Header/juliette.png\n' +
+          ' create mode 100644 src/assets/Header/julisaz.png\n' +
+          ' create mode 100644 src/assets/Header/podcast.png\n' +
+          ' create mode 100644 src/components/TerminKarte.vue\n' +
+          ' create mode 100644 src/views/LAK-Anmeldung.vue\n'
       },
       {
         'Titel': 'Landeskongress',
         'Datum': '2020-04-22T10:00:00',
-        'Ort': 'Stuttgart'
+        'Ort': 'Stuttgart',
+        'Text': 'Failed to compile.\n' +
+          '\n' +
+          './src/store/index.js\n' +
+          'Module Error (from /usr/lib/node_modules/@vue/cli-service-global/node_modules/eslint-loader/index.js):\n'
       }
     ],
     currentDate: new Date(),

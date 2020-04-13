@@ -1,7 +1,7 @@
 <template>
   <div class="col-12">
 
-    <div class="row veranstaltungs-vorschau-item justify-content-start">
+    <div class="row veranstaltungs-vorschau-item justify-content-start clickable">
       <div :class="gib_datum_tag_klassen">
         {{gib_tag}}
       </div>
@@ -58,6 +58,9 @@
     methods:{
       aktualisiere_ist_am_gewaehlten_tag(){
         this.ist_am_gewaehlten_tag = this.veranstaltung.Datum.getDate() === this.gewaehlter_tag.getDate();
+      },
+      zeige_termin_details(){
+
       }
     }
   }

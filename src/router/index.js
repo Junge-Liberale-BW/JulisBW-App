@@ -54,7 +54,12 @@ const routes = [
   {
     path: '/Terminliste',
     name: 'Terminliste',
-    component: () => import('../views/Terminliste.vue')
+    component: () => import('../content/Kalender/Terminliste.vue')
+  },
+  {
+    path: '/TerminDetails',
+    name: 'TerminDetails',
+    component: () => import('../content/Kalender/TerminDetailText.vue')
   },
   {
     path: '/Merch',

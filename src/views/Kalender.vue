@@ -23,8 +23,8 @@
 <script>
 
   import Calendar from 'v-calendar/lib/components/calendar.umd'
-  import KalenderVeranstaltungsVorschau from '../content/KalenderVeranstaltungsVorschau'
-  import KalenderHeader from '../content/KalenderHeader'
+  import KalenderVeranstaltungsVorschau from '../content/Kalender/KalenderVeranstaltungsVorschau'
+  import KalenderHeader from '../content/Kalender/KalenderHeader'
 
   export default {
     name: 'Kalender',
