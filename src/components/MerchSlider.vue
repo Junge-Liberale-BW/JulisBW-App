@@ -1,8 +1,10 @@
 <template>
   <div :key="key" id="merch-slider">
-      <a target="_blank" href="https://shop.spreadshirt.de/julis-bw">
-        <img :src="image[index]">
-      </a>
+      <v-touch @swipeleft="changeImage(1)" @swiperight="changeImage(0)" :swipe-options="{ threshold: 20 }">
+        <a target="_blank" href="https://shop.spreadshirt.de/julis-bw">
+            <img :src="image[index]">
+        </a>
+      </v-touch>
       <div id="points">
         <div @click="changeImage(indexBilder)" v-bind:class="{point: true, active: (indexBilder === index)}" v-for="(each, indexBilder) in image" v-bind:key="indexBilder"></div>
     </div>
@@ -25,6 +27,9 @@ export default {
             this.index = index;
             this.key++;
         },
+        swipeleft: function (index) {
+            alert(index)
+        }
     },
     mounted: function () {
         this.image = this.$store.getters.merchBilder
