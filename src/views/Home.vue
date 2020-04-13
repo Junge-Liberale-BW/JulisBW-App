@@ -2,7 +2,7 @@
   <div id="home">
     <Header />
     <TerminKarte />
-    <hr>
+    <hr />
     <Umfrage />
   </div>
 </template>

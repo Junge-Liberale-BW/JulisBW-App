@@ -73,6 +73,7 @@ export default new Vuex.Store({
     landesarbeitskreise: state => state.lak.liste,
     unsereThemen: state => state.unsereThemen.liste,
     landesvorstand: state => state.person.landesvorstand,
-    ausgewählterLAK: state => state.ausgewählterLAK
+    ausgewählterLAK: state => state.ausgewählterLAK,
+    umfrageDerWoche: state => state.umfrageDerWoche
   }
 })
