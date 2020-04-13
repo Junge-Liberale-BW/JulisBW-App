@@ -71,8 +71,8 @@
             <i class="la la-book la-lg" /> Juliette
           </li>
 
-          <li class="nav-item">
-            <i class="la la-envelope la-lg" /> Newsletter
+          <li class="nav-item second-icon">
+            <i class="la la-envelope la-lg" /> Newsletter <i class="la la-external-link-alt la-lg" />
           </li>
 
         </ul>
