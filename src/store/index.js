@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import router from '../router'
-import lak from './modules/lak'
 import unsereThemen from './modules/unsereThemen'
 
 Vue.use(Vuex)
@@ -72,13 +71,12 @@ export default new Vuex.Store({
     }
   },
   modules: {
-    lak: lak,
     unsereThemen: unsereThemen
   },
   getters: {
     termine: state => state.termine,
     currentDate: state => state.currentDate,
-    landesarbeitskreise: state => state.lak.liste,
+    landesarbeitskreise: state => state.laks,
     unsereThemen: state => state.unsereThemen.liste,
     ausgewählterLAK: state => state.ausgewählterLAK,
     landesvorstand: state => state.landesvorstand,

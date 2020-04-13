@@ -13,7 +13,7 @@
           >
             <i :class=" 'las la-4x la-' + properties.icon"></i>
             <br>
-            {{titel}}
+            {{properties.title}}
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
 
     methods: {
       wechsel_seite (titel) {
-        this.$store.dispatch('wechsel_seite', titel)
+        this.$store.dispatch('wechsel_seite', "lak/" + titel)
       }
     }
   }

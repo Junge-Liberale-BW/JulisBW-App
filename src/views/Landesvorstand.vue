@@ -29,6 +29,7 @@ export default {
   components: { Header, PersonKachel },
   computed: {
     landesvorstand() {
+      console.log(this.$store.getters.landesvorstand);
       return this.$store.getters.landesvorstand;
     }
   },
