@@ -57,18 +57,102 @@
   },
   "wirtschaft": {
     "title": "Wirtschaft & Gründergeist",
-    "icon": "chart-line"
+    "icon": "chart-line",
+    "fixed_content": [
+      {
+        "title": "„Wir finden: Die Wirtschaft von morgen gelingt nicht mit den Konzepten von gestern.“",
+        "text": "Baden-Württemberg ist das wirtschaftliche Powerhouse Europas. Was uns stark macht, ist die Vielfalt unserer Wirtschaftsstruktur. Egal ob mittelständisches Unternehmen, Global Player oder Start-Up: sie alle schaffen jene Arbeitsplätze, die jungen Menschen in unserem Land eine Perspektive geben. Nachhaltigkeit steht dabei in unserem Fokus – damit alle an einer starken Wirtschaft teilhaben können, heute und auch morgen."
+      }
+    ],
+    "foldable_content": [
+      {
+        "title": "Werte vererben, nicht Schulden!",
+        "text": "Solides Wirtschaften ist für uns eine soziale Frage. Denn wenn künftige Generationen mit Schulden in ihr Leben starten, schmälert das die Chance auf wirtschaftlichen Erfolg und freie Selbstentfaltung. Wir JuLis setzen uns für ausgeglichene Haushalte und maßvolle Investitionen ein. Für ein Land, in dem wir auch morgen noch gut und gerne leben."
+      },
+      {
+        "title": "Öfter mal was neues!",
+        "text": "Start-Ups sind das Salz in der Suppe unserer Wirtschaft. Nur wo heute Ideen willkommen sind, entsteht morgen auch Wohlstand. Wir JuLis wollen jungen Gründern einen fruchtbaren Boden bereiten – mit passenden Beratungsangeboten, unbürokratischen Unternehmensgründungen und einem BAföG für Gründer. Denn auch Bosch und Daimler haben mal klein angefangen!"
+      },
+      {
+        "title": "Für Spätis am Schlossplatz!",
+        "text": "Unsere Terminkalender sind so vielfältig wie unsere Lebensentwürfe. Starre Ladenöffnungszeiten und Sonntagsverkaufsverbote passen nicht mehr in unsere Zeit und behindern Einzelhändler im Wettbewerb mit Online-Shops. Darum wollen wir JuLis auf die Liberalisierung der Ladenöffnungszeiten durchsetzen und dir gemütliches Shopping ermöglichen – egal ob nach Feierabend oder am Sonntagnachmittag."
+      }
+    ]
   },
   "umwelt": {
     "title": "Umwelt & Nachhaltigkeit",
-    "icon": "tree"
+    "icon": "tree",
+    "fixed_content": [
+      {
+        "title": "„Wir werfen für ganzheitliche Klimapolitik einen Blick über den Tellerand hinaus und überlassen Symbolpolitik anderen!“",
+        "text": "Ob du die klare Luft auf dem Gipfel des Feldbergs atmest oder in den Fluten des Bodensees deine Bahnen ziehst: die Natur hat es gut mit Baden-Württemberg gemeint! Für uns ist die Schönheit unserer Natur aber auch Verantwortung. Darum setzen wir uns für ganzheitlichen Klima- und Umweltschutz ein – egal ob lokal oder im globalen Maßstab."
+      }
+    ],
+    "foldable_content": [
+      {
+        "title": "Abkühlung für Mutter Erde!",
+        "text": "Klimaschutz geht uns alle an. Doch was können wir in Baden-Württemberg zum Kampf gegen den Klimawandel beisteuern? Wir glauben, dass die Senkung der CO2-Emissionen eine globale Herausforderung ist, die nur durch weltweite Zusammenarbeit funktioniert. Deswegen setzen wir auf das erfolgreiche System des europaweiten Emissionszertifikatehandels und dessen Ausweitung auf weitere Sektoren."
+      },
+      {
+        "title": "Energiewende – Aber richtig!",
+        "text": "Wir JuLis setzen auf erneuerbare Energien zur Senkung unseres ökologischen Fußabdrucks und zur Verringerung unserer Abhängigkeit vom Import fossiler Energieträger. Wir fordern aber auch Technologieoffenheit und lehnen Denkverbote ab. Ziel unserer Energiepolitik ist verlässlicher, sauberer Strom zu sozialverträglichen Preisen. Darum lehnen wir starre Quoten und planwirtschaftliche Maßnahmen wie das Erneuerbare-Energien-Gesetz (EEG) ab."
+      },
+      {
+        "title": "Smarte Mobilität für Baden-Württemberg!",
+        "text": "Baden-Württemberg ist so etwas wie die Wiege der Mobilität. In den letzten 200 Jahren wurden hier das Fahrrad, das Motorrad und das Auto erfunden. Wir sehen uns in der Tradition dieser Vielfalt der Verkehrsmittel. Darum setzen wir uns für die Vernetzung der verschiedenen Verkehrsträger und einen effizienten Nahverkehr ein. Gerade für die ländlichen Gebiete in Baden-Württemberg spielt aber auch der Individualverkehr eine tragende Rolle. Forderungen nach Fahrverboten stellen wir uns daher entgegen und antworten mit intelligenten Leitsystemen und Offenheit gegenüber neuen Konzepten wie z.B. Carsharing."
+      }
+    ]
   },
   "europa": {
     "title": "Deutschland & Europa",
-    "icon": "globe"
+    "icon": "globe",
+    "fixed_content": [
+      {
+        "title": "„Gäbe es Europa nicht, müssten wir es erfinden. Weil es Europa gibt, wollen wir es neu erfinden.“",
+        "text": "Bereits seit über 70 Jahren gedeihen in Baden-Württemberg Frieden und Wohlstand – der europäischen Einigung sei Dank. Europa hat Deutschland und dem Kontinent nicht nur freieren Handel und Wohlstand, sondern vor allem auch andauernden Frieden und umfassende Freiheit geschenkt. Diese unschätzbaren Werte gilt es, weiter zu stärken und zu sichern."
+      }
+    ],
+    "foldable_content": [
+      {
+        "title": "In Vielfalt geeint!",
+        "text": "Unser langfristiges Ziel ist ein föderaler europäischer Bundesstaat. Dabei orientieren wir uns am Prinzip der Subsidiarität: Globale Themen wie Energie-, Umwelt-, Migrations-, Außen-, Verteidigungs- und Handelspolitik können nur gemeinsam in Europa gelöst werden, Detailfragen dagegen sollten auf kleinerer Ebene geregelt werden. Wir wollen keine Gleichmacherei, sondern die Vielfalt Europas sinnvoll weiterentwickeln."
+      },
+      {
+        "title": "Gemeinsam sind wir stärker!",
+        "text": "Die Flüchtlingskrise und der Kampf gegen den Klimawandel haben eines ganz klar zu Tage gefördert: wenn Nationalstaaten nebeneinander statt miteinander arbeiten, hat niemand etwas davon. Deshalb setzen wir uns für mehr Zusammenarbeit in globalen Themen ein und wünschen uns die Schaffung einer europäischen Verteidigungsarmee stehen wir positiv gegenüber."
+      },
+      {
+        "title": "Ein Neustart für die europäischen Institutionen!",
+        "text": "Über die Jahrzehnte ist nicht nur die Union gewachsen, sondern auch ihre Institutionen. Wir fordern daher einen Konvent zur Änderung der Europäischen Verträge, der die Errungenschaften der europäischen Integration langfristig sichert und ihre bisherigen Schwachstellen beseitigt. Dazu gehört für uns auch eine Stärkung des EU-Parlaments mittels eines eigenen Initiativrechts und die Umwandlung der EU-Kommission in eine echte Regierung."
+      },
+      {
+        "title": "28 Staaten, 24 Sprachen – ein Wertekanon!",
+        "text": "Die Europäische Union ist vielmehr als ein Wirtschaftsraum, sie ist eine Wertegemeinschaft. Demokratie, Menschenrechte und ein liberales Gesellschaftsmodell sind die Basis unseres Zusammenlebens in Europa und müssen gegen jedwede Attacken entschlossen verteidigt werden. Die strengen Beitrittsvoraussetzungen zur Union müssen daher auch nach dem Beitritt Gültigkeit bewahren."
+      }
+    ]
   },
   "partizipation": {
     "title": "Demokratie & Partizipation",
-    "icon": "vote-yea"
+    "icon": "vote-yea",
+    "fixed_content": [
+      {
+        "title": "„Politik beginnt mit engagierten Menschen. Politik beginnt mit dir.“",
+        "text": "Demokratie ist nicht alles – aber ohne Demokratie ist alles nichts. Sie zu wahren und kontinuierlich weiterzuentwickeln, liegt in unserer DNA und eint uns über alle Differenzen bei einzelnen Politikfeldern hinweg mit vielen anderen Jugendorganisationen in Baden-Württemberg. Demokratie lebt aber von engagierten Demokraten. Junge Menschen für sie zu begeistern, ist unsere wichtigste und schönste Aufgabe."
+      }
+    ],
+    "foldable_content": [
+      {
+        "title": "Damit du die Wahl hast!",
+        "text": "Junge Menschen sind entgegen der landläufigen Meinung heute besser über die politischen und gesellschaftlichen Entwicklungen informiert denn je. Wir möchten ihnen die Chance geben, aktiv die Richtung unseres Landes mitzubestimmen. Daher setzen wir uns für das aktive und passive Wahlrecht ab 16 Jahren auf allen Ebenen ein."
+      },
+      {
+        "title": "Mehr Demokratie wagen!",
+        "text": "Wir wollen Politik bürgernäher gestalten und direktdemokratische Initiativen stärken. Denn wo Menschen unsere Gesellschaft mitgestalten wollen, gilt es Hindernisse aus dem Weg zu räumen. Neben einer Verankerung von Volksabstimmungen in der Landesverfassung und einer Absenkung der Mindestquoren möchten wir daher analog zur Bundesebene E-Petitionen auch in Baden-Württemberg einführen und die Direktwahl der Landräte ermöglichen."
+      },
+      {
+        "title": "Ein Landtag, so bunt wie Baden-Württemberg!",
+        "text": "Das aktuelle Landtagswahlrecht mit nur einer Stimme führt dazu, dass junge Menschen – und damit oft auch deren Interessen – im Stuttgarter Landtag massiv unterrepräsentiert sind. So waren unmittelbar nach der letzten Landtagswahl gerade einmal 5 von 143 Abgeordneten unter 35 Jahre alt. Um dem entgegenzuwirken, fordern wir ein Zweistimmenwahlrecht wie bei der Bundestagswahl. Damit deine Stimme Einzug ins Parlament hält."
+      }
+    ]
   }
 }

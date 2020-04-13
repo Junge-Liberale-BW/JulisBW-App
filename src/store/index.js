@@ -23,7 +23,7 @@ export default new Vuex.Store({
       "beisitzerPO": 'http://s.julisbw.de/app/person/beisitzerPO.jpg',
       "beisitzerProgrammatik": 'http://s.julisbw.de/app/person/beisitzerProgrammatik.jpg',
       "digitalesLeitung": 'http://s.julisbw.de/app/person/digitalesLeitung.jpg',
-      "digitalesStellvertretung": 'http://s.julisbw.de/app/person/digitalesStellvertretung.jpg',
+      "digitalesStellvertretung": 'http://s.julisbw.de/app/person/digitalesStellvertretung.jpg'
     },
     headerBilder: {
       'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
@@ -41,7 +41,11 @@ export default new Vuex.Store({
       'Juliette': require('../assets/Header/juliette.png'),
       'UnsereThemen': require('../assets/Header/unsereThemen.png'),
       'freiheit': require('../assets/Header/freiheitSelbstbestimmung.png'),
-      'bildung': require('../assets/Header/bildungForschung.png')
+      'bildung': require('../assets/Header/bildungForschung.png'),
+      'wirtschaft': require('../assets/Header/wirtschaftGründergeist.png'),
+      'umwelt': require('../assets/Header/umweltNachhaltigkeit.png'),
+      'europa': require('../assets/Header/deutschlandEuropa.png'),
+      'partizipation': require('../assets/Header/demokratiePartizipation.png'),
     },
     termine: [
       {
