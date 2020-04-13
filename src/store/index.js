@@ -34,6 +34,13 @@ export default new Vuex.Store({
       }
     ],
     currentDate: new Date(),
+    umfrageDerWoche: {
+      frage: 'Abitur ausfallen lassen - ja oder nein?',
+      möglichkeiten: {
+        ja: '70%',
+        nein: '30%'
+      }
+    }
   },
   mutations: {
     setze_datum (state, neues_datum) {
@@ -51,6 +58,7 @@ export default new Vuex.Store({
   getters: {
     termine: state => state.termine,
     currentDate: state => state.currentDate,
-    landesarbeitskreise: state => state.lak.liste
+    landesarbeitskreise: state => state.lak.liste,
+    umfrageDerWoche: state => state.umfrageDerWoche
   }
 })
