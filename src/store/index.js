@@ -2,12 +2,16 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import router from '../router'
 import lak from './modules/lak'
+import unsereThemen from './modules/unsereThemen'
+import person from './modules/person'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    ausgewählterLAK: '',
     headerBilder: {
+<<<<<<< HEAD
       'Home': [
         ['https://wolke.julis-bw.de/index.php/apps/gallery/preview.public/81346?width=2800&height=2800&c=145acf899061c984740d8d0c2b21e741&requesttoken=Ecw5l7aoNdzquNNRnCoHjcO2TxKcFWG0VzO7qq0pcK4%3D%3AIoVupcT5Up241qMAqH5F%2FY%2FkDmLGcgL7eEmP4J0bJ%2BM%3D&token=WJLQL9NkMyxCcfK', 'Terminliste'],
         ['https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png', 'Landesarbeitskreise'],
@@ -15,16 +19,23 @@ export default new Vuex.Store({
         ['https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png', 'Landesarbeitskreise']
       ],
       'Landesarbeitskreise': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
+=======
+      'Home': 'https://cdn.discordapp.com/attachments/697877107841302553/698112102111379456/landesarbeitskreise.png',
+      'Landesarbeitskreise': require('../assets/Header/landesarbeitskreise.png'),
+      'LAK-anmelden': require('../assets/Header/landesarbeitskreise.png'),
+>>>>>>> master
       'Beschlusssammlung': false,
       'ProgrammatikLexikon': false,
       'WerWirSind': false,
-      'Landesvorstand': false,
-      'Julis-A-Z': 'https://wolke.julis-bw.de/index.php/apps/gallery/preview.public/81266?width=2000&height=2000&c=0526ccfd17e86db49aeeb5e6055b8848&requesttoken=k61ZTe4qboSJmXnsTP02GrTU3K9IiKWweyhUyyA2eZA%3D%3Awd5uKaBuCt3h6Rq8CZUHafe9psYKp%2BjVKH0ZoW1XTd0%3D&token=WJLQL9NkMyxCcfK',
+      'Landesvorstand': require('../assets/Header/landesvorstand.png'),
+      'Julis-A-Z': require('../assets/Header/julisaz.png'),
       'Merch': false,
       'Kalender': false,
-      'Podcast': false,
+      'Podcast': require('../assets/Header/podcast.png'),
       'Newsletter': false,
-      'Juliette': false
+      'Juliette': require('../assets/Header/juliette.png'),
+      'UnsereThemen': require('../assets/Header/unsereThemen.png'),
+      'freiheitSelbstbestimmung': require('../assets/Header/freiheitSelbstbestimmung.png')
     },
     termine: [
       {
@@ -48,14 +59,23 @@ export default new Vuex.Store({
   actions: {
     wechsel_seite (context, neue_seite) {
       router.push(neue_seite)
+    },
+    LAK_anmelden (store, LAK) {
+      store.state.ausgewählterLAK = LAK;
+      router.push('LAK-anmelden');
     }
   },
   modules: {
-    lak: lak
+    lak: lak,
+    unsereThemen: unsereThemen,
+    person: person
   },
   getters: {
     termine: state => state.termine,
     currentDate: state => state.currentDate,
-    landesarbeitskreise: state => state.lak.liste
+    landesarbeitskreise: state => state.lak.liste,
+    unsereThemen: state => state.unsereThemen.liste,
+    landesvorstand: state => state.person.landesvorstand,
+    ausgewählterLAK: state => state.ausgewählterLAK
   }
 })

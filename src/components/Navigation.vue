@@ -5,10 +5,7 @@
       :class="{'opened-nav-button': navigationOpen}"
       @click="changeNavigationState"
     >
-      <i
-        class="la la-bars la-2x"
-        :class="{'opened-nav-button': navigationOpen}"
-      />
+      <i class="la la-bars la-2x" :class="{'opened-nav-button': navigationOpen}" />
     </button>
 
     <nav :style="{left: navigationWidth}">
@@ -17,87 +14,62 @@
           <img
             height="100%"
             src="https://www.julis.de/wp-content/uploads/2017/03/Logo-Junge-Liberale-web.png"
-          >
+          />
         </div>
 
         <ul id="nav-body">
-          <li
-            class="nav-item"
-            @click="changeSite('Home')"
-          >
+          <li class="nav-item" @click="changeSite('Home')">
             <i class="la la-home la-lg" /> Home
           </li>
 
-          <li
-            class="nav-item"
-            @click="unfoldList('inhalte')"
-          >
-            <i class="la la-pen-nib la-lg" /> Inhalte <i
+          <li class="nav-item" @click="unfoldList('inhalte')">
+            <i class="la la-pen-nib la-lg" /> Inhalte
+            <i
               :class="{la: true, 'icon-right': true, 'la-angle-up': unfold.inhalte, 'la-angle-right': !unfold.inhalte}"
             />
           </li>
-          <ul
-            v-if="unfold.inhalte"
-            class="unfoldList"
-          >
+          <ul v-if="unfold.inhalte" class="unfoldList">
+            <li class="nav-subitem" @click="changeSite('UnsereThemen')">
+              <i class="la la-angle-right la-lg" /> Unsere Themen
+            </li>
             <li class="nav-subitem">
               <i class="la la-angle-right la-lg" /> Beschlusssammlung
             </li>
-            <li class="nav-subitem">
-              <i class="la la-angle-right la-lg" /> Programmatik-Lexikon
-            </li>
-            <li
-              class="nav-subitem"
-              @click="changeSite('Landesarbeitskreise')"
-            >
+            <li class="nav-subitem" @click="changeSite('Landesarbeitskreise')">
               <i class="la la-angle-right la-lg" /> Landesarbeitskreise
             </li>
           </ul>
 
-
-          <li
-            class="nav-item"
-            @click="unfoldList('verband')"
-          >
-            <i class="la la-thumbs-up la-lg" /> Verband <i
+          <li class="nav-item" @click="unfoldList('verband')">
+            <i class="la la-thumbs-up la-lg" /> Verband
+            <i
               :class="{la: true, 'icon-right': true, 'la-angle-up': unfold.verband, 'la-angle-right': !unfold.verband}"
             />
           </li>
-          <ul
-            v-if="unfold.verband"
-            class="unfoldList"
-          >
+          <ul v-if="unfold.verband" class="unfoldList">
             <li class="nav-subitem">
               <i class="la la-angle-right" /> Wer wir sind
             </li>
-            <li class="nav-subitem">
+            <li class="nav-subitem" @click="changeSite('Landesvorstand')">
               <i class="la la-angle-right" /> Landesvorstand
             </li>
+
             <li class="nav-subitem" @click="changeSite('Julis-A-Z')">
-              <i class="la la-angle-right" /> Julis A-Z
+              <i class="la la-angle-right" /> JuLis A-Z
+
             </li>
-            <li
-              class="nav-subitem"
-              @click="changeSite('Merch')"
-            >
+            <li class="nav-subitem" @click="changeSite('Merch')">
               <i class="la la-angle-right" /> Merch-Shop
             </li>
           </ul>
 
-
-          <li
-            class="nav-item"
-            @click="changeSite('Kalender')"
-          >
+          <li class="nav-item" @click="changeSite('Kalender')">
             <i class="la la-calendar la-lg" /> Kalender
           </li>
 
           <div class="horizontal-line" />
 
-          <li
-            class="nav-item"
-            @click="changeSite('Podcast')"
-          >
+          <li class="nav-item" @click="changeSite('Podcast')">
             <i class="la la-podcast la-lg" /> Podcast
           </li>
 
@@ -105,66 +77,59 @@
             <i class="la la-envelope la-lg" /> Newsletter
           </li>
 
-          <li
-            class="nav-item"
-            @click="changeSite('Juliette')"
-          >
+          <li class="nav-item" @click="changeSite('Juliette')">
             <i class="la la-book la-lg" /> Juliette
           </li>
         </ul>
       </div>
 
       <div class="nav-footer">
-          <a>Über die App</a>
-        <br>
-          <a @click="changeSite('Impresseum')">Impresseum und Datenschutz</a>
+        <a>Über die App</a>
+        <br />
+        <a @click="changeSite('Impresseum')">Impresseum und Datenschutz</a>
       </div>
-
     </nav>
   </div>
 </template>
 
 <script>
-
-  export default {
-    name: 'Navigation',
-    data: function () {
-      return {
-        navigationOpen: false,
-        navigationWidth: '-80vw',
-        navigationMargin: '0vw',
-        active: 'Home',
-        unfold: {
+export default {
+  name: "Navigation",
+  data: function() {
+    return {
+      navigationOpen: false,
+      navigationWidth: "-80vw",
+      navigationMargin: "0vw",
+      active: "Home",
+      unfold: {
+        inhalte: false,
+        verband: false
+      }
+    };
+  },
+  methods: {
+    changeNavigationState: function() {
+      if (this.navigationOpen) {
+        this.navigationWidth = "-80vw";
+        this.unfold = {
           inhalte: false,
           verband: false
-        }
+        };
+      } else {
+        this.navigationWidth = "0vw";
       }
+      this.navigationOpen = !this.navigationOpen;
     },
-    methods: {
-      changeNavigationState: function () {
-        if (this.navigationOpen) {
-          this.navigationWidth = '-80vw'
-          this.unfold = {
-            inhalte: false,
-            verband: false
-          }
-        } else {
-          this.navigationWidth = '0vw'
-        }
-        this.navigationOpen = !this.navigationOpen
-      },
-      unfoldList: function (index) {
-        this.unfold[index] = !this.unfold[index]
-      },
-      changeSite: function (site) {
-        this.$store.dispatch('wechsel_seite', site)
-        this.changeNavigationState()
-      }
+    unfoldList: function(index) {
+      this.unfold[index] = !this.unfold[index];
     },
+    changeSite: function(site) {
+      this.$store.dispatch("wechsel_seite", site);
+      this.changeNavigationState();
+    }
   }
+};
 </script>
 
 <style scoped>
-
-
 </style>

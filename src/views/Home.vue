@@ -1,16 +1,16 @@
 <template>
   <div>
-    
-    <HeaderSlider />
-
+    <Header />
+    <TerminKarte />
   </div>
 </template>
 
 <script>
-import HeaderSlider from '../components/HeaderSlider'
+  import Header from '../components/Header'
+  import TerminKarte from '../components/TerminKarte'
   export default {
     name: 'Home',
-    components: { HeaderSlider }
+    components: { Header, TerminKarte }
   }
 </script>
 
