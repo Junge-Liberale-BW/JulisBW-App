@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import router from '../router'
 import lak from './modules/lak'
 import unsereThemen from './modules/unsereThemen'
+import person from './modules/person'
 
 Vue.use(Vuex)
 
@@ -16,7 +17,7 @@ export default new Vuex.Store({
       'Beschlusssammlung': false,
       'ProgrammatikLexikon': false,
       'WerWirSind': false,
-      'Landesvorstand': false,
+      'Landesvorstand': require('../assets/Header/landesvorstand.png'),
       'Julis-A-Z': require('../assets/Header/julisaz.png'),
       'Merch': false,
       'Kalender': false,
@@ -57,7 +58,7 @@ export default new Vuex.Store({
   },
   actions: {
     wechsel_seite (context, neue_seite) {
-      router.push(neue_seite)
+      router.push({name: neue_seite})
     },
     LAK_anmelden (store, LAK) {
       store.state.ausgewählterLAK = LAK;
@@ -66,13 +67,15 @@ export default new Vuex.Store({
   },
   modules: {
     lak: lak,
-    unsereThemen: unsereThemen
+    unsereThemen: unsereThemen,
+    person: person
   },
   getters: {
     termine: state => state.termine,
     currentDate: state => state.currentDate,
     landesarbeitskreise: state => state.lak.liste,
     unsereThemen: state => state.unsereThemen.liste,
+    landesvorstand: state => state.person.landesvorstand,
     ausgewählterLAK: state => state.ausgewählterLAK
   }
 })

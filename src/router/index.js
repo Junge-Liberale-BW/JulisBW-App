@@ -87,6 +87,11 @@ const routes = [
     component: () => import('../views/Verband.vue')
   },
   {
+    path: '/Landesvorstand',
+    name: 'Landesvorstand',
+    component: () => import('../views/Landesvorstand.vue')
+  },
+  {
     path: '/LAK-anmelden',
     name: 'LAK-anmelden',
     component: () => import('../views/LAK-Anmeldung')

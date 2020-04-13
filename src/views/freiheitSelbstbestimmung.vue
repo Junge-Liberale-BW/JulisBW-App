@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header :sticky = 'true'/>
+    <Header/>
     <ThemenSeite
       thema="Freiheit & Selbstbestimmung"
       :fixed_content="fixed_content"
@@ -29,7 +29,7 @@
         return {
           0:{
             title: "Lieb’ doch, wen du willst!",
-            text: "Darum setzen wir uns für die vollständige Gleichstellung gleichgeschlechtlicher Ehen und das Adoptionsrecht für Regenbogenfamilien ein. Der Abbau von Vorurteilen und die Beseitigung von Diskriminierungen gegenüber der LGBTQ-Community ist für uns Aufgabe einer offenen Gesellschaft. Liebe ist nicht, was der Staat definiert – Liebe ist, wo Menschen füreinander Verantwortung übernehmen wollen."
+            text: "Darum setzen wir uns für die vollständige Gleichstellung gleichgeschlechtlicher Ehen und das Adoptionsrecht für Regenbogenfamilien ein.Der Abbau von Vorurteilen und die Beseitigung von Diskriminierungen gegenüber der LGBTQ-Community ist für uns Aufgabe einer offenen Gesellschaft. Liebe ist nicht, was der Staat definiert – Liebe ist, wo Menschen füreinander Verantwortung übernehmen wollen."
             },
           1:{
             title:"Gebt das Hanf frei!",
