@@ -3,18 +3,18 @@
 
     <Header/>
     <div class="kachel-wrapper">
-        <div v-for="(properties, titel) in themen_liste" v-bind:key="titel"
-             class="wide-kachel-wrapper"
+      <div v-for="(properties, titel) in themen_liste" v-bind:key="titel"
+           class="wide-kachel-wrapper"
+      >
+        <div class="wide-kachel"
+             @click="wechsel_seite('freiheitSelbstbestimmung')"
+             @touchmove="wechsel_seite(titel)"
         >
-          <div class="wide-kachel"
-               @click="wechsel_seite('freiheitSelbstbestimmung')"
-               @touchmove="wechsel_seite(titel)"
-          >
-            <i :class=" 'las la-4x la-' + properties.icon + ' wide-kachel-i'"></i>
-            <br>
-            {{titel}}
-          </div>
+          <i :class=" 'las la-4x la-' + properties.icon + ' wide-kachel-i'"></i>
+          <br>
+          {{titel}}
         </div>
+      </div>
     </div>
   </div>
 
@@ -33,7 +33,7 @@
 
     methods: {
       wechsel_seite (titel) {
-        this.$store.dispatch('wechsel_seite', titel)
+        this.$store.dispatch('wechsel_seite', { 'name': titel })
       }
     }
   }
