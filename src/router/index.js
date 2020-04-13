@@ -110,6 +110,11 @@ const routes = [
     path: '/Kürzel-ABC',
     name: 'Kürzel-ABC',
     component: () => import('../views/Kürzel-ABC.vue')
+  },
+  {
+    path: '/How-To-LaKo',
+    name: 'How to LaKo',
+    component: () => import('../views/HowToLaKo.vue')
   }
 ]
 

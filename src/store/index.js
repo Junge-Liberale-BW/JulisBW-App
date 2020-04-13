@@ -25,6 +25,7 @@ export default new Vuex.Store({
       'Kongresse': require('../assets/Header/kongresse.png'),
       'Verbandsebenen': require('../assets/Header/verbandsebenen.png'),
       'Kürzel-ABC': require('../assets/Header/kürzelABC.png'),
+      'How to LaKo': require('../assets/Header/howtolako.png'),
       'Juliette': require('../assets/Header/juliette.png'),
       'UnsereThemen': require('../assets/Header/unsereThemen.png'),
       'freiheitSelbstbestimmung': require('../assets/Header/freiheitSelbstbestimmung.png')
