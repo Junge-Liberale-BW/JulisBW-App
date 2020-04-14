@@ -53,11 +53,8 @@
 
             <li class="nav-subitem" @click="changeSite('Julis-A-Z')">
               <i class="la la-angle-right" /> JuLis A-Z
+            </li>
 
-            </li>
-            <li class="nav-subitem" @click="changeSite('Merch')">
-              <i class="la la-angle-right" /> Merch-Shop
-            </li>
           </ul>
 
           <li class="nav-item" @click="changeSite('Kalender')">
@@ -70,13 +67,14 @@
             <i class="la la-podcast la-lg" /> Podcast
           </li>
 
+          <li class="nav-item" @click="changeSite('Juliette')">
+            <i class="la la-book la-lg" /> Juliette
+          </li>
+
           <li class="nav-item">
             <i class="la la-envelope la-lg" /> Newsletter
           </li>
 
-          <li class="nav-item" @click="changeSite('Juliette')">
-            <i class="la la-book la-lg" /> Juliette
-          </li>
         </ul>
       </div>
 

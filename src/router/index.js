@@ -57,11 +57,6 @@ const routes = [
     component: () => import('../views/Terminliste.vue')
   },
   {
-    path: '/Merch',
-    name: 'Merch',
-    component: () => import('../views/Merch-Shop.vue')
-  },
-  {
     path: '/Podcast',
     name: 'Podcast',
     component: () => import('../views/Podcast.vue')
@@ -121,6 +116,11 @@ const routes = [
     path: '/How-To-LaKo',
     name: 'How to LaKo',
     component: () => import('../views/HowToLaKo.vue')
+  },
+  {
+    path: '/Arbeitskreise',
+    name: 'Arbeitskreise',
+    component: () => import('../views/Arbeitskreise.vue')
   }
 ]
 

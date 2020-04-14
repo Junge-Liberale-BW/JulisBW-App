@@ -29,7 +29,7 @@ export default {
     data: function () {
         return {
             buttons: {
-                'Landesarbeitskreise': 'suitcase',
+                'Arbeitskreise': 'suitcase',
                 'Kürzel-ABC': 'comment-alt',
                 'Kongresse': 'users',
                 'How to LaKo': 'lightbulb',
