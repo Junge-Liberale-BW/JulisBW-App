@@ -81,7 +81,7 @@
       <div class="nav-footer">
         <a>Über die App</a>
         <br />
-        <a @click="changeSite('Impresseum')">Impresseum und Datenschutz</a>
+        <a @click="changeSite('Impresseum')">Impressum und Datenschutz</a>
       </div>
     </nav>
   </div>
