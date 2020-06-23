@@ -57,6 +57,7 @@ export default new Vuex.Store({
       'Landesvorstand': require('../assets/Header/landesvorstand.png'),
       'Julis-A-Z': require('../assets/Header/julisaz.png'),
       'Podcast': require('../assets/Header/podcast.png'),
+      'Arbeitskreise': require('../assets/Header/arbeitskreise.png'),
       'Kongresse': require('../assets/Header/kongresse.png'),
       'Verbandsebenen': require('../assets/Header/verbandsebenen.png'),
       'Kürzel-ABC': require('../assets/Header/kürzelABC.png'),
