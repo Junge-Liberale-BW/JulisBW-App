@@ -8,11 +8,11 @@
     <div v-for="(each, index) in content" :key="index">
       <img :src="each.img">
       <h2>{{ each.heading }}</h2>
+      <p v-if="unfold[index]" v-html="each.text"></p>
       <div class="unfoldButton" @click="unfold[index] = !unfold[index]; key++">
         <i v-if="unfold[index]" class="las la-4x la-angle-up"></i>
         <i v-if="!unfold[index]" class="las la-4x la-angle-down"></i>
       </div>
-      <p v-if="unfold[index]" v-html="each.text"></p>
     </div>
 
   </div>
