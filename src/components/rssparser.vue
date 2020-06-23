@@ -12,6 +12,8 @@
 
 <script>
   import VueRssFeed from "./rss/VueRssFeed";
+
+
   const CORS_PROXY = "https://cors-anywhere.herokuapp.com/"
   //TODO: delete Proxy
 
