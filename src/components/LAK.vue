@@ -79,6 +79,10 @@ export default {
   font-weight: bold;
 }
 
+p {
+  text-align: left;
+}
+
 h1,
 .la-sitemap {
   text-align: center;
