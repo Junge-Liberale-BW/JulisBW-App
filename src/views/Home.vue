@@ -18,5 +18,8 @@
 </script>
 
 <style scoped>
-
+hr {
+  border-bottom: 3px solid #aeaeae;
+  margin: 30px 20vw;
+}
 </style>
