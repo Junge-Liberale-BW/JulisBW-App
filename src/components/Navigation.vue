@@ -12,8 +12,7 @@
       <div id="nav-content">
         <div id="nav-header">
           <img
-            height="100%"
-            src="https://www.julis.de/wp-content/uploads/2017/03/Logo-Junge-Liberale-web.png"
+            src="../assets/img/julisBW-banner.png"
           />
         </div>
 
@@ -71,8 +70,8 @@
             <i class="la la-book la-lg" /> Juliette
           </li>
 
-          <li class="nav-item">
-            <i class="la la-envelope la-lg" /> Newsletter
+          <li class="nav-item second-icon">
+            <i class="la la-envelope la-lg" /> Newsletter <i class="la la-external-link-alt la-lg" />
           </li>
 
         </ul>
@@ -81,7 +80,7 @@
       <div class="nav-footer">
         <a>Über die App</a>
         <br />
-        <a @click="changeSite('Impresseum')">Impresseum und Datenschutz</a>
+        <a @click="changeSite('Impresseum')">Impressum und Datenschutz</a>
       </div>
     </nav>
   </div>
@@ -93,7 +92,7 @@ export default {
   data: function() {
     return {
       navigationOpen: false,
-      navigationWidth: "-80vw",
+      navigationWidth: "-320px",
       navigationMargin: "0vw",
       active: "Home",
       unfold: {
@@ -105,7 +104,7 @@ export default {
   methods: {
     changeNavigationState: function() {
       if (this.navigationOpen) {
-        this.navigationWidth = "-80vw";
+        this.navigationWidth = "-320px";
         this.unfold = {
           inhalte: false,
           verband: false

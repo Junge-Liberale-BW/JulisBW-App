@@ -12,12 +12,14 @@
   .icon-right {
     position: absolute;
     right: 10px;
+    top: 15px;
   }
 }
 
 nav {
   min-height: 100vh;
-  width: 280px;
+  max-width: 320px;
+  width: 100vw;
   height: 100%;
   transition: 300ms;
   background-color: white;
@@ -29,8 +31,6 @@ nav {
   z-index: 50;
 
   .nav-footer{
-
-      //margin-top: 4rem;
       text-align: center;
 
       a{
@@ -61,7 +61,6 @@ a:hover {
   top: 3em;
   z-index: 100;
   border-style: none;
-
   padding-top: .3rem;
   padding-bottom: .3rem;
 }
@@ -87,15 +86,17 @@ a:hover {
 
 
 #nav-header {
-  height: 20vh;
-  width: 280px;
+  width: 100%;
   font-size: 40px;
+  min-height: 100px;
   background-color: #fff;
 }
 
 #nav-header img {
-  max-width: 100%;
-  max-height: 100%;
+  margin-top: 1.3rem;
+  margin-left: 3rem;
+  width: 15rem;
+  height: 100%;
 }
 
 #nav-body {
@@ -136,4 +137,14 @@ a:hover {
 
 #nav-body .unfoldList li i {
   color: white;
+}
+
+.second-icon {
+  position: relative;
+}
+
+.second-icon > i:last-child {
+  position: absolute;
+  right: 0;
+  top: 15px;
 }
