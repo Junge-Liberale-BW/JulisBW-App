@@ -19,7 +19,7 @@
 
 <style scoped>
 hr {
-  border-bottom: 3px solid #aeaeae;
-  margin: 30px 20vw;
+  border-bottom: 2px solid #aeaeae;
+  margin: 30px 10vw;
 }
 </style>
