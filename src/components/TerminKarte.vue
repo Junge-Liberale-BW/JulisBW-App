@@ -92,7 +92,6 @@ h2 {
     padding: 20px 0;
     width: 80vw;
     margin: 0 auto;
-    border-bottom: 3px solid #aeaeae;
 }
 
 #terminKarte {

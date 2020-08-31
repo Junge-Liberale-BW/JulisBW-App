@@ -39,8 +39,9 @@ export default {
 
 <style scoped>
 #merch-slider {
+    width: 90vw;
     position: relative;
-    margin: 20px 10vw;
+    margin: 20px auto;
 }
 
 img {
