@@ -18,7 +18,10 @@
 
 nav {
   min-height: 100vh;
-  width: 320px;
+  //width: 320px;
+  //min-width: 100px;
+  max-width: 320px;
+  width: 100vw;
   height: 100%;
   transition: 300ms;
   background-color: white;
@@ -91,17 +94,18 @@ a:hover {
   font-size: 40px;
   min-height: 100px;
   background-color: #fff;
-  text-align: center;
+  //text-align: center;
 }
 
 #nav-header img {
-  padding-left: 1.4rem;
-  padding-top: 1.6rem;
-  padding-bottom: 1rem;
-  max-width: 100%;
-  width: calc(100% - 75px);
-  height: auto;
-  max-height: 100%;
+  //padding-left: 1.4rem;
+  //padding-top: 1.6rem;
+  //padding-bottom: 1rem;
+  //max-width: 280px;
+  margin-top: 1.3rem;
+  margin-left: 3rem;
+  width: 15rem;
+  height: 100%;
 }
 
 #nav-body {

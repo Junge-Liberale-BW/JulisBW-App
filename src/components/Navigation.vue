@@ -12,7 +12,6 @@
       <div id="nav-content">
         <div id="nav-header">
           <img
-            height="100%"
             src="../assets/img/julisBW-banner.png"
           />
         </div>
@@ -93,7 +92,7 @@ export default {
   data: function() {
     return {
       navigationOpen: false,
-      navigationWidth: "-80vw",
+      navigationWidth: "-320px",
       navigationMargin: "0vw",
       active: "Home",
       unfold: {
@@ -105,7 +104,7 @@ export default {
   methods: {
     changeNavigationState: function() {
       if (this.navigationOpen) {
-        this.navigationWidth = "-80vw";
+        this.navigationWidth = "-320px";
         this.unfold = {
           inhalte: false,
           verband: false
