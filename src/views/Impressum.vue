@@ -82,7 +82,7 @@
 
 <script>
   export default {
-    name: 'Impresseum'
+    name: 'Impressum'
   }
 </script>
 

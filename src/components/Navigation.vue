@@ -80,7 +80,7 @@
       <div class="nav-footer">
         <a>Über die App</a>
         <br />
-        <a @click="changeSite('Impresseum')">Impressum und Datenschutz</a>
+        <a @click="changeSite('Impressum')">Impressum und Datenschutz</a>
       </div>
     </nav>
   </div>

@@ -20,9 +20,9 @@ const routes = [
     component: () => import('../views/About.vue')
   },
   {
-    path: '/Impresseum',
-    name: 'Impresseum',
-    component: () => import('../views/Impresseum.vue')
+    path: '/Impressum',
+    name: 'Impressum',
+    component: () => import('../views/Impressum.vue')
   },
   {
     path: '/Landesarbeitskreise',
