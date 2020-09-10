@@ -52,7 +52,6 @@
               <i class="la la-angle-right" /> JuLis A-Z
             </li>
           </ul>
-
           <li class="nav-item" @click="changeSite('Kalender')">
             <i class="la la-calendar la-lg" /> Kalender
           </li>
@@ -67,13 +66,13 @@
             <i class="la la-book la-lg" /> Juliette
           </li>
 
-          <li class="nav-item second-icon">
+          <li class="nav-item">
             <i class="la la-envelope la-lg" /> Newsletter
-            <i class="la la-external-link-alt la-lg" />
+            <i class="la la-external-link-alt la-lg external-link" />
           </li>
         </ul>
 
-        <div class="nav-footer">
+        <div id="nav-footer">
           <a>Über die App</a>
           <br />
           <a @click="changeSite('Impressum')">Impressum und Datenschutz</a>
