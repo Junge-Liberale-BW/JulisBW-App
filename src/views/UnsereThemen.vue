@@ -8,7 +8,7 @@
         class="wide-kachel-wrapper"
       >
         <div class="wide-kachel" @click="wechsel_seite(titel)">
-          <i :class=" 'las la-4x la-' + properties.icon + ' wide-kachel-i'"></i>
+          <i :class=" 'las la-4x la-' + properties.icon"></i>
           <br />
           {{properties.title}}
         </div>

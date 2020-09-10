@@ -6,18 +6,19 @@
 
   background-color: $magenta;
   color: white;
-
-  text-align: center;
-  line-height: 1.2em;
-
   border-radius: .4rem;
 
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-
+  text-align: center;
   font-weight: 800;
+  line-height: 1.2em;
+  
+  margin: 0rem;
 
-  cursor: pointer;
+  -moz-hyphens: auto;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 
   box-shadow: 0 0.5rem 0 $darker_magenta;
 
@@ -26,40 +27,37 @@
   }
 }
 
-.lak-kachel{
-  min-height: 10rem;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
-
-  text-transform: uppercase;
-}
-
-.wide-kachel{
-  min-height: 3rem;
-  padding-top: .25rem;
-  padding-bottom: 0.25rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
-}
-
-.wide-kachel-i{
-  font-size: 3rem !important;
-}
-
-.lak-kachel-wrapper{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.wide-kachel-wrapper{
-  margin-top: 1rem !important;
-  margin-bottom: 1rem !important;
-}
-
 .kachel-wrapper{
   margin: 1rem;
+  margin-bottom: 1.5rem;
   padding-left: .5rem;
   padding-right: .5rem;
+
+  .lak-kachel-wrapper{
+    margin: 0rem;
+    .lak-kachel{
+      min-height: 8rem;
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
+
+      text-transform: uppercase;
+    }
+  }
+
+  .wide-kachel-wrapper{
+    margin-top: 1.25rem !important;
+    margin-bottom: 1.25rem !important;
+    .wide-kachel{
+      min-height: 5rem;
+      padding-top: .25rem;
+      padding-bottom: 0.25rem;
+      padding-left: .5rem;
+      padding-right: .5rem;
+      i{
+        font-size: 3rem !important;
+      }
+    }
+  }
 }
