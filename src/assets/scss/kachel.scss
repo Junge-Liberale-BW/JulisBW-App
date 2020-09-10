@@ -11,6 +11,7 @@
   text-align: center;
   font-weight: 800;
   line-height: 1.2em;
+  text-transform: uppercase;
   
   margin: 0rem;
 
@@ -37,7 +38,9 @@
   .lak-kachel-wrapper{
     margin: 0rem;
     .lak-kachel{
-      min-height: 8rem;
+      margin-top: 1.5rem;
+
+      min-height: 9rem;
       padding-top: 1.25rem;
       padding-bottom: 1.25rem;
       padding-left: .5rem;
