@@ -31,13 +31,15 @@ nav {
   z-index: 50;
 
   .nav-footer{
-      text-align: center;
+    min-height: 50px;
+    text-align: center;
+    margin-top: auto;
 
-      a{
-        color: $magenta;
-        font-weight: bolder;
-        cursor: pointer;
-      }
+    a{
+      color: $magenta;
+      font-weight: bolder;
+      cursor: pointer;
+    }
   }
 }
 
@@ -99,12 +101,19 @@ a:hover {
   height: 100%;
 }
 
+ #nav-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+ }
+
 #nav-body {
-  list-style: none;
+  height: 100vh;
+  margin: 0;
+  //list-style: none;
   font-size: 1.8rem;
   font-weight: bold;
   padding: 0px;
-
 
   i {
     color: $magenta;

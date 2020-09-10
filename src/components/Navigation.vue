@@ -11,9 +11,7 @@
     <nav :style="{left: navigationWidth}">
       <div id="nav-content">
         <div id="nav-header">
-          <img
-            src="../assets/img/julisBW-banner.png"
-          />
+          <img src="../assets/img/julisBW-banner.png" />
         </div>
 
         <ul id="nav-body">
@@ -53,7 +51,6 @@
             <li class="nav-subitem" @click="changeSite('Julis-A-Z')">
               <i class="la la-angle-right" /> JuLis A-Z
             </li>
-
           </ul>
 
           <li class="nav-item" @click="changeSite('Kalender')">
@@ -71,16 +68,16 @@
           </li>
 
           <li class="nav-item second-icon">
-            <i class="la la-envelope la-lg" /> Newsletter <i class="la la-external-link-alt la-lg" />
+            <i class="la la-envelope la-lg" /> Newsletter
+            <i class="la la-external-link-alt la-lg" />
           </li>
-
         </ul>
-      </div>
 
-      <div class="nav-footer">
-        <a>Über die App</a>
-        <br />
-        <a @click="changeSite('Impressum')">Impressum und Datenschutz</a>
+        <div class="nav-footer">
+          <a>Über die App</a>
+          <br />
+          <a @click="changeSite('Impressum')">Impressum und Datenschutz</a>
+        </div>
       </div>
     </nav>
   </div>
@@ -89,7 +86,7 @@
 <script>
 export default {
   name: "Navigation",
-  data: function() {
+  data: function () {
     return {
       navigationOpen: false,
       navigationWidth: "-320px",
@@ -97,31 +94,31 @@ export default {
       active: "Home",
       unfold: {
         inhalte: false,
-        verband: false
-      }
+        verband: false,
+      },
     };
   },
   methods: {
-    changeNavigationState: function() {
+    changeNavigationState: function () {
       if (this.navigationOpen) {
         this.navigationWidth = "-320px";
         this.unfold = {
           inhalte: false,
-          verband: false
+          verband: false,
         };
       } else {
         this.navigationWidth = "0vw";
       }
       this.navigationOpen = !this.navigationOpen;
     },
-    unfoldList: function(index) {
+    unfoldList: function (index) {
       this.unfold[index] = !this.unfold[index];
     },
-    changeSite: function(site) {
-      this.$store.dispatch("wechsel_seite", {'name': site});
+    changeSite: function (site) {
+      this.$store.dispatch("wechsel_seite", { name: site });
       this.changeNavigationState();
-    }
-  }
+    },
+  },
 };
 </script>
 
