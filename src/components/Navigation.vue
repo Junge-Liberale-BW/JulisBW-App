@@ -73,9 +73,10 @@
         </ul>
 
         <div id="nav-footer">
-          <a>Über die App</a>
+          <a @click="changeSite('About')">Über die App</a>
           <br />
-          <a @click="changeSite('Impressum')">Impressum und Datenschutz</a>
+          <a @click="changeSite('Impressum')">Impressum</a>&nbsp;
+          <a @click="changeSite('Datenschutz')">Datenschutz</a>
         </div>
       </div>
     </nav>

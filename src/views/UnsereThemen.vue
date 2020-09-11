@@ -25,14 +25,17 @@ export default {
   computed: {
     themen_liste() {
       return this.$store.getters.unsereThemen;
-    }
+    },
   },
 
   methods: {
     wechsel_seite(titel) {
-      this.$store.dispatch("wechsel_seite", { name: "Themen-Ansicht" , params: {id:titel} });
-    }
-  }
+      this.$store.dispatch("wechsel_seite", {
+        name: "Themen-Ansicht",
+        params: { id: titel },
+      });
+    },
+  },
 };
 </script>
 

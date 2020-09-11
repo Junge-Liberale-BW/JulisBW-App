@@ -70,6 +70,8 @@ export default new Vuex.Store({
       'umwelt': require('../assets/Header/umweltNachhaltigkeit.png'),
       'europa': require('../assets/Header/deutschlandEuropa.png'),
       'partizipation': require('../assets/Header/demokratiePartizipation.png'),
+      'Impressum': require('../assets/Header/startseite.png'),
+      'Datenschutz': require('../assets/Header/startseite.png'),
     },
     merchBilder: [
       require('../assets/img/merch/merchshop-1.png'),
@@ -95,7 +97,7 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    wechsel_seite (context, neue_seite) {
+    wechsel_seite(context, neue_seite) {
       router.push({ name: neue_seite.name, params: neue_seite.params })
       window.scrollTo(0, 0)
     },

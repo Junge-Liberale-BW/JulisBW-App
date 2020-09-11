@@ -1,5 +1,5 @@
 <template>
-  <div class="lak-seite">
+  <div>
     <div class="lak-header">
       <i :class="'las la-4x la-' + lak.icon"></i>
       <h1 class="text-center text-uppercase">LAK {{ lak.title }}</h1>
@@ -90,11 +90,6 @@ export default {
     font-weight: 800;
     font-size: 1.25rem;
   }
-}
-
-.lak-seite {
-  font-weight: bold;
-  text-align: left;
 }
 
 .leiter-kachel {
