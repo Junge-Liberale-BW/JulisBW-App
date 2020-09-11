@@ -5,7 +5,7 @@
       <h1 class="text-center text-uppercase">LAK {{ lak.title }}</h1>
     </div>
 
-    <div class="container lak-content">
+    <div class="text-page">
       <p class="text-content left">{{ lak.text1 }}</p>
       <p class="text-content left">{{ lak.text2 }}</p>
 
@@ -95,12 +95,6 @@ export default {
 .lak-seite {
   font-weight: bold;
   text-align: left;
-}
-
-.lak-content {
-  text-align: justify;
-  line-height: 1.2;
-  font-weight: bold;
 }
 
 .leiter-kachel {

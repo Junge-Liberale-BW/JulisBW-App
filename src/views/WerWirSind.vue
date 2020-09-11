@@ -68,9 +68,7 @@ export default {
           text:
             "Unsere Debatten sind stets das, was wir uns auch für die politische Diskussion in Deutschland wünschen: Ein fairer Wettbewerb um die besten Ideen. Es gibt keine Denkverbote und keine blöden Blicke. Wir stehen neuen Ideen offen gegenüber und diskutieren dann leidenschaftlich und gerne darüber, ob es eine noch bessere gibt. Dabei ist es ganz egal, ob du für eine bessere Finanzpolitik, für eine demokratischere Eüropäische Union oder für mehr Rechte für Fußballfans streitest, jedes Thema und jeder Mensch ist bei uns willkommen.",
         },
-      ],
-      unfold: [false, false, false, false],
-      key: 0,
+      ]
     };
   },
   methods: {
