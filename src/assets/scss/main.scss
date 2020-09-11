@@ -45,6 +45,12 @@ body *{
   color: $cyan;
 }
 
+.vertical-divider{
+  margin: .8rem;
+  border: none;
+  border-bottom: 3px solid $lighter_grey;
+}
+
 .header-sticky {
   position: sticky;
   top: 0;
@@ -61,14 +67,6 @@ body *{
     font-weight: bold;
     box-shadow: 0rem 0.2rem 0 $darker_cyan;
   }
-}
-
-.text-content{
-  text-align: left;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 0rem;
-  margin-right: 0rem;
 }
 
 .vc-rounded-full {
@@ -133,18 +131,4 @@ body *{
     right: 1rem;
     top: 3.5rem;
   }
-}
-
-a.button_big, button.button_big{
-  width: 80vw;
-  margin: 20px auto;
-  padding-top: 10px;
-  display: block;
-  text-align: center;
-  height: 50px;
-  font-weight: bold;
-  color: #fff !important;
-  background-color: #009EE3;
-  font-size: 20px;
-  text-transform: uppercase; 
 }

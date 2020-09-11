@@ -6,8 +6,8 @@
     </div>
 
     <div class="container lak-content">
-      <p class="text-content">{{ lak.text1 }}</p>
-      <p class="text-content">{{ lak.text2 }}</p>
+      <p class="text-content left">{{ lak.text1 }}</p>
+      <p class="text-content left">{{ lak.text2 }}</p>
 
       <PersonKachel
         class="leiter-kachel"
@@ -30,8 +30,12 @@
         >LAK Leitung kontaktieren</button>
       </div>
 
-      <p class="text-content">Du interessierst dich für das Thema Digitales & Medien und möchtest dich im Landesarbeitskreis engagieren?</p>
-      <p class="text-content">Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!</p>
+      <p
+        class="text-content center"
+      >Du interessierst dich für das Thema {{lak.title}} und möchtest dich im Landesarbeitskreis engagieren?</p>
+      <p
+        class="text-content center"
+      >Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!</p>
 
       <div class="button-wrapper">
         <button
@@ -76,6 +80,7 @@ export default {
   font-size: 1.7rem;
   color: white;
   background-color: #e5007d;
+  padding-top: 1rem;
 
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -87,7 +92,7 @@ export default {
   }
 }
 
-.lak-seite{
+.lak-seite {
   font-weight: bold;
   text-align: left;
 }
