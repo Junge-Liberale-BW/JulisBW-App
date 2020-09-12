@@ -15,12 +15,6 @@
   
   margin: 0rem;
 
-  -moz-hyphens: auto;
-  -o-hyphens: auto;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-
   box-shadow: 0 0.5rem 0 $darker_magenta;
 
   &:hover{
@@ -40,7 +34,7 @@
     .lak-kachel{
       margin-top: 1.5rem;
 
-      min-height: 9rem;
+      min-height: 10rem;
       padding-top: 1.25rem;
       padding-bottom: 1.25rem;
       padding-left: .5rem;

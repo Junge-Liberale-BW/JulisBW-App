@@ -42,11 +42,6 @@ export default {
     kuerzelList() {
       return this.$store.getters.kuerzel.kuerzel;
     },
-    orderedList() {
-      let v = this.$store.getters.kuerzel.kuerzel;
-
-      return v;
-    },
     filteredList() {
       let v = this.kuerzelList.filter((e) =>
         (e.abbr + " " + e.explanation)
@@ -75,7 +70,6 @@ h1 {
     line-height: 1rem;
   }
   .letter {
-    //line-height: 1.5rem;
     td {
       padding-top: 0.75rem;
       vertical-align: bottom;
@@ -85,7 +79,5 @@ h1 {
 
 .abbr {
   width: 4rem;
-}
-.explanation {
 }
 </style>

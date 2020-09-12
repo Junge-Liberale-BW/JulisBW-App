@@ -31,6 +31,11 @@ $lighter_grey:#707070;
 
 * {
   font-family: 'Montserrat';
+  -moz-hyphens: manual;
+  -o-hyphens: manual;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
 }
 
 body *{

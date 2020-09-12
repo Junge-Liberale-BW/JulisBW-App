@@ -26,6 +26,10 @@ Object.defineProperty(Vue.prototype, '$julietteService', {
 })
 
 new Vue({
+  created() {
+    const html = document.documentElement
+    html.setAttribute('lang', 'de')
+  },
   router,
   store,
   render: h => h(App)
