@@ -69,6 +69,38 @@ body *{
   }
 }
 
+::-webkit-input-placeholder { /* Edge */
+  color: black;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+::placeholder {
+  color: black;
+}
+
+.search-wrapper {
+    width: 100%;
+  .search {
+    width: 100%;
+    height: 1.75rem;
+    border-radius: 0;
+    border: 1px solid $lighter_grey;
+    font-size: 0.6rem;
+    font-style: italic;
+    color: black;
+    padding-left: .5rem;
+    padding-bottom: 0.1rem;
+    font-weight: 500;
+    &:focus{
+      border: 1px solid black;
+      outline: none;
+    }
+    
+  }
+  
+}
+
 .vc-rounded-full {
   border-radius: 0 !important;
   margin: 0;

@@ -10,6 +10,7 @@ export default new Vuex.Store({
     landesvorstand: require('../assets/landesvorstand.json'), // hol von da "http://s.julisbw.de/app/landesvorstand.json"
     laks: require('../assets/laks.json'), // hol von da "http://s.julisbw.de/app/laks.json"
     unsereThemen: require('../assets/themen.json'), // hol von da "http://s.julisbw.de/app/themen.json"
+    kuerzel: require('../assets/kuerzel.json'),
     personBilder: {
       "landesvorsitzender": 'http://s.julisbw.de/app/person/landesvorsitzender.jpg',
       "stvFinanzen": 'http://s.julisbw.de/app/person/stvFinanzen.jpg',
@@ -113,6 +114,7 @@ export default new Vuex.Store({
     landesvorstand: state => state.landesvorstand,
     laks: state => state.laks,
     unsereThemen: state => state.unsereThemen,
+    kuerzel: state => state.kuerzel,
     ausgewählterLAK: state => state.ausgewählterLAK,
     merchBilder: state => state.merchBilder
   }

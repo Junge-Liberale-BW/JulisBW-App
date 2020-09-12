@@ -1,0 +1,156 @@
+{
+  "kuerzel": [
+    {
+      "abbr": "AK",
+      "explanation": "Arbeitskreis"
+    },
+    {
+      "abbr": "BAK",
+      "explanation": "Bundesarbeitskreis"
+    },
+    {
+      "abbr": "LAK",
+      "explanation": "Landesarbeitskreis"
+    },
+    {
+      "abbr": "BFA",
+      "explanation": "Bundesfachausschuss der FDP"
+    },
+    {
+      "abbr": "BGSt",
+      "explanation": "Bundesgeschäftsstelle"
+    },
+    {
+      "abbr": "LGSt",
+      "explanation": "Landesgeschäftsstelle"
+    },
+    {
+      "abbr": "BMV",
+      "explanation": "Bezirksmitgliederversammlung"
+    },
+    {
+      "abbr": "KMV",
+      "explanation": "Kreismitgliederversammlung"
+    },
+    {
+      "abbr": "BuKo",
+      "explanation": "Bundeskongress"
+    },
+    {
+      "abbr": "LaKo",
+      "explanation": "Landeskongress"
+    },
+    {
+      "abbr": "BuVo",
+      "explanation": "Bundesvorstand"
+    },
+    {
+      "abbr": "LaVo",
+      "explanation": "Landesvorstand"
+    },
+    {
+      "abbr": "eBuVo",
+      "explanation": "erweiterter Bundesvorstand"
+    },
+    {
+      "abbr": "eLaVo",
+      "explanation": "erweiterter Landesvorstand"
+    },
+    {
+      "abbr": "BV",
+      "explanation": "Bezirksverband"
+    },
+    {
+      "abbr": "FDP",
+      "explanation": "Freie Demoraktische Partei (unsere Seniorenorganisation ;-))"
+    },
+    {
+      "abbr": "FNF",
+      "explanation": "Friedrich-Naumann-Stiftung für die Freiheit"
+    },
+    {
+      "abbr": "GO",
+      "explanation": "Geschäftsordnung"
+    },
+    {
+      "abbr": "J+L",
+      "explanation": "Jung + Liberal (Bundesmitgliedermagazin)"
+    },
+    {
+      "abbr": "KJR",
+      "explanation": "Kreisjugendring"
+    },
+    {
+      "abbr": "RPJ",
+      "explanation": "Ring politischer Jugend"
+    },
+    {
+      "abbr": "KV",
+      "explanation": "Kreisverband"
+    },
+    {
+      "abbr": "KV",
+      "explanation": "Kreisverband"
+    },
+    {
+      "abbr": "LFA",
+      "explanation": "Landesfachausschuss der FDP"
+    },
+    {
+      "abbr": "LHG",
+      "explanation": "Liberale Hochschulgruppe"
+    },
+    {
+      "abbr": "LiF",
+      "explanation": "Liberale Frauen"
+    },
+    {
+      "abbr": "LiM",
+      "explanation": "Liberaler Mittelstand"
+    },
+    {
+      "abbr": "LiS",
+      "explanation": "Liberale Senioren"
+    },
+    {
+      "abbr": "LiSL",
+      "explanation": "Liberale Schwulen und Lesben"
+    },
+    {
+      "abbr": "LS",
+      "explanation": "Liberale Schüler"
+    },
+    {
+      "abbr": "LPW",
+      "explanation": "Landesprogrammatisches Wochenende"
+    },
+    {
+      "abbr": "LV",
+      "explanation": "Landesverband"
+    },
+    {
+      "abbr": "MdL",
+      "explanation": "Mitglied des Landtages"
+    },
+    {
+      "abbr": "MdB",
+      "explanation": "Mitglied des Bundestages"
+    },
+    {
+      "abbr": "MdEP",
+      "explanation": "Mitglied des EU-Parlaments"
+    },
+    {
+      "abbr": "OV",
+      "explanation": "Ortsverband"
+    },
+    {
+      "abbr": "PPW",
+      "explanation": "Politisch Programmatische Wochenende der FNF"
+    },
+    {
+      "abbr": "VLK",
+      "explanation": "Vereinigung Liberaler Kommunalpolitiker"
+    }
+  ]
+}
