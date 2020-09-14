@@ -1,114 +1,83 @@
 <template>
   <div>
     <Header />
+    <div class="text-page">
+      <h1 class="heading-cyan">SUCHE:</h1>
+      <div class="search-wrapper center">
+        <input class="search" type="text" v-model="search" placeholder="Suche nach Abkürzung..." />
+      </div>
 
-    <div id="ABC" v-for="(each, index) in content" :key="index">
-        <h2>{{ index }}</h2>
-        <table>
-            <tr v-for="(each2, index2) in each" :key="index2">
-                <td>{{ index2 }}</td>
-                <td>{{ each2 }}</td>
+      <div class="list-wrapper">
+        <table class="list-table">
+          <div v-for="(item, i) in filteredList" v-bind:key="i">
+            <tr
+              class="text-magenta letter"
+              v-if="search=='' && (i==0 || (i>0 && item.abbr.toUpperCase()[0] !== filteredList[i-1].abbr.toUpperCase()[0]))"
+            >
+              <td>{{ item.abbr.toUpperCase()[0] }}</td>
             </tr>
+            <tr>
+              <td class="abbr">{{item.abbr}}</td>
+              <td class="explanation">{{item.explanation}}</td>
+            </tr>
+          </div>
         </table>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Header from '../components/Header';
+import Header from "../components/Header";
 
 export default {
-    name: 'Kürzel-ABC',
-    components: { Header },
-    data: function () {
-        return {
-            content: {
-                A: {
-                    AK: 'Arbeitskreis'
-                },
-                B: {
-                    BAK: 'Bundesarbeitskreis',
-                    BFA: 'Bundesfachausschuss der FDP',
-                    BGSt: 'Bundesgeschäftsstelle',
-                    BMV: 'Bezirksmitgliederversammlung',
-                    BuKo: 'Bundeskongress',
-                    BuVo: 'Bundesvorstand',
-                    BV: 'Bezirksverband'
-                },
-                E: {
-                    eBuVo: 'erweiterter Bundesvorstand',
-                    eLaVo: 'erweiterter Landesvorstand',
-                },
-                F: {
-                    FDP: "Seniorenorganisation ;-)",
-                    FNF: 'Friedrich-Naumann-Stiftung für die Freiheit'
-                },
-                G: {
-                    GO: 'Geschäftsordnung',
-                },
-                J: {
-                    'J&L': 'Jung & Liberal'
-                },
-                K: {
-                    KJR: 'Kreisjugendring',
-                    KMV: 'Kreismitgliederversammlung',
-                    KV: 'Kreisverband',
-                },
-                L: {
-                    LAK: 'Landesarbeitskreis',
-                    LaKo: 'Landeskongress',
-                    LaVo: 'Landesvorstand',
-                    LFA: 'Landesfachausschuss der FDP',
-                    LGSt: 'Landesgeschäftsstelle',
-                    LHG: 'Liberale Hochschulgruppe',
-                    LiF: 'Liberale Frauen',
-                    LiM: 'Liberaler Mittelstand',
-                    LiS: 'Liberale Senioren',
-                    LiSL: 'Liberale Schwulen und Lesben',
-                    LS: 'Liberale Schüler',
-                    LPW: 'Landesprogrammatisches Wochenende',
-                    LV: 'Landesverband'
-                },
-                M: {
-                    MdL: 'Mitglied des Landtages',
-                    MdB: 'Mitglied des Bundestages',
-                    MdEP: 'Mitglied des EU-Parlaments'
-                },
-                O: {
-                    OV: 'Ortsverband'
-                },
-                P: {
-                    PPW: 'Politisch Programmatische Wochenende der Friedrich-Naumann-Stiftung'
-                },
-                R: {
-                    RPJ: 'Ring politischer Jugend'
-                },
-                V: {
-                    VLK: 'Vereinigung Liberaler Kommunalpolitiker'
-                }
-            }
-        }
-    }
-}
+  name: "Kürzel-ABC",
+  components: { Header },
+  data: function () {
+    return {
+      search: "",
+    };
+  },
+  computed: {
+    kuerzelList() {
+      return this.$store.getters.kuerzel.kuerzel;
+    },
+    filteredList() {
+      let v = this.kuerzelList.filter((e) =>
+        (e.abbr + " " + e.explanation)
+          .toLowerCase()
+          .includes(this.search.toLowerCase())
+      );
+      v.sort((e1, e2) =>
+        e1.abbr.toLowerCase() > e2.abbr.toLowerCase() ? 1 : -1
+      );
+      return v;
+    },
+  },
+};
 </script>
 
-<style scoped>
-#ABC {
-    padding: 20px;
+<style lang="scss" scoped>
+h1 {
+  color: black;
+  font-size: 1.5rem;
+}
+.list-wrapper {
+  margin-top: 1rem;
+}
+.list-table {
+  tr {
+    line-height: 1rem;
+  }
+  .letter {
+    td {
+      padding-top: 0.75rem;
+      vertical-align: bottom;
+    }
+  }
 }
 
-h2 {
-    color: #e5007d;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-table {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-table tr>td:first-child {
-    width: 70px;
+.abbr {
+  width: 4rem;
 }
 </style>

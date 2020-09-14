@@ -8,7 +8,7 @@
         class="wide-kachel-wrapper"
       >
         <div class="wide-kachel" @click="wechsel_seite(titel)">
-          <i :class=" 'las la-4x la-' + properties.icon + ' wide-kachel-i'"></i>
+          <i :class=" 'las la-4x la-' + properties.icon"></i>
           <br />
           {{properties.title}}
         </div>
@@ -25,14 +25,17 @@ export default {
   computed: {
     themen_liste() {
       return this.$store.getters.unsereThemen;
-    }
+    },
   },
 
   methods: {
     wechsel_seite(titel) {
-      this.$store.dispatch("wechsel_seite", { name: "Themen-Ansicht" , params: {id:titel} });
-    }
-  }
+      this.$store.dispatch("wechsel_seite", {
+        name: "Themen-Ansicht",
+        params: { id: titel },
+      });
+    },
+  },
 };
 </script>
 

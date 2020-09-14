@@ -26,9 +26,16 @@ $darker_magenta: #c10069;
 $cyan: #009EE3;
 $darker_cyan: #007AAF;
 $yellow: #ffed00;
+$grey: #5f5f5f;
+$lighter_grey:#707070;
 
 * {
   font-family: 'Montserrat';
+  -moz-hyphens: manual;
+  -o-hyphens: manual;
+  -webkit-hyphens: manual;
+  -ms-hyphens: manual;
+  hyphens: manual;
 }
 
 body *{
@@ -43,36 +50,10 @@ body *{
   color: $cyan;
 }
 
-
-.lak-kachel {
-  min-height: 10rem;
-  align-content: center;
-
-  background-color: $magenta;
-  color: white;
-
-  text-align: center;
-  line-height: 1.2;
-
-  border-radius: .4rem;
-
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  padding-left: .5rem;
-  padding-right: .5rem;
-
-  margin-top: 1.5rem;
-
-  font-weight: 800;
-  text-transform: uppercase;
-
-  cursor: pointer;
-
-  box-shadow: 0 0.5rem 0 $darker_magenta;
-
-  &:hover {
-    background-color: $darker_magenta;
-  }
+.vertical-divider{
+  margin: .8rem;
+  border: none;
+  border-bottom: 3px solid $lighter_grey;
 }
 
 .header-sticky {
@@ -80,61 +61,50 @@ body *{
   top: 0;
 }
 
-.lak-seite {
-  //margin-bottom: 2rem;
-}
+.button-wrapper {
+  text-align: center;
+  padding: 0.5em;
 
-.lak-header {
-  width: 100%;
-  background-color: $magenta;
-  padding-bottom: 1rem;
-
-  h1 {
-    font-weight: 800;
-    font-size: 1.2em;
+  .btn {
+    background-color: $cyan;
+    border-radius: 0.4em;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0rem 0.2rem 0 $darker_cyan;
   }
 }
 
-.lak-content {
+::-webkit-input-placeholder { /* Edge */
+  color: black;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: black;
+}
+::placeholder {
+  color: black;
+}
 
-  padding: 1.8em !important;
-  text-align: justify;
-  line-height: 1.2;
-  font-weight: bold;
-
-  .button-wrapper {
-    text-align: center;
-    padding: 0.5em;
-
-    .btn {
-      background-color: $cyan;
-      border-radius: 0.4em;
-      border: none;
-      font-weight: bold;
-      box-shadow: 0rem 0.2rem 0 $darker_cyan;
+.search-wrapper {
+    width: 100%;
+  .search {
+    width: 100%;
+    height: 1.75rem;
+    border-radius: 0;
+    border: 1px solid $lighter_grey;
+    font-size: 0.6rem;
+    font-style: italic;
+    color: black;
+    padding-left: .5rem;
+    padding-bottom: 0.1rem;
+    font-weight: 500;
+    &:focus{
+      border: 1px solid black;
+      outline: none;
     }
+    
   }
-
-  .lak-leiter-kachel {
-    border-color: $magenta;
-    border-width: medium;
-    margin-bottom: 2rem;
-
-    .lak-zusatzinhalt {
-      background-color: $magenta;
-      color: white;
-
-      padding-top: 1rem;
-      padding-bottom: 2rem;
-    }
-  }
-
+  
 }
-
-.clickable {
-  cursor: pointer;
-}
-
 
 .vc-rounded-full {
   border-radius: 0 !important;
@@ -198,18 +168,4 @@ body *{
     right: 1rem;
     top: 3.5rem;
   }
-}
-
-a.button_big, button.button_big{
-  width: 80vw;
-  margin: 20px auto;
-  padding-top: 10px;
-  display: block;
-  text-align: center;
-  height: 50px;
-  font-weight: bold;
-  color: #fff !important;
-  background-color: #009EE3;
-  font-size: 20px;
-  text-transform: uppercase; 
 }

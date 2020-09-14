@@ -1,150 +1,119 @@
 @import "main";
 
-.nav-item {
-  cursor: pointer;
-  padding: .5rem 1.5rem;
-  position: relative;
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  .icon-right {
-    position: absolute;
-    right: 10px;
-    top: 15px;
-  }
-}
-
 nav {
-  min-height: 100vh;
+  height: 100vh;
   max-width: 320px;
   width: 100vw;
-  height: 100%;
   transition: 300ms;
+  border-right: 1px solid $lighter_grey;
+
   background-color: white;
-  overflow: auto;
   position: fixed;
-  top: 0;
-  left: 0;
-  border-right: 1px solid #aeaeae;
+  
   z-index: 50;
+  
+  #nav-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    #nav-header {
+      width: 100%;
+      font-size: 40px;
+      min-height: 100px;
+      background-color: white;
 
-  .nav-footer{
-      text-align: center;
-
-      a{
-        color: $magenta;
-        font-weight: bolder;
-        cursor: pointer;
+      img {
+        margin-top: 1.3rem;
+        margin-left: 3rem;
+        width: 15rem;
+        height: 100%;
       }
+    }
+    
+    #nav-body {
+      height: 100vh;
+      margin-top: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+      
+      list-style: none;
+      padding: 0px;
+      
+
+      .nav-item {
+        padding: .5rem 1.5rem;
+        position: relative;
+
+        .icon-right {
+          position: absolute;
+          right: 10px;
+          top: 15px;
+        }
+      }
+
+      .unfoldList {
+        li {
+          color: white !important;
+          i {
+            color: white;
+          }
+        }
+        list-style: none;
+        font-size: 20px;
+        padding: .5rem;
+        width: 100%;
+        background-color: $magenta;
+      }
+
+      i {
+        color: $magenta;
+        padding-right: 0.5rem;
+      }
+      .external-link{
+        color: $lighter_grey;
+        font-size: 1.5rem;
+      }
+
+      .nav-subitem {
+        padding: .6rem 1.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      .horizontal-line {
+        border-bottom: 3px solid $magenta;
+        margin: 10px 20px;
+      }
+    }
+
+    #nav-footer{
+      color: $magenta;
+      text-align: center;
+      font-weight: bolder;
+
+      padding: 1rem;
+    }
   }
 }
 
-a {
-  color: black;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #E5007D;
-}
-
-.router-link-active {
-  text-decoration: none;
-}
-
+// button
 #nav-button {
-  background-color: white;
   color: $magenta;
+  background-color: white;
+
   position: fixed;
   top: 3em;
   z-index: 100;
+
   border-style: none;
+  outline: none;
+
   padding-top: .3rem;
   padding-bottom: .3rem;
 }
-
 .opened-nav-button {
-  background-color: #E5007D !important;
   color: #fff;
+  background-color: #E5007D !important;
   border-style: none;
-}
-
-
-#nav-button:active {
-  outline: none;
-}
-
-#nav-button:hover {
-  outline: none;
-}
-
-#nav-button:focus {
-  outline: none;
-}
-
-
-#nav-header {
-  width: 100%;
-  font-size: 40px;
-  min-height: 100px;
-  background-color: #fff;
-}
-
-#nav-header img {
-  margin-top: 1.3rem;
-  margin-left: 3rem;
-  width: 15rem;
-  height: 100%;
-}
-
-#nav-body {
-  list-style: none;
-  font-size: 1.8rem;
-  font-weight: bold;
-  padding: 0px;
-
-
-  i {
-    color: $magenta;
-  }
-
-  .nav-subitem {
-    padding: .6rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-
-    cursor: pointer;
-  }
-}
-
-.horizontal-line {
-  border-bottom: 3px solid $magenta;
-  margin: 10px 20px;
-}
-
-.unfoldList {
-  list-style: none;
-  font-size: 20px;
-  padding: .5rem;
-  background-color: $magenta;
-}
-
-.unfoldList li {
-  color: white !important;
-}
-
-#nav-body .unfoldList li i {
-  color: white;
-}
-
-.second-icon {
-  position: relative;
-}
-
-.second-icon > i:last-child {
-  position: absolute;
-  right: 0;
-  top: 15px;
 }

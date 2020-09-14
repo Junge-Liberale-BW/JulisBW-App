@@ -1,21 +1,14 @@
 <template>
-  <div class="lak-seite">
+  <div>
     <div class="lak-header">
-      <i class="las la-sitemap la-8x"></i>
+      <i :class="'las la-4x la-' + lak.icon"></i>
       <h1 class="text-center text-uppercase">LAK {{ lak.title }}</h1>
     </div>
 
-    <div class="container lak-content">
-      <p>{{ lak.text1 }}</p>
-      <p>{{ lak.text2 }}</p>
+    <div class="text-page">
+      <p class="text-content left">{{ lak.text1 }}</p>
+      <p class="text-content left">{{ lak.text2 }}</p>
 
-      <div class="button-wrapper">
-        <button
-          type="button"
-          class="btn btn-primary text-uppercase mx-auto"
-          @click="lakMail"
-        >LAK Leiter kontaktieren</button>
-      </div>
       <PersonKachel
         class="leiter-kachel"
         :person="lak.leiter"
@@ -29,9 +22,20 @@
         :position="name +'Stellvertretung'"
         :color="getColor"
       />
+      <div class="button-wrapper">
+        <button
+          type="button"
+          class="btn btn-primary text-uppercase mx-auto"
+          @click="lakMail"
+        >LAK Leitung kontaktieren</button>
+      </div>
 
-      <p>Du interessierst dich für das Thema Digitales & Medien und möchtest dich im Landesarbeitskreis engagieren?</p>
-      <p>Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!</p>
+      <p
+        class="text-content center"
+      >Du interessierst dich für das Thema {{lak.title}} und möchtest dich im Landesarbeitskreis engagieren?</p>
+      <p
+        class="text-content center"
+      >Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!</p>
 
       <div class="button-wrapper">
         <button
@@ -56,43 +60,44 @@ export default {
     },
     lak() {
       return this.$store.getters.laks[this.name];
-    }
+    },
   },
   methods: {
-    anmeldenZumLAK: function() {
+    anmeldenZumLAK: function () {
       this.$store.dispatch("LAK_anmelden", this.titel);
     },
     lakMail() {
       window.open("mailto:" + this.lak.email + "@julis-bw.de", "_blank");
-    }
-  }
+    },
+  },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.lak-header {
+  width: 100%;
+  text-align: center;
+  font-size: 1.7rem;
+  color: white;
+  background-color: #e5007d;
+  padding-top: 1rem;
+
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
+
+  h1 {
+    font-weight: 800;
+    font-size: 1.25rem;
+  }
+}
+
 .leiter-kachel {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.lak-seite {
-  font-weight: bold;
-}
-
-p {
-  text-align: left;
-}
-
-h1,
-.la-sitemap {
-  text-align: center;
-  color: white;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.la-sitemap {
-  padding-bottom: 1%;
-  padding-top: 5%;
+.button-wrapper {
+  margin-bottom: 0.75rem;
 }
 </style>

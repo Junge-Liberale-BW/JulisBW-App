@@ -10,6 +10,7 @@ export default new Vuex.Store({
     landesvorstand: require('../assets/landesvorstand.json'), // hol von da "http://s.julisbw.de/app/landesvorstand.json"
     laks: require('../assets/laks.json'), // hol von da "http://s.julisbw.de/app/laks.json"
     unsereThemen: require('../assets/themen.json'), // hol von da "http://s.julisbw.de/app/themen.json"
+    kuerzel: require('../assets/kuerzel.json'),
     personBilder: {
       "landesvorsitzender": 'http://s.julisbw.de/app/person/landesvorsitzender.jpg',
       "stvFinanzen": 'http://s.julisbw.de/app/person/stvFinanzen.jpg',
@@ -70,6 +71,8 @@ export default new Vuex.Store({
       'umwelt': require('../assets/Header/umweltNachhaltigkeit.png'),
       'europa': require('../assets/Header/deutschlandEuropa.png'),
       'partizipation': require('../assets/Header/demokratiePartizipation.png'),
+      'Impressum': require('../assets/Header/startseite.png'),
+      'Datenschutz': require('../assets/Header/startseite.png'),
     },
     merchBilder: [
       require('../assets/img/merch/merchshop-1.png'),
@@ -95,8 +98,9 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    wechsel_seite (context, neue_seite) {
-      router.push({name: neue_seite.name, params: neue_seite.params})
+    wechsel_seite(context, neue_seite) {
+      router.push({ name: neue_seite.name, params: neue_seite.params })
+      window.scrollTo(0, 0)
     },
     LAK_anmelden(store, LAK) {
       store.state.ausgewählterLAK = LAK;
@@ -110,6 +114,7 @@ export default new Vuex.Store({
     landesvorstand: state => state.landesvorstand,
     laks: state => state.laks,
     unsereThemen: state => state.unsereThemen,
+    kuerzel: state => state.kuerzel,
     ausgewählterLAK: state => state.ausgewählterLAK,
     merchBilder: state => state.merchBilder
   }

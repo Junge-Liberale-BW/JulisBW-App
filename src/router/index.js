@@ -25,6 +25,11 @@ const routes = [
     component: () => import('../views/Impressum.vue')
   },
   {
+    path: '/Datenschutz',
+    name: 'Datenschutz',
+    component: () => import('../views/Datenschutz.vue')
+  },
+  {
     path: '/Landesarbeitskreise',
     name: 'Landesarbeitskreise',
     component: () => import('../views/Landesarbeitskreise.vue')
