@@ -116,7 +116,7 @@
     },
     "wirtschaft": {
         "title": "Handwerk & Wirtschaft",
-        "icon":"industry",
+        "icon": "industry",
         "text1": "Egal, ob du über die Zukunft des Handwerks und der beruflichen Bildung, Meisterpflicht und Kammerzwang reden willst, über Arbeit 4.0 und Wettbewerbsrecht in der Digitalisierung – oder dich vielleicht Subventionen nerven und du über Privatisierung diskutieren möchtest; egal ob Wohnungsmarkt, die Verteilung von Wohlstand oder doch Start-Ups: Bei uns bist du richtig!",
         "text2": null,
         "leiter": {
@@ -183,7 +183,7 @@
         "email": "lak-leiter-umwelt"
     },
     "struktur": {
-        "title": "Verbandsentwicklung",
+        "title": "Verbands\u00ADentwicklung",
         "icon": "dna",
         "text1": "Ein dynamischer Verband wie die JuLis Baden-Württemberg ist laufend im Wandel. Der Landesarbeitskreis Verbandsentwicklung beschäftigt sich mit der Frage, wie man die Struktur des Landesverbands anpassen kann, um den Spaß am Mitmachen zu steigern und die Strukturen effizient zu halten. Es geht dabei auch darum, zu überlegen, wie digitale Möglichkeiten unsere Arbeit unterstützen können.",
         "text2": null,
@@ -200,7 +200,7 @@
         "email": "lak-leiter-struktur"
     },
     "schueler": {
-        "title": "Verbandsentwicklung",
+        "title": "Liberale Schüler",
         "icon": "graduation-cap",
         "text1": "Das hier ist ein Blanko Text. Der tatsächliche Text über den LAK Liberale Schüler wird zeitnah nachgereicht.",
         "text2": null,
