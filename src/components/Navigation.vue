@@ -1,11 +1,10 @@
 <template>
   <div>
-    <button
-      id="nav-button"
-      :class="{'opened-nav-button': navigationOpen}"
-      @click="changeNavigationState"
-    >
-      <i class="la la-bars la-2x" :class="{'opened-nav-button': navigationOpen}" />
+    <button id="nav-button" :class="{'opened-nav-button': navigationOpen}" @click="onButtonClick">
+      <i
+        class="las la-2x"
+        :class="{  'la-bars':onPrimaryPage, 'la-angle-left':!onPrimaryPage,'opened-nav-button': navigationOpen}"
+      />
     </button>
 
     <nav :style="{left: navigationWidth}">
@@ -93,6 +92,7 @@ export default {
   data: function () {
     return {
       navigationOpen: false,
+      onPrimaryPage: true,
       navigationWidth: "-320px",
       navigationMargin: "0vw",
       active: "Home",
@@ -145,7 +145,7 @@ export default {
         ".html";*/
       window.open(currentLink, "_blank");
     },
-    changeNavigationState: function () {
+    changeNavigationState() {
       if (this.navigationOpen) {
         this.navigationWidth = "-320px";
         this.unfold = {
@@ -163,6 +163,19 @@ export default {
     changeSite: function (site) {
       this.$store.dispatch("wechsel_seite", { name: site });
       this.changeNavigationState();
+    },
+    onButtonClick: function () {
+      console.log(this.onPrimaryPage);
+      if (this.onPrimaryPage) {
+        this.changeNavigationState();
+      } else {
+        this.$router.back();
+      }
+    },
+  },
+  watch: {
+    $route(to) {
+      this.onPrimaryPage = to.matched[0].props.default.isPrimary;
     },
   },
 };
