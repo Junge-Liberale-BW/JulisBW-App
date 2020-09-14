@@ -58,15 +58,19 @@
 
           <div class="horizontal-line" />
 
-          <li class="nav-item" @click="changeSite('Podcast')">
+          <li
+            class="nav-item"
+            @click="openWebsite('https://www.julis-bw.de/freiheitsfunk-der-juli-podcast')"
+          >
             <i class="la la-podcast la-lg" /> Podcast
+            <i class="la la-external-link-alt la-lg external-link" />
           </li>
 
           <li class="nav-item" @click="changeSite('Juliette')">
             <i class="la la-book la-lg" /> Juliette
           </li>
 
-          <li class="nav-item">
+          <li class="nav-item" @click="openNewsletter">
             <i class="la la-envelope la-lg" /> Newsletter
             <i class="la la-external-link-alt la-lg external-link" />
           </li>
@@ -99,6 +103,48 @@ export default {
     };
   },
   methods: {
+    openWebsite(link) {
+      window.open(link, "_blank");
+    },
+    openNewsletter() {
+      var date = new Date();
+      var month = date.getMonth();
+      var year = date.getFullYear();
+
+      if (month !== 0) {
+        var currentMonth = (month + 1).toString().padStart(2, "0");
+        var lastMonth = month.toString().padStart(2, "0");
+      } else {
+        currentMonth = "01";
+        lastMonth = "12";
+      }
+
+      console.log(currentMonth + " " + lastMonth + " ");
+
+      var currentLink =
+        "http://s.julisbw.de/newsletter/" +
+        year +
+        currentMonth +
+        "/Newsletter-" +
+        year +
+        "-" +
+        currentMonth +
+        ".html";
+
+      if (month == 0) {
+        year--;
+      }
+      /*var lastLink =
+        "http://s.julisbw.de/newsletter/" +
+        year +
+        lastMonth +
+        "/Newsletter-" +
+        year +
+        "-" +
+        lastMonth +
+        ".html";*/
+      window.open(currentLink, "_blank");
+    },
     changeNavigationState: function () {
       if (this.navigationOpen) {
         this.navigationWidth = "-320px";
