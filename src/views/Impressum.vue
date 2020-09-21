@@ -3,16 +3,9 @@
     <Header />
     <div class="text-page">
       <div>
-        <div
-          v-for="item in content"
-          :key="item.heading"
-        >
-          <h1 class="heading-magenta">
-            {{ item.heading }}
-          </h1>
-          <div class="text-content">
-            {{ item.text }}
-          </div>
+        <div v-for="item in content" :key="item.heading">
+          <h1 class="heading-magenta">{{ item.heading }}</h1>
+          <div class="text-content">{{ item.text }}</div>
         </div>
       </div>
     </div>
@@ -150,6 +143,11 @@ export default {
           heading: "STREITBEILEGUNG",
           text:
             "Eventuelle Streitigkeiten möchten wir gerne einvernehmlich lösen und präferieren daher die direkte Kommunikation in einem solchem Fall.\nZur Teilnahme am Streitschlichtungsverfahren sind wir nicht verpflichtet, weisen aber trotzdem auf die Plattform der Europäischen Kommission zur Online-Streitbeilegung unter http://ec.europa.eu/consumers/odr/ hin.",
+        },
+        {
+          heading: "",
+          text:
+            "Quellverweis: Dieses Impressum sowie der Haftungsausschluss wurden mit dem Impressum-Generator der Kanzlei Siebert sowie den nachfolgend genannten bzw. verlinkten Quellen erstellt (Disclaimer eRecht24).",
         },
       ],
     };
