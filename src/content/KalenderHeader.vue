@@ -4,9 +4,10 @@
       {{ month }} {{ year }}
     </h3>
 
-    <i :class="get_icon_classes"
-       @click="wechsel_ansicht"
-    ></i>
+    <i
+      :class="get_icon_classes"
+      @click="wechsel_ansicht"
+    />
   </div>
 </template>
 

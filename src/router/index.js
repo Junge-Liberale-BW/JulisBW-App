@@ -13,14 +13,6 @@ const routes = [
     }
   },
   {
-    path: '/Home',
-    name: 'Home',
-    component: Home,
-    props: {
-      isPrimary: true,
-    }
-  },
-  {
     path: '/About',
     name: 'About',
     component: () => import('../views/About.vue'),

@@ -4,13 +4,16 @@
     <div class="kachel-wrapper">
       <div
         v-for="(properties, titel) in themen_liste"
-        v-bind:key="titel"
+        :key="titel"
         class="wide-kachel-wrapper"
       >
-        <div class="wide-kachel" @click="wechsel_seite(titel)">
-          <i :class=" 'las la-4x la-' + properties.icon"></i>
-          <br />
-          {{properties.title}}
+        <div
+          class="wide-kachel"
+          @click="wechsel_seite(titel)"
+        >
+          <i :class=" 'las la-4x la-' + properties.icon" />
+          <br>
+          {{ properties.title }}
         </div>
       </div>
     </div>

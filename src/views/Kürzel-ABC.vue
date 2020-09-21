@@ -2,23 +2,37 @@
   <div>
     <Header />
     <div class="text-page">
-      <h1 class="heading-cyan">SUCHE:</h1>
+      <h1 class="heading-cyan">
+        SUCHE:
+      </h1>
       <div class="search-wrapper center">
-        <input class="search" type="text" v-model="search" placeholder="Suche nach Abkürzung..." />
+        <input
+          v-model="search"
+          class="search"
+          type="text"
+          placeholder="Suche nach Abkürzung..."
+        >
       </div>
 
       <div class="list-wrapper">
         <table class="list-table">
-          <div v-for="(item, i) in filteredList" v-bind:key="i">
+          <div
+            v-for="(item, i) in filteredList"
+            :key="i"
+          >
             <tr
-              class="text-magenta letter"
               v-if="search=='' && (i==0 || (i>0 && item.abbr.toUpperCase()[0] !== filteredList[i-1].abbr.toUpperCase()[0]))"
+              class="text-magenta letter"
             >
               <td>{{ item.abbr.toUpperCase()[0] }}</td>
             </tr>
             <tr>
-              <td class="abbr">{{item.abbr}}</td>
-              <td class="explanation">{{item.explanation}}</td>
+              <td class="abbr">
+                {{ item.abbr }}
+              </td>
+              <td class="explanation">
+                {{ item.explanation }}
+              </td>
             </tr>
           </div>
         </table>
@@ -31,7 +45,7 @@
 import Header from "../components/Header";
 
 export default {
-  name: "Kürzel-ABC",
+  name: "KRzelABC",
   components: { Header },
   data: function () {
     return {

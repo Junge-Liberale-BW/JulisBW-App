@@ -4,9 +4,10 @@
       {{ month }} {{ year }}
     </h3>
 
-    <i class="switch-icon la la-list la-2x clickable"
-       @click="zeige_liste"
-    ></i>
+    <i
+      class="switch-icon la la-list la-2x clickable"
+      @click="zeige_liste"
+    />
   </div>
 </template>
 

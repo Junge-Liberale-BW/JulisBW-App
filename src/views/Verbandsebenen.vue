@@ -2,9 +2,16 @@
   <div>
     <Header />
     <div class="text-page">
-      <section v-for="(each, index) in content" :key="index">
-        <h1 class="heading-magenta">{{ index }}</h1>
-        <p class="text-content">{{ each }}</p>
+      <section
+        v-for="(each, index) in content"
+        :key="index"
+      >
+        <h1 class="heading-magenta">
+          {{ index }}
+        </h1>
+        <p class="text-content">
+          {{ each }}
+        </p>
       </section>
     </div>
   </div>

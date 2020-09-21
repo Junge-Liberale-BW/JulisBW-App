@@ -6,12 +6,15 @@
       <div class="row justify-content-center kachel-wrapper">
         <div
           v-for="(properties, titel) in lak_liste"
-          v-bind:key="titel"
+          :key="titel"
           class="col-6 col-sm-3 col-lg-2 lak-kachel-wrapper"
         >
-          <div class="lak-kachel" @click="wechsel_seite(titel)">
-            <i :class=" 'las la-4x la-' + properties.icon"></i>
-            <br />
+          <div
+            class="lak-kachel"
+            @click="wechsel_seite(titel)"
+          >
+            <i :class=" 'las la-4x la-' + properties.icon" />
+            <br>
             {{ properties.title }}
           </div>
         </div>

@@ -1,22 +1,43 @@
 <template>
   <div class="article">
     <div class="title">
-      <h3 class="article-title">{{article.title}}</h3>
-
+      <h3 class="article-title">
+        {{ article.title }}
+      </h3>
     </div>
     <div class="body">
-      <a class="article-link" :href="article.link" target="_blank">
+      <a
+        class="article-link"
+        :href="article.link"
+        target="_blank"
+      >
         <h3>
-          {{article.link}}
+          {{ article.link }}
         </h3>
       </a>
-      <p class="summary" v-html="article.content"></p>
-      <button class="btn" v-if="btn" v-on:click="selected = !selected"> Ganzer Text</button>
-      <p class="full-content" v-if="selected" v-html="article['content:encoded']"></p>
+      <p
+        class="summary"
+        v-html="article.content"
+      />
+      <button
+        v-if="btn"
+        class="btn"
+        @click="selected = !selected"
+      >
+        Ganzer Text
+      </button>
+      <p
+        v-if="selected"
+        class="full-content"
+        v-html="article['content:encoded']"
+      />
     </div>
     <div class="footer">
-      <span v-if="article.isoDate" class="middot">&bull;</span>
-      <span class="datetime">{{this.getDateTime()}}</span>
+      <span
+        v-if="article.isoDate"
+        class="middot"
+      >&bull;</span>
+      <span class="datetime">{{ this.getDateTime() }}</span>
     </div>
   </div>
 </template>s

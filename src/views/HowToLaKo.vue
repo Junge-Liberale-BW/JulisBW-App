@@ -4,10 +4,15 @@
     <div class="text-page">
       <p
         class="text-content"
-      >Auf Landeskongressen gibt es mehrere Mittel und Wege, sich in der Debatte einzubringen. Die wichtigsten Gesten und die damit verbundenen Optionen siehst du hier auf einen Blick.</p>
+      >
+        Auf Landeskongressen gibt es mehrere Mittel und Wege, sich in der Debatte einzubringen. Die wichtigsten Gesten und die damit verbundenen Optionen siehst du hier auf einen Blick.
+      </p>
       <div>
-        <div v-for="item in content" v-bind:key="item.heading">
-          <img :src="item.img" />
+        <div
+          v-for="item in content"
+          :key="item.heading"
+        >
+          <img :src="item.img">
           <FoldableSection
             :title="item.heading"
             :text="item.text"

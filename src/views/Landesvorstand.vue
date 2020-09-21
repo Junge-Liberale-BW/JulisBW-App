@@ -3,18 +3,18 @@
     <Header />
     <div
       v-for="(k, index) in Object.keys(landesvorstand)"
-      v-bind:key="index"
+      :key="index"
       class="landesvorstand-kacheln"
     >
       <PersonKachel
-        class="landesvorstand-kachel"
         :id="index"
+        class="landesvorstand-kachel"
         :person="landesvorstand[k]"
         :position="k"
         :color="getColor(index)"
         :foldable="true"
         :folded="index !== activeId"
-        v-on:childUnfold="childUnfold($event)"
+        @childUnfold="childUnfold($event)"
       />
     </div>
   </div>
@@ -27,16 +27,16 @@ import PersonKachel from "../components/PersonKachel";
 export default {
   name: "Landesvorstand",
   components: { Header, PersonKachel },
+  data() {
+    return {
+      activeId: undefined
+    };
+  },
   computed: {
     landesvorstand() {
       console.log(this.$store.getters.landesvorstand);
       return this.$store.getters.landesvorstand;
     }
-  },
-  data() {
-    return {
-      activeId: undefined
-    };
   },
   methods: {
     getColor(index) {

@@ -3,9 +3,16 @@
     <Header />
     <div class="text-page">
       <div>
-        <div v-for="item in content" v-bind:key="item.heading">
-          <h1 class="heading-magenta">{{item.heading}}</h1>
-          <div class="text-content">{{item.text}}</div>
+        <div
+          v-for="item in content"
+          :key="item.heading"
+        >
+          <h1 class="heading-magenta">
+            {{ item.heading }}
+          </h1>
+          <div class="text-content">
+            {{ item.text }}
+          </div>
         </div>
       </div>
     </div>

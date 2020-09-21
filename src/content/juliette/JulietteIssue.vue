@@ -1,9 +1,10 @@
 <template>
   <div>
-    <h1>Juliette {{$route.params.id}}</h1>
-    <router-link v-for="(article,index) of articles"
-                 v-bind:key="index"
-                 :to="'/Juliette/article/'+article.id"
+    <h1>Juliette {{ $route.params.id }}</h1>
+    <router-link
+      v-for="(article,index) of articles"
+      :key="index"
+      :to="'/Juliette/article/'+article.id"
     >
       <h2>
         {{ article.title.rendered.split(";")[1] }}

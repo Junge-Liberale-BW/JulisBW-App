@@ -3,7 +3,7 @@
     <template v-if="article">
       <h1>{{ article.title.rendered.split(";")[1] }}</h1>
       <div class="article-content">
-        <p v-html="article.content.rendered"/>
+        <p v-html="article.content.rendered" />
       </div>
     </template>
   </div>

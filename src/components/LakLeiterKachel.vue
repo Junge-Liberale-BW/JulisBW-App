@@ -3,7 +3,11 @@
     <div class="card mt-4 lak-leiter-kachel">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img :src="leiter.Bild" class="card-img" alt="Timo Breuninger">
+          <img
+            :src="leiter.Bild"
+            class="card-img"
+            alt="Timo Breuninger"
+          >
         </div>
 
         <div class="col-md-8">
@@ -19,23 +23,25 @@
             </p>
 
             <div class="text-center">
-              <a class="btn-link clickable"
-                 @click="schalte_leitung_anzeigen_um"
-                 @touchmove="schalte_leitung_anzeigen_um"
+              <a
+                class="btn-link clickable"
+                @click="schalte_leitung_anzeigen_um"
+                @touchmove="schalte_leitung_anzeigen_um"
               >
-                <i class="las la-angle-down"></i>
+                <i class="las la-angle-down" />
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div v-if="zeige_details_leitung === true"
-           class="col-12 lak-zusatzinhalt"
+      <div
+        v-if="zeige_details_leitung === true"
+        class="col-12 lak-zusatzinhalt"
       >
         {{ leiter.Zusatztext }}
         <hr>
         <a :mailto="leiter.Email">
-          <i class="las la-envelope la-2x "></i>
+          <i class="las la-envelope la-2x " />
           <span class="ml-3"> NACHRICHT SCHREIBEN</span>
         </a>
       </div>

@@ -1,23 +1,24 @@
 <template>
   <div>
-
     <Header />
 
 
     <div class="kachel-wrapper">
-      <div v-for="(properties, titel) in buttons" v-bind:key="titel"
-           class="wide-kachel-wrapper"
+      <div
+        v-for="(properties, titel) in buttons"
+        :key="titel"
+        class="wide-kachel-wrapper"
       >
-        <div class="wide-kachel"
-            @click="$store.dispatch('wechsel_seite', {name: titel})"
+        <div
+          class="wide-kachel"
+          @click="$store.dispatch('wechsel_seite', {name: titel})"
         >
-          <i :class=" 'las la-4x la-' + properties + ' wide-kachel-i'"></i>
+          <i :class=" 'las la-4x la-' + properties + ' wide-kachel-i'" />
           <br>
-          {{titel}}
+          {{ titel }}
         </div>
       </div>
     </div>
-    
   </div>
 </template>
 

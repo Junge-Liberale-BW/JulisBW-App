@@ -2,25 +2,29 @@
   <div>
     <h2>Aktuelle Termin</h2>
     <v-touch @swipeleft="nextIMG()">
-        <div id="terminKarte" class="row" :key="key">
-            <div id="terminKarteDatum">
-                
-                <span id="tag">{{ new Date(termine[terminIndex].Datum).getDate() }}</span>
-                <span id="monat">{{ months[new Date(termine[terminIndex].Datum).getMonth()] }}</span>
-            
-            </div>
-            <div id="terminKarteInfos">
-
-                <h3>{{ termine[terminIndex].Titel }}</h3>
-                <div><i class="la la-clock"></i>{{ getTime }}</div>
-                <div><i class="la la-map-marker"></i>{{ termine[terminIndex].Ort }}</div>
-
-            </div>
+      <div
+        id="terminKarte"
+        :key="key"
+        class="row"
+      >
+        <div id="terminKarteDatum">
+          <span id="tag">{{ new Date(termine[terminIndex].Datum).getDate() }}</span>
+          <span id="monat">{{ months[new Date(termine[terminIndex].Datum).getMonth()] }}</span>
         </div>
-    
+        <div id="terminKarteInfos">
+          <h3>{{ termine[terminIndex].Titel }}</h3>
+          <div><i class="la la-clock" />{{ getTime }}</div>
+          <div><i class="la la-map-marker" />{{ termine[terminIndex].Ort }}</div>
+        </div>
+      </div>
     </v-touch>
     <div id="points">
-        <div v-bind:class="{point: true, active: indexTermin === terminIndex}" @click="neuerTermin(indexTermin)" v-for="(each, indexTermin) in termine" v-bind:key="indexTermin"></div>
+      <div
+        v-for="(each, indexTermin) in termine"
+        :key="indexTermin"
+        :class="{point: true, active: indexTermin === terminIndex}"
+        @click="neuerTermin(indexTermin)"
+      />
     </div>
   </div>
 </template>
@@ -48,17 +52,6 @@ export default {
             ]
         }
     },
-    methods: {
-        neuerTermin: function (neuerIndex) {
-            this.terminIndex = neuerIndex;
-        },
-        nextIMG: function () {
-            this.terminIndex++;
-            if (this.termine.length === this.terminIndex) {
-                this.terminIndex = 0;
-            }
-        }
-    },
     computed: {
         getTime () {
             let temp = [new Date(this.termine[this.terminIndex].Datum).getHours().toString(), new Date(this.termine[this.terminIndex].Datum).getMinutes().toString()];
@@ -80,6 +73,17 @@ export default {
             this.termine = this.termine.splice(3, this.termine.length - 4);
         }
         console.log(this.termine)
+    },
+    methods: {
+        neuerTermin: function (neuerIndex) {
+            this.terminIndex = neuerIndex;
+        },
+        nextIMG: function () {
+            this.terminIndex++;
+            if (this.termine.length === this.terminIndex) {
+                this.terminIndex = 0;
+            }
+        }
     }
 }
 </script>

@@ -4,31 +4,50 @@
     <div class="text-page">
       <p
         class="text-content"
-      >Wir JuLis sind Baden-Württembergs liberale Jugendorganisation. Bei uns sind über 1.000 junge Menschen im Alter von 14 bis 35 Jahren Mitglied geworden, weil sie nicht länger zugucken, sondern anpacken und etwas bewegen wollen.</p>
+      >
+        Wir JuLis sind Baden-Württembergs liberale Jugendorganisation. Bei uns sind über 1.000 junge Menschen im Alter von 14 bis 35 Jahren Mitglied geworden, weil sie nicht länger zugucken, sondern anpacken und etwas bewegen wollen.
+      </p>
       <p
         class="text-content"
-      >Weil sie nicht länger zusehen wollen, wie alte Menschen über die Zukunft unserer jungen Generation entscheiden. Und weil sie Ideen haben, die es wert sind, gehört und verbreitet zu werden.</p>
-      <p class="text-content">Unser Motto ist deshalb klar:</p>
+      >
+        Weil sie nicht länger zusehen wollen, wie alte Menschen über die Zukunft unserer jungen Generation entscheiden. Und weil sie Ideen haben, die es wert sind, gehört und verbreitet zu werden.
+      </p>
+      <p class="text-content">
+        Unser Motto ist deshalb klar:
+      </p>
       <div>
-        <div v-for="item in content" v-bind:key="item.heading">
-          <FoldableSection :title="item.heading" :text="item.text" :heading_style="'heading-bold'" />
+        <div
+          v-for="item in content"
+          :key="item.heading"
+        >
+          <FoldableSection
+            :title="item.heading"
+            :text="item.text"
+            :heading_style="'heading-bold'"
+          />
         </div>
       </div>
 
-      <hr class="vertical-divider" />
+      <hr class="vertical-divider">
       <p
         class="text-content center"
-      >Du bist noch kein Mitglied, aber willst ein Teil der Jungen Liberalen sein?</p>
+      >
+        Du bist noch kein Mitglied, aber willst ein Teil der Jungen Liberalen sein?
+      </p>
       <p
         class="text-content center"
-      >Dann besuche jetzt unsere Website und beantrage jetzt deine persönliche Unabhängigkeitserklärung!</p>
+      >
+        Dann besuche jetzt unsere Website und beantrage jetzt deine persönliche Unabhängigkeitserklärung!
+      </p>
 
       <div class="button-wrapper">
         <button
           type="button"
           class="btn btn-primary text-uppercase mx-auto"
           @click="mitgliedWerden"
-        >Jetzt Mitglied werden</button>
+        >
+          Jetzt Mitglied werden
+        </button>
       </div>
     </div>
   </div>

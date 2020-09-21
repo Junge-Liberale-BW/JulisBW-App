@@ -3,7 +3,7 @@
     <button id="nav-button" :class="{'opened-nav-button': navigationOpen}" @click="onButtonClick">
       <i
         class="las la-2x"
-        :class="{  'la-bars':onPrimaryPage, 'la-angle-left':!onPrimaryPage,'opened-nav-button': navigationOpen}"
+        :class="{ 'la-bars':onPrimaryPage, 'la-angle-left':!onPrimaryPage,'opened-nav-button': navigationOpen}"
       />
     </button>
 
@@ -102,6 +102,11 @@ export default {
       },
     };
   },
+  watch: {
+    $route(to) {
+      this.onPrimaryPage = to.matched[0].props.default.isPrimary;
+    },
+  },
   methods: {
     openWebsite(link) {
       window.open(link, "_blank");
@@ -165,17 +170,11 @@ export default {
       this.changeNavigationState();
     },
     onButtonClick: function () {
-      console.log(this.onPrimaryPage);
       if (this.onPrimaryPage) {
         this.changeNavigationState();
       } else {
         this.$router.back();
       }
-    },
-  },
-  watch: {
-    $route(to) {
-      this.onPrimaryPage = to.matched[0].props.default.isPrimary;
     },
   },
 };

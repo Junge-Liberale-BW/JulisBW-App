@@ -1,12 +1,15 @@
 <template>
   <div>
     <Header />
-    <router-link v-for="(article) of issues"
-                 v-bind:key="article"
-                 :to="'/Juliette/issue/'+article"
-    ><h2>
-      {{ article }}
-    </h2></router-link>
+    <router-link
+      v-for="(article) of issues"
+      :key="article"
+      :to="'/Juliette/issue/'+article"
+    >
+      <h2>
+        {{ article }}
+      </h2>
+    </router-link>
   </div>
 </template>
 

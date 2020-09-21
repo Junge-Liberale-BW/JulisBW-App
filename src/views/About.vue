@@ -1,21 +1,33 @@
 <template>
   <div class="center">
-    <img src="../assets/img/julisBW-banner.png" />
+    <img src="../assets/img/julisBW-banner.png">
     <div class="text-page about-text">
-      <h1 class="heading-about">JuLis BW App</h1>
+      <h1 class="heading-about">
+        JuLis BW App
+      </h1>
       <div>
-        <div v-for="item in content" v-bind:key="item.heading">
-          <h1 class="title">{{item.title}}</h1>
-          <div v-for="name in item.names" v-bind:key="name">
-            <div class="name">{{name}}</div>
+        <div
+          v-for="item in content"
+          :key="item.heading"
+        >
+          <h1 class="title">
+            {{ item.title }}
+          </h1>
+          <div
+            v-for="name in item.names"
+            :key="name"
+          >
+            <div class="name">
+              {{ name }}
+            </div>
           </div>
         </div>
       </div>
       <div class="version-info">
         App-Version: 1.0
-        <br />Copyright © 2020
-        <br />
-        <br />
+        <br>Copyright © 2020
+        <br>
+        <br>
         <a @click="openWebsite">https://www.julis-bw.de</a>
       </div>
     </div>

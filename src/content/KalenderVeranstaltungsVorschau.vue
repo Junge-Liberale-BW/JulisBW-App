@@ -1,21 +1,23 @@
 <template>
   <div>
-
-    <div v-if="!mindestens_eine_veranstaltung" class="col-12 mb-3">
+    <div
+      v-if="!mindestens_eine_veranstaltung"
+      class="col-12 mb-3"
+    >
       <div class="row veranstaltungs-vorschau-item">
         <div class="datum-tag keine-veranstaltungen">
-          {{selected_date.getDate()}}
+          {{ selected_date.getDate() }}
         </div>
 
         <div class="info-text keine-veranstaltungen-text">
           An diesem Tag finden leider keine <br> Veranstaltungen statt
         </div>
-
       </div>
     </div>
 
-    <div v-for="(kommende_veranstaltung, index) in anstehende_veranstaltungen"
-         v-bind:key="index"
+    <div
+      v-for="(kommende_veranstaltung, index) in anstehende_veranstaltungen"
+      :key="index"
     >
       <VeranstaltungsVorschauItem
         :veranstaltung="kommende_veranstaltung"
@@ -41,17 +43,6 @@
       'max_items'
     ],
 
-    watch:{
-        'selected_date': function () {
-          this.gib_anstehende_veranstaltungen();
-          this.$forceUpdate();
-        }
-    },
-
-    mounted () {
-      this.gib_anstehende_veranstaltungen();
-    },
-
     data(){
       return {
         'anstehende_veranstaltungen': this.veranstaltungen_liste,
@@ -66,6 +57,17 @@
       },
 
 
+    },
+
+    watch:{
+        'selected_date': function () {
+          this.gib_anstehende_veranstaltungen();
+          this.$forceUpdate();
+        }
+    },
+
+    mounted () {
+      this.gib_anstehende_veranstaltungen();
     },
     methods:{
       gib_anstehende_veranstaltungen () {

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Navigation/>
+    <Navigation />
     <VueRssFeed
-      :feedUrl="feedUrl"
+      :feed-url="feedUrl"
       :name="name"
       :limit="limit"
       :btn="button"
@@ -17,7 +17,7 @@
 
 
   export default {
-    name: "rssparser",
+    name: "Rssparser",
     components:
       {
         VueRssFeed

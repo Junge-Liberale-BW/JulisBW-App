@@ -1,22 +1,28 @@
 <template>
   <div class="header-wrapper" :class=" sticky && 'header-sticky'">
-    <img :src="gib_bild" />
+    <img :src="getImg" />
   </div>
 </template>
 
 <script>
 export default {
   name: "Header",
+  props: ["sticky"],
+  data() {
+    return {
+      name: this.$route.params.id,
+    };
+  },
   computed: {
-    gib_bild() {
-      if (this.$route.name === "Themen-Ansicht"){
-        return this.$store.state.headerBilder[this.$route.params.id]
-      }else{
+    getImg() {
+      if (this.$route.name === "Themen-Ansicht") {
+        console.log(this.$store.state.headerBilder);
+        return this.$store.state.headerBilder[this.$route.params.id];
+      } else {
         return this.$store.state.headerBilder[this.$route.name];
       }
-    }
+    },
   },
-  props: ["sticky"]
 };
 </script>
 

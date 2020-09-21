@@ -51,7 +51,7 @@ export default new Vuex.Store({
       "schuelerStellvertretung": 'http://s.julisbw.de/app/person/schuelerStellvertretung.jpg',
     },
     headerBilder: {
-      'Home': require('../assets/Header/startseite.png'),
+      'Home': require('./../assets/Header/startseite.png'),
       'Landesarbeitskreise': require('../assets/Header/landesarbeitskreise.png'),
       'LAK-anmelden': require('../assets/Header/landesarbeitskreise.png'),
       'WerWirSind': require('../assets/Header/werwirsind.png'),

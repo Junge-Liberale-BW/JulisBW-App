@@ -1,9 +1,24 @@
 <template>
   <div class="foldable-section">
-    <p :class="heading_style + ' heading-magenta'">{{title}}</p>
-    <p v-if="!folded" class="text-content left">{{text}}</p>
-    <i v-if="folded" class="la la-lg la-angle-down foldable-i" @click="foldSection" />
-    <i v-else class="la la-lg la-angle-up foldable-i" @click="foldSection" />
+    <p :class="heading_style + ' heading-magenta'">
+      {{ title }}
+    </p>
+    <p
+      v-if="!folded"
+      class="text-content left"
+    >
+      {{ text }}
+    </p>
+    <i
+      v-if="folded"
+      class="la la-lg la-angle-down foldable-i"
+      @click="foldSection"
+    />
+    <i
+      v-else
+      class="la la-lg la-angle-up foldable-i"
+      @click="foldSection"
+    />
   </div>
 </template>
 

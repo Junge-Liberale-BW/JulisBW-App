@@ -1,25 +1,46 @@
 <template>
   <div :class="colorScheme">
     <div class="person-box">
-      <img :src="getImage" class="person-img" />
+      <img
+        :src="getImage"
+        class="person-img"
+      >
       <div class="person-text">
-        <p class="position">{{ person.position }}</p>
+        <p class="position">
+          {{ person.position }}
+        </p>
         <div class="wrapper">
           <p class="name">
-            {{person.firstname}}
-            <br />
-            {{person.lastname}}
+            {{ person.firstname }}
+            <br>
+            {{ person.lastname }}
           </p>
-          <i v-if="folded && foldable" class="la la-lg la-angle-down" @click="foldSection" />
-          <i v-else-if="foldable" class="la la-lg la-angle-up" @click="foldSection" />
+          <i
+            v-if="folded && foldable"
+            class="la la-lg la-angle-down"
+            @click="foldSection"
+          />
+          <i
+            v-else-if="foldable"
+            class="la la-lg la-angle-up"
+            @click="foldSection"
+          />
         </div>
       </div>
     </div>
-    <div v-if="!folded && foldable" class="person-info">
+    <div
+      v-if="!folded && foldable"
+      class="person-info"
+    >
       Aufgaben:
-      <br />
+      <br>
       <ul>
-        <li v-for="item in person.tasks" v-bind:key="item">{{item}}</li>
+        <li
+          v-for="item in person.tasks"
+          :key="item"
+        >
+          {{ item }}
+        </li>
       </ul>
       <div class="socials">
         <div v-if="person.email !== null">

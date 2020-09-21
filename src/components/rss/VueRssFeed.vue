@@ -1,6 +1,11 @@
 <template>
   <div class="vue-rss-feed">
-    <Feed :feedUrl="feedUrl" :name="name" :limit="limit" :btn="btn"/>
+    <Feed
+      :feed-url="feedUrl"
+      :name="name"
+      :limit="limit"
+      :btn="btn"
+    />
   </div>
 </template>
 

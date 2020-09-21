@@ -1,42 +1,72 @@
 <template>
   <div>
-      <Header />
-      <div id="LAK-Anmeldung" v-bind:key="key">
-          <p>Du möchtest die inhaltliche Arbeit der Jungen Liberalen vorantreiben und deine Ideen einbringen?</p>
-        <h2>Zum Landesarbeitskreis anmelden:</h2>
+    <Header />
+    <div
+      id="LAK-Anmeldung"
+      :key="key"
+    >
+      <p>Du möchtest die inhaltliche Arbeit der Jungen Liberalen vorantreiben und deine Ideen einbringen?</p>
+      <h2>Zum Landesarbeitskreis anmelden:</h2>
 
-        <div>
-            <label>Name: </label>
-            <br>
-            <input v-model="inputData.name" type="text">
-        </div>
-        <div>
-            <label>E-Mail-Adresse: </label>
-            <br>
-            <input v-model="inputData.email" type="text">
-        </div>
-        <div>
-            <label>Kreisverband: </label>
-            <br>
-            <select v-model="inputData.kreisverband">
-                <option v-for="(each, index) in kreisverbände" v-bind:key="index" :value="each">{{ each }}</option>
-            </select>
-        </div>
-        <br><br>
-        <p>
-            Ich Interessiere mich für folgende Landesarbeitskreise:
-        </p>
-        <div v-for="(each, index) in LAKs" v-bind:key="index">
-            <input type="checkbox" :value="each" v-model="inputData.LAKs">
-            <label>{{ each }}</label>
-        </div>
-        <p class="error" v-if="error">
-            {{ error }}
-        </p>
-        <div>
-            <button class="enroll-btn" @click="enrollLAK">Jetzt zum LAK anmelden</button>
-        </div>
+      <div>
+        <label>Name: </label>
+        <br>
+        <input
+          v-model="inputData.name"
+          type="text"
+        >
       </div>
+      <div>
+        <label>E-Mail-Adresse: </label>
+        <br>
+        <input
+          v-model="inputData.email"
+          type="text"
+        >
+      </div>
+      <div>
+        <label>Kreisverband: </label>
+        <br>
+        <select v-model="inputData.kreisverband">
+          <option
+            v-for="(each, index) in kreisverbände"
+            :key="index"
+            :value="each"
+          >
+            {{ each }}
+          </option>
+        </select>
+      </div>
+      <br><br>
+      <p>
+        Ich Interessiere mich für folgende Landesarbeitskreise:
+      </p>
+      <div
+        v-for="(each, index) in LAKs"
+        :key="index"
+      >
+        <input
+          v-model="inputData.LAKs"
+          type="checkbox"
+          :value="each"
+        >
+        <label>{{ each }}</label>
+      </div>
+      <p
+        v-if="error"
+        class="error"
+      >
+        {{ error }}
+      </p>
+      <div>
+        <button
+          class="enroll-btn"
+          @click="enrollLAK"
+        >
+          Jetzt zum LAK anmelden
+        </button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -95,6 +125,11 @@ export default {
             error: false
         }
     },
+    mounted: function () {
+        this.LAKs = Object.keys(this.$store.getters.landesarbeitskreise);
+        this.inputData.LAKs.push(this.$store.getters.ausgewählterLAK);
+        this.key++;
+    },
     methods: {
         enrollLAK: function () {
             if (this.inputData.name.length === 0) {
@@ -115,11 +150,6 @@ export default {
 
             console.log(this.inputData)
         }
-    },
-    mounted: function () {
-        this.LAKs = Object.keys(this.$store.getters.landesarbeitskreise);
-        this.inputData.LAKs.push(this.$store.getters.ausgewählterLAK);
-        this.key++;
     }
 }
 </script>

@@ -1,13 +1,19 @@
 <template>
   <div>
     <div class="lak-header">
-      <i :class="'las la-4x la-' + lak.icon"></i>
-      <h1 class="text-center text-uppercase">LAK {{ lak.title }}</h1>
+      <i :class="'las la-4x la-' + lak.icon" />
+      <h1 class="text-center text-uppercase">
+        LAK {{ lak.title }}
+      </h1>
     </div>
 
     <div class="text-page">
-      <p class="text-content left">{{ lak.text1 }}</p>
-      <p class="text-content left">{{ lak.text2 }}</p>
+      <p class="text-content left">
+        {{ lak.text1 }}
+      </p>
+      <p class="text-content left">
+        {{ lak.text2 }}
+      </p>
 
       <PersonKachel
         class="leiter-kachel"
@@ -27,22 +33,30 @@
           type="button"
           class="btn btn-primary text-uppercase mx-auto"
           @click="lakMail"
-        >LAK Leitung kontaktieren</button>
+        >
+          LAK Leitung kontaktieren
+        </button>
       </div>
 
       <p
         class="text-content center"
-      >Du interessierst dich für das Thema {{lak.title}} und möchtest dich im Landesarbeitskreis engagieren?</p>
+      >
+        Du interessierst dich für das Thema {{ lak.title }} und möchtest dich im Landesarbeitskreis engagieren?
+      </p>
       <p
         class="text-content center"
-      >Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!</p>
+      >
+        Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!
+      </p>
 
       <div class="button-wrapper">
         <button
           type="button"
           class="btn btn-primary text-uppercase mx-auto"
           @click="anmeldenZumLAK"
-        >Jetzt zum LAK anmelden</button>
+        >
+          Jetzt zum LAK anmelden
+        </button>
       </div>
     </div>
   </div>

@@ -1,22 +1,43 @@
 <template>
-  <div v-if="error" class="error">{{error}}</div>
-  <div v-else class="feed">
-    <h1 v-if="name" class="name">{{name}}</h1>
-    <h1 v-else class="title">{{feed.title}}</h1>
+  <div
+    v-if="error"
+    class="error"
+  >
+    {{ error }}
+  </div>
+  <div
+    v-else
+    class="feed"
+  >
+    <h1
+      v-if="name"
+      class="name"
+    >
+      {{ name }}
+    </h1>
+    <h1
+      v-else
+      class="title"
+    >
+      {{ feed.title }}
+    </h1>
     <div class="feed">
-      {{feed.description}}
+      {{ feed.description }}
     </div>
-    <div v-if="loading" class="spinner">
-      <div class="bounce1"></div>
-      <div class="bounce2"></div>
-      <div class="bounce3"></div>
+    <div
+      v-if="loading"
+      class="spinner"
+    >
+      <div class="bounce1" />
+      <div class="bounce2" />
+      <div class="bounce3" />
     </div>
     <div class="articles-container">
       <Article
         v-for="(article, index) of getArticles()"
-        v-bind:key="index"
-        v-bind:article="article"
-        v-bind:btn="btn"
+        :key="index"
+        :article="article"
+        :btn="btn"
       />
     </div>
   </div>
@@ -46,9 +67,6 @@
         feed: {}
       };
     },
-    created() {
-      this.fetchData();
-    },
     watch: {
       feedUrl() {
         this.fetchData();
@@ -58,6 +76,9 @@
           this.getArticles();
         }
       }
+    },
+    created() {
+      this.fetchData();
     },
     methods: {
       async fetchData() {
