@@ -59,7 +59,7 @@
 
           <li
             class="nav-item"
-            @click="openWebsite('https://www.julis-bw.de/freiheitsfunk-der-juli-podcast')"
+            @click="openWebsite('http://www.julis-bw.de/freiheitsfunk-der-juli-podcast')"
           >
             <i class="la la-podcast la-lg" /> Podcast
             <i class="la la-external-link-alt la-lg external-link" />
@@ -127,7 +127,7 @@ export default {
       console.log(currentMonth + " " + lastMonth + " ");
 
       var currentLink =
-        "http://s.julisbw.de/newsletter/" +
+        "https://s.julisbw.de/newsletter/" +
         year +
         currentMonth +
         "/Newsletter-" +
@@ -148,6 +148,18 @@ export default {
         "-" +
         lastMonth +
         ".html";*/
+
+      /*var request = new XMLHttpRequest();
+      request.open("GET", currentLink, true);
+      request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+          if (request.status === 404) {
+            console.log("Oh no, it does not exist!");
+          }
+        }
+      };
+      request.send();*/
+
       window.open(currentLink, "_blank");
     },
     changeNavigationState() {

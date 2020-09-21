@@ -16,7 +16,6 @@ export default {
   computed: {
     getImg() {
       if (this.$route.name === "Themen-Ansicht") {
-        console.log(this.$store.state.headerBilder);
         return this.$store.state.headerBilder[this.$route.params.id];
       } else {
         return this.$store.state.headerBilder[this.$route.name];
