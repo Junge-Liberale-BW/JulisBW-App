@@ -74,30 +74,6 @@ const routes = [
 
   },
   {
-    path: '/Kalender',
-    name: 'Kalender',
-    component: () => import('../views/Kalender.vue'),
-    props: {
-      isPrimary: true,
-    }
-  },
-  {
-    path: '/Terminliste',
-    name: 'Terminliste',
-    component: () => import('../views/Terminliste.vue'),
-    props: {
-      isPrimary: true,
-    }
-  },
-  {
-    path: '/Podcast',
-    name: 'Podcast',
-    component: () => import('../views/Podcast.vue'),
-    props: {
-      isPrimary: true,
-    }
-  },
-  {
     path: '/UnsereThemen',
     name: 'UnsereThemen',
     component: () => import('../views/UnsereThemen.vue'),

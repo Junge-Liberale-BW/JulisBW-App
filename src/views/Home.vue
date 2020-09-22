@@ -1,20 +1,18 @@
 <template>
   <div>
     <Header />
-    <TerminKarte />
-    <hr>
+    <hr />
     <MerchSlider />
   </div>
 </template>
 
 <script>
-  import Header from '../components/Header'
-  import TerminKarte from '../components/TerminKarte'
-  import MerchSlider from '../components/MerchSlider'
-  export default {
-    name: 'Home',
-    components: { Header, TerminKarte, MerchSlider }
-  }
+import Header from "../components/Header";
+import MerchSlider from "../components/MerchSlider";
+export default {
+  name: "Home",
+  components: { Header, MerchSlider },
+};
 </script>
 
 <style scoped>

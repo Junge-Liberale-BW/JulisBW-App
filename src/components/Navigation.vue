@@ -51,9 +51,6 @@
               <i class="la la-angle-right" /> JuLis A-Z
             </li>
           </ul>
-          <li class="nav-item" @click="changeSite('Kalender')">
-            <i class="la la-calendar la-lg" /> Kalender
-          </li>
 
           <div class="horizontal-line" />
 

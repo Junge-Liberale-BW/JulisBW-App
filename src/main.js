@@ -4,7 +4,6 @@ import router from './router'
 import store from './store'
 
 import julietteService from './util/juliette'
-import storageManager from './util/storageManager'
 
 import VueTouch from 'vue-touch';
 Vue.use(VueTouch);
@@ -19,25 +18,12 @@ import '../node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css'
 
 Vue.config.productionTip = false
 Vue.$julietteService = julietteService
-Vue.$storageManager = storageManager
 
 Object.defineProperty(Vue.prototype, '$julietteService', {
   get() {
     return julietteService
   }
 })
-
-Object.defineProperty(Vue.prototype, '$storageManager', {
-  get() {
-    return storageManager
-  }
-})
-
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-  storageManager.test()
-}
 
 new Vue({
   created() {

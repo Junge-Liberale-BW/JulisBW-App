@@ -6,7 +6,6 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    ausgewählterLAK: '',
     landesvorstand: require('../assets/landesvorstand.json'), // hol von da "http://s.julisbw.de/app/landesvorstand.json"
     laks: require('../assets/laks.json'), // hol von da "http://s.julisbw.de/app/laks.json"
     unsereThemen: require('../assets/themen.json'), // hol von da "http://s.julisbw.de/app/themen.json"
@@ -78,18 +77,6 @@ export default new Vuex.Store({
       require('../assets/img/merch/merchshop-1.png'),
       require('../assets/img/merch/merchshop-2.png'),
     ],
-    termine: [
-      {
-        'Titel': 'Go-Live Hackathon TI',
-        'Datum': '2020-04-14T14:00:00',
-        'Ort': 'WebEx'
-      },
-      {
-        'Titel': 'Landeskongress',
-        'Datum': '2020-04-22T10:00:00',
-        'Ort': 'Stuttgart'
-      }
-    ],
     currentDate: new Date(),
   },
   mutations: {
@@ -102,20 +89,14 @@ export default new Vuex.Store({
       router.push({ name: neue_seite.name, params: neue_seite.params })
       window.scrollTo(0, 0)
     },
-    LAK_anmelden(store, LAK) {
-      store.state.ausgewählterLAK = LAK;
-      router.push('LAK-anmelden');
-    }
   },
   getters: {
-    termine: state => state.termine,
     currentDate: state => state.currentDate,
     landesarbeitskreise: state => state.lak.liste,
     landesvorstand: state => state.landesvorstand,
     laks: state => state.laks,
     unsereThemen: state => state.unsereThemen,
     kuerzel: state => state.kuerzel,
-    ausgewählterLAK: state => state.ausgewählterLAK,
     merchBilder: state => state.merchBilder
   }
 })
