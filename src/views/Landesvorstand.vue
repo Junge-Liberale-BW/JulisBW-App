@@ -29,14 +29,13 @@ export default {
   components: { Header, PersonKachel },
   data() {
     return {
-      activeId: undefined
+      activeId: undefined,
     };
   },
   computed: {
     landesvorstand() {
-      console.log(this.$store.getters.landesvorstand);
       return this.$store.getters.landesvorstand;
-    }
+    },
   },
   methods: {
     getColor(index) {
@@ -51,8 +50,8 @@ export default {
     },
     childUnfold(id) {
       this.activeId = id;
-    }
-  }
+    },
+  },
 };
 </script>
 

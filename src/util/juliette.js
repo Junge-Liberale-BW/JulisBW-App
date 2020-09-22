@@ -49,7 +49,6 @@ class JulietteDataService {
     return new Promise((resolve) => {
       this.data.then(items => {
         const articles = (items.filter(i => i.title.rendered.replace("/", "-").includes(issueName)))
-        console.log(articles)
         resolve(articles)
       })
     })

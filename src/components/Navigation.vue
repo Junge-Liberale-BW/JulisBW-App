@@ -75,8 +75,12 @@
         <div id="nav-footer">
           <a @click="changeSite('About')">Über die App</a>
           <br />
-          <a @click="changeSite('Impressum')">Impressum</a>&nbsp;
-          <a @click="changeSite('Datenschutz')">Datenschutz</a>
+          <span style="padding-right: 0.5rem">
+            <a @click="changeSite('Impressum')">Impressum</a>
+          </span>
+          <span style="padding-left: 0.5rem">
+            <a @click="changeSite('Datenschutz')">Datenschutz</a>
+          </span>
         </div>
       </div>
     </nav>
@@ -115,13 +119,11 @@ export default {
 
       if (month !== 0) {
         var currentMonth = (month + 1).toString().padStart(2, "0");
-        var lastMonth = month.toString().padStart(2, "0");
+        //ar lastMonth = month.toString().padStart(2, "0");
       } else {
         currentMonth = "01";
-        lastMonth = "12";
+        //lastMonth = "12";
       }
-
-      console.log(currentMonth + " " + lastMonth + " ");
 
       var currentLink =
         "https://s.julisbw.de/newsletter/" +

@@ -2,21 +2,16 @@
   <div>
     <div class="lak-header">
       <i :class="'las la-4x la-' + lak.icon" />
-      <h1 class="text-center text-uppercase">
-        LAK {{ lak.title }}
-      </h1>
+      <h1 class="text-center text-uppercase">LAK {{ lak.title }}</h1>
     </div>
 
     <div class="text-page">
-      <p class="text-content left">
-        {{ lak.text1 }}
-      </p>
-      <p class="text-content left">
-        {{ lak.text2 }}
-      </p>
+      <p class="text-content left">{{ lak.text1 }}</p>
+      <p class="text-content left">{{ lak.text2 }}</p>
 
       <PersonKachel
         class="leiter-kachel"
+        v-if="lak.leiter"
         :person="lak.leiter"
         :position="name+'Leitung'"
         :color="getColor"
@@ -24,6 +19,7 @@
       />
       <PersonKachel
         class="leiter-kachel"
+        v-if="lak.stellvertreter"
         :person="lak.stellvertreter"
         :position="name +'Stellvertretung'"
         :color="getColor"
@@ -33,21 +29,15 @@
           type="button"
           class="btn btn-primary text-uppercase mx-auto"
           @click="lakMail"
-        >
-          LAK Leitung kontaktieren
-        </button>
+        >LAK Leitung kontaktieren</button>
       </div>
 
       <p
         class="text-content center"
-      >
-        Du interessierst dich für das Thema {{ lak.title }} und möchtest dich im Landesarbeitskreis engagieren?
-      </p>
+      >Du interessierst dich für das Thema {{ lak.title }} und möchtest dich im Landesarbeitskreis engagieren?</p>
       <p
         class="text-content center"
-      >
-        Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!
-      </p>
+      >Dann trage dich jetzt in den Verteiler ein, um über alle Termine und Neuigkeiten informiert zu sein!</p>
 
       <div class="button-wrapper">
         <button
@@ -56,6 +46,7 @@
           @click="anmeldenZumLAK"
         >
           Jetzt zum LAK anmelden
+          <i class="la la-external-link-alt la-lg external-link" />
         </button>
       </div>
     </div>
@@ -78,7 +69,10 @@ export default {
   },
   methods: {
     anmeldenZumLAK: function () {
-      this.$store.dispatch("LAK_anmelden", this.titel);
+      window.open(
+        "https://www.julis-bw.de/inhalte/ideen-einbringen/landesarbeitskreise/",
+        "_blank"
+      );
     },
     lakMail() {
       window.open("mailto:" + this.lak.email + "@julis-bw.de", "_blank");

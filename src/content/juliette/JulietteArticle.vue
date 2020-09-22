@@ -18,7 +18,6 @@
     },
     async created() {
       await this.$julietteService.getArticle(this.$route.params.id).then(article => {
-        console.log(article)
         this.article = article
       })
     }
