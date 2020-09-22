@@ -51,6 +51,7 @@ export default {
   width: 90vw;
   position: relative;
   margin: 20px auto;
+  margin-bottom: 3rem;
 }
 
 img {
@@ -63,20 +64,20 @@ img {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 10px;
+  bottom: -18px;
   left: 0;
 }
 
 .point {
-  width: 10px;
-  height: 10px;
-  background-color: grey;
+  width: 8px;
+  height: 8px;
+  background-color: #aeaeae;
   border-radius: 50%;
   margin: 0 5px;
 }
 
 .point.active {
-  background: white;
-  border: 1px solid black;
+  background: #5f5f5f;
+  border: 0px solid black;
 }
 </style>

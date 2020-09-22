@@ -57,6 +57,14 @@
       "explanation": "erweiterter Landesvorstand"
     },
     {
+      "abbr": "BuVoSi",
+      "explanation": "Bundesvorstandssitzung"
+    },
+    {
+      "abbr": "LaVoSi",
+      "explanation": "Landesvorstandssitzung"
+    },
+    {
       "abbr": "BV",
       "explanation": "Bezirksverband"
     },
@@ -71,6 +79,10 @@
     {
       "abbr": "GO",
       "explanation": "Geschäftsordnung"
+    },
+    {
+      "abbr": "TO",
+      "explanation": "Tagesordnung"
     },
     {
       "abbr": "J+L",
@@ -155,6 +167,14 @@
     {
       "abbr": "THA",
       "explanation": "Theodor-Heuss-Akademie der FNF auf dem Zauberberg in Gummersbach"
+    },
+    {
+      "abbr": "LPT",
+      "explanation": "Landesparteitag der FDP"
+    },
+    {
+      "abbr": "BPT",
+      "explanation": "Bundesparteitag der FDP"
     }
   ]
 }
