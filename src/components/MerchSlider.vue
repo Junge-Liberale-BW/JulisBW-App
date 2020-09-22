@@ -1,18 +1,12 @@
 <template>
-  <div
-    id="merch-slider"
-    :key="key"
-  >
+  <div id="merch-slider" :key="key">
     <v-touch
       :swipe-options="{ threshold: 20 }"
-      @swipeleft="changeImage(1)"
-      @swiperight="changeImage(0)"
+      @swipeleft="changeImage((index + 1)%image.length)"
+      @swiperight="changeImage((image.length + index - 1)%image.length)"
     >
-      <a
-        target="_blank"
-        href="https://shop.spreadshirt.de/julis-bw"
-      >
-        <img :src="image[index]">
+      <a target="_blank" href="https://shop.spreadshirt.de/julis-bw">
+        <img :src="image[index]" />
       </a>
     </v-touch>
     <div id="points">
@@ -28,61 +22,61 @@
 
 <script>
 export default {
-    name: 'HeaderSlider',
-    data: function () {
-      return {
-        image: [],
-        index: 0,
-        key: 0,
-        interval: undefined
-      }
+  name: "HeaderSlider",
+  data: function () {
+    return {
+      image: [],
+      index: 0,
+      key: 0,
+      interval: undefined,
+    };
+  },
+  mounted: function () {
+    this.image = this.$store.getters.merchBilder;
+  },
+  methods: {
+    changeImage: function (index) {
+      this.index = index;
+      this.key++;
     },
-    mounted: function () {
-        this.image = this.$store.getters.merchBilder
+    swipeleft: function (index) {
+      alert(index);
     },
-    methods: {
-        changeImage: function (index) {
-            this.index = index;
-            this.key++;
-        },
-        swipeleft: function (index) {
-            alert(index)
-        }
-    }
-  }
+  },
+};
 </script>
 
 <style scoped>
 #merch-slider {
-    width: 90vw;
-    position: relative;
-    margin: 20px auto;
+  width: 90vw;
+  position: relative;
+  margin: 20px auto;
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 #points {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 10px;
-    left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
 }
 
 .point {
-    width: 10px;
-    height: 10px;
-    background-color: grey;
-    border-radius: 50%;
-    margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  background-color: grey;
+  border-radius: 50%;
+  margin: 0 5px;
 }
 
 .point.active {
-    background: white;
-    border: 1px solid black;
+  background: white;
+  border: 1px solid black;
 }
 </style>
