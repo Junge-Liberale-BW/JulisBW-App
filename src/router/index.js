@@ -177,6 +177,10 @@ const routes = [
     props: {
       isPrimary: false,
     }
+  },
+  {
+    path: '*',
+    redirect: '/'
   }
 ]
 
