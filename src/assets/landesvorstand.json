@@ -1,5 +1,5 @@
 {
-    "landesvorsitzender":{
+    "landesvorsitzender": {
         "position": "Landesvorsitzender",
         "firstname": "Valentin",
         "lastname": "Abel",
@@ -14,7 +14,7 @@
         "twitter": "Valentin_C_Abel",
         "instagram": "valentin_christian_abel"
     },
-    "stvFinanzen":{
+    "stvFinanzen": {
         "position": "Stellv. Landesvorsitzender für Finanzen",
         "firstname": "Dr. Moritz",
         "lastname": "Otto",
@@ -30,7 +30,7 @@
         "twitter": null,
         "instagram": "mo_tto"
     },
-    "stvOrga":{
+    "stvOrga": {
         "position": "Stellv. Landesvorsitzender für Organisation",
         "firstname": "Philip",
         "lastname": "Brozé",
@@ -43,7 +43,7 @@
         "twitter": "BrozePhilip",
         "instagram": "phily_bro"
     },
-    "stvPO":{
+    "stvPO": {
         "position": "Stellv. Landesvorsitzender für Presse- und Öffentlichkeitsarbeit",
         "firstname": "Pascal",
         "lastname": "Schejnoha",
@@ -57,7 +57,7 @@
         "twitter": "schejnoha",
         "instagram": "pascal.schehnoha"
     },
-    "stvProgrammatik":{
+    "stvProgrammatik": {
         "position": "Stellv. Landesvorsitzender für Programmatik",
         "firstname": "Hieronymus",
         "lastname": "Eichengrün",
@@ -71,12 +71,12 @@
         "twitter": null,
         "instagram": "hiero.juliuy"
     },
-    "beisitzerInternet":{
+    "beisitzerInternet": {
         "position": "Beisitzer für Internet",
         "firstname": "Daniel",
         "lastname": "Götz",
         "tasks": [
-            "verantwortlich für IT-INfrastruktur und Technik",
+            "Verantwortlich für IT-Infrastruktur und Technik",
             "Verwaltung von E-Mail-Accounts und -Verteilern",
             "Ansprechpartner für alle technischen Anliegen",
             "Serveradministration"
@@ -86,12 +86,12 @@
         "twitter": "odessa2og",
         "instagram": "odessa2"
     },
-    "beisitzerPublikationen":{
+    "beisitzerPublikationen": {
         "position": "Beisitzer für Publikationen",
         "firstname": "Linus",
         "lastname": "Molin",
         "tasks": [
-            "redaktionelle Betreuung, Layout und Druck des Mitgliedermagazins Juliette",
+            "Redaktionelle Betreuung, Layout und Druck des Mitgliedermagazins Juliette",
             "Gestalltung des monatlichen Newsletters"
         ],
         "email": "molin",
@@ -99,7 +99,7 @@
         "twitter": "linus30092141",
         "instagram": "linus.mln"
     },
-    "beisitzerFinanzen":{
+    "beisitzerFinanzen": {
         "position": "Beisitzer für Finanzen",
         "firstname": "Maurice",
         "lastname": "Ehinlanwo",
@@ -113,7 +113,7 @@
         "twitter": null,
         "instagram": "maurice.ehn"
     },
-    "beisitzerOrga":{
+    "beisitzerOrga": {
         "position": "Beisitzerin für Organisation",
         "firstname": "Desiree",
         "lastname": "Ortlieb",
@@ -125,7 +125,7 @@
         "twitter": null,
         "instagram": "desireeortlieb"
     },
-    "beisitzerPO":{
+    "beisitzerPO": {
         "position": "Beisitzerin für Presse- und Öffentlichkeitsarbeit",
         "firstname": "Lorraine",
         "lastname": "Schönrock",
@@ -139,14 +139,14 @@
         "twitter": null,
         "instagram": "lrrnschnrck"
     },
-    "beisitzerProgrammatik":{
+    "beisitzerProgrammatik": {
         "position": "Beisitzer für Programmatik",
         "firstname": "Paul",
         "lastname": "Thies",
         "tasks": [
             "Organisation der Landesarbeitskreise (LAKs)",
-            "inhaltliche Ausarbeitung der Landesprogrammatischen Wochenenden (LPWs)",
-            "direkter Ansprechpartner zu allen Fragen rund um die Programmatik"
+            "Inhaltliche Ausarbeitung der Landesprogrammatischen Wochenenden (LPWs)",
+            "Direkter Ansprechpartner zu allen Fragen rund um die Programmatik"
         ],
         "email": "thies",
         "facebook": "paul.thies.353",

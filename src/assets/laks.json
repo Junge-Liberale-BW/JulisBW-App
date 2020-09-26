@@ -60,7 +60,11 @@
             "firstname": "Florian",
             "lastname": "Ratzel"
         },
-        "stellvertreter": null,
+        "stellvertreter": {
+            "position": "Stellvertretung",
+            "firstname": "Bernhard",
+            "lastname": "Möllers"
+        },
         "email": "lak-leiter-aussen"
     },
     "finanzen": {

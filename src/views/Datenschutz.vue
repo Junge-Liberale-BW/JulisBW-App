@@ -1,18 +1,14 @@
 <template>
   <div>
-    <Header />
+    <div class="blank-header">
+      <i :class="'las la-4x la-server'" />
+      <h1 class="text-center text-uppercase">Datenschutz</h1>
+    </div>
     <div class="text-page">
       <div>
-        <div
-          v-for="item in content"
-          :key="item.heading"
-        >
-          <h1 class="heading-magenta">
-            {{ item.heading }}
-          </h1>
-          <div class="text-content">
-            {{ item.text }}
-          </div>
+        <div v-for="item in content" :key="item.heading">
+          <h1 class="heading-magenta">{{ item.heading }}</h1>
+          <div class="text-content">{{ item.text }}</div>
         </div>
       </div>
     </div>
@@ -20,17 +16,16 @@
 </template>
 
 <script>
-import Header from "../components/Header";
 export default {
   name: "Impressum",
-  components: { Header },
+  components: {},
   data: function () {
     return {
       content: [
         {
-          heading: "INFORMATION ÜBER DIE ERHEBUNG PERSONENBEZOGENER DATEN",
+          heading: null,
           text:
-            "Im Folgenden informieren wir über Art, Umfang und Zwecke der Erhebung und Verarbeitung personenbezogener Daten bei Nutzung unserer Website.\n\nVerantwortlicher für die Datenverarbeitung gem. Art. 4 Abs. 7 EU-Datenschutz-Grundverordnung (DSGVO) ist: \nJunge Liberale Baden-Württemberg e.V.\nRosensteinstraße 22\n70191 Stuttgart\nE-Mail: info@julis-bw.de\nTelefon: +49(0)711 66618-22\n\nRegistergericht: Amtsgericht Stuttgart\nRegisternummer: 720369\nVertretungsberechtigter Vorstand (Anschrift wie oben):\nValentin Christian Abel (abel@julis-bw.de)\n\nDatenschutzbeauftragter (Anschrift wie oben):\nMoritz Klammler (datenschutz@julis-bw.de)\n\nGemeinsam Mitverantwortliche:\nJunge Liberale e.V.\nReinhardtstraße 14\n10117 Berlin\n\nE-Mail: info@julis.de\nTelefon: +49 (0)30 68078550\n\nRegistergericht: Amtsgericht Berlin-Charlottenburg\nRegisternummer: 19305\n\nVertretungsberechtigter Vorstand (Anschrift wie oben):\nRia Schröder (ria.schroeder@julis.de)\n\nDatenschutzbeauftragter (Anschrift wie oben):\nPhilippe Hintzen (philippe.hintzen@julis.de)",
+            "Die JuLis-BW App verarbeitet keine personenbezogenen Daten von Dir. Alle dargestellten Inhalte werden aus lokal gespeicherten statischen Daten erzeugt und Deine Interaktion mit der App wird nicht protokolliert.\nEs werden außerhalb des regulären Update-Prozess' Deines Betriebssystems für die App selbst keine externen Daten nachgeladen. Wenn Du einer der gekennzeichneten Weiterleitungen in der App zu externen Inhalten folgst, öffnet sich die entsprechende Webseite in Deiner Browser-App, die hierfür einen HTTP-Request über eine verschlüsselte Verbindung an den jeweiligen Server stellen wird.\nFür den Umgang mit potentiell personenbezogenen Daten, die beim Besuch unserer Webseite (www.julis-bw.de) und der Nutzung der darauf angebotenen Funktionen anfallen, oder wenn Du über eine der angegebenen Möglichkeiten direkt mit uns in Kontakt trittst, gilt unsere allgemeine Datenschutzerklärung(https://www.julis-bw.de/datenschutz/).",
         },
       ],
     };
@@ -38,5 +33,21 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.blank-header {
+  width: 100%;
+  text-align: center;
+  font-size: 1.7rem;
+  color: white;
+  background-color: #e5007d;
+  padding-top: 1rem;
+
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
+  h1 {
+    font-weight: 800;
+    font-size: 1.25rem;
+  }
+}
 </style>

@@ -29,7 +29,7 @@ export default new Vuex.Store({
       "digitalesLeitung": require('../assets/img/person/digitalesLeitung.jpg'),
       "digitalesStellvertretung": require('../assets/img/person/digitalesStellvertretung.jpg'),
       "aussenLeitung": require('../assets/img/person/aussenLeitung.jpg'),
-      /*"aussenStellvertretung": require('../assets/img/person/aussenStellvertretung.jpg'),*/
+      "aussenStellvertretung": require('../assets/img/person/aussenStellvertretung.jpg'),
       "finanzenLeitung": require('../assets/img/person/finanzenLeitung.jpg'),
       "finanzenStellvertretung": require('../assets/img/person/finanzenStellvertretung.jpg'),
       "gesellschaftLeitung": require('../assets/img/person/gesellschaftLeitung.jpg'),
@@ -70,8 +70,6 @@ export default new Vuex.Store({
       'umwelt': require('../assets/Header/umweltNachhaltigkeit.jpg'),
       'europa': require('../assets/Header/deutschlandEuropa.jpg'),
       'partizipation': require('../assets/Header/demokratiePartizipation.jpg'),
-      'Impressum': require('../assets/Header/startseite.jpg'),
-      'Datenschutz': require('../assets/Header/startseite.jpg'),
     },
     merchBilder: [
       require('../assets/img/merch/merchshop-1.png'),

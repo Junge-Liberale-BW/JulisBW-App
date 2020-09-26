@@ -52,6 +52,12 @@ nav {
         }
       }
 
+      .svg-icon{
+        height: 2.5rem;
+        padding-right: 0.4rem;
+        padding-left: 0.25rem;
+      }
+
       .unfoldList {
         li {
           color: white !important;
@@ -99,8 +105,8 @@ nav {
 
 // button
 #nav-button {
-  color: $magenta;
-  background-color: white;
+  color: white;
+  background-color: $magenta;
 
   position: fixed;
   top: 3em;
@@ -113,7 +119,7 @@ nav {
   padding-bottom: .3rem;
 }
 .opened-nav-button {
-  color: #fff;
-  background-color: #E5007D !important;
+  color: $magenta;
+  background-color: white !important;
   border-style: none;
 }

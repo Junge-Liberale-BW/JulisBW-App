@@ -34,7 +34,7 @@
           </ul>
 
           <li class="nav-item" @click="unfoldList('verband')">
-            <i class="la la-thumbs-up la-lg" /> Verband
+            <img :src="require('../assets/JL-MAGENTA-RGB.svg')" class="svg-icon" /> Verband
             <i
               :class="{la: true, 'icon-right': true, 'la-angle-up': unfold.verband, 'la-angle-right': !unfold.verband}"
             />
@@ -56,7 +56,7 @@
 
           <li
             class="nav-item"
-            @click="openWebsite('http://www.julis-bw.de/freiheitsfunk-der-juli-podcast')"
+            @click="openWebsite('https://www.julis-bw.de/freiheitsfunk-der-juli-podcast')"
           >
             <i class="la la-podcast la-lg" /> Podcast
             <i class="la la-external-link-alt la-lg external-link" />
@@ -118,27 +118,27 @@ export default {
       var year = date.getFullYear();
 
       if (month !== 0) {
-        var currentMonth = (month + 1).toString().padStart(2, "0");
-        //ar lastMonth = month.toString().padStart(2, "0");
+        //var currentMonth = (month + 1).toString().padStart(2, "0");
+        var lastMonth = month.toString().padStart(2, "0");
       } else {
-        currentMonth = "01";
-        //lastMonth = "12";
+        //currentMonth = "01";
+        lastMonth = "12";
       }
 
-      var currentLink =
-        "https://s.julisbw.de/newsletter/" +
+      /*var currentLink =
+        "http://s.julisbw.de/newsletter/" +
         year +
         currentMonth +
         "/Newsletter-" +
         year +
         "-" +
         currentMonth +
-        ".html";
+        ".html";*/
 
       if (month == 0) {
         year--;
       }
-      /*var lastLink =
+      var lastLink =
         "http://s.julisbw.de/newsletter/" +
         year +
         lastMonth +
@@ -146,7 +146,7 @@ export default {
         year +
         "-" +
         lastMonth +
-        ".html";*/
+        ".html";
 
       /*var request = new XMLHttpRequest();
       request.open("GET", currentLink, true);
@@ -159,15 +159,11 @@ export default {
       };
       request.send();*/
 
-      window.open(currentLink, "_blank");
+      window.open(lastLink, "_blank");
     },
     changeNavigationState() {
       if (this.navigationOpen) {
         this.navigationWidth = "-320px";
-        this.unfold = {
-          inhalte: false,
-          verband: false,
-        };
       } else {
         this.navigationWidth = "0vw";
       }
