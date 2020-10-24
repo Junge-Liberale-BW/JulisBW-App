@@ -5,8 +5,9 @@ module.exports = {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
     types.forEach(type => addStyleResource(config.module.rule('stylus').oneOf(type)))
   },
-
-  publicPath: '/',
+  
+  //publicPath: 'file:///android_asset/www/', //for apk build
+  publicPath: '/', //for serve
 
   pluginOptions: {
     cordovaPath: 'src-cordova'

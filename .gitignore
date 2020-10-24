@@ -29,3 +29,5 @@ yarn-error.log*
 #keystores
 *.keystore*
 
+package-lock.json
+
