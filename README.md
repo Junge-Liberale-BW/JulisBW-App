@@ -2,6 +2,10 @@
 
 ## Informationen zur App
 
+### Preview
+
+Eine Browser Preview findet sich unter https://junge-liberale-bw.github.io/JulisBW-App/.
+
 ### Informationen zur Idee
 
 Die App der Jungen Liberalen Baden-Württemberg.
@@ -79,7 +83,7 @@ genauere Informationen in `package.json`
 
 ### Webversion über github-pages deployen
 
-Mit Zugriff auf das repository lässt sich mit dem Skript `deploy.sh` der aktuell gebaute Stand aus `/dist` mit Hilfe von github-pages auf junge-liberale-bw.github.io/JulisBW-App/ deployen.
+Mit Zugriff auf das repository lässt sich mit dem Skript `deploy.sh` der aktuell gebaute Stand aus `/dist` mit Hilfe von github-pages auf https://junge-liberale-bw.github.io/JulisBW-App/ deployen.
 
 ## Cordova
 
