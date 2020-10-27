@@ -121,4 +121,4 @@ Um diese beim Google Play Store einreichen zu können, muss sie mit einem Entwic
 
 ### iOS
 
-Dieser Abschnitt wird zur  nachgetragen, sobald wir einen Workflow für das iOS Deployment gefeunden haben.
+Dieser Abschnitt wird zur  nachgetragen, sobald wir einen Workflow für das iOS Deployment gefunden haben.
