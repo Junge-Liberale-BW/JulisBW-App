@@ -1,4 +1,5 @@
 # JuLis-BW App
+>> [ENGLISH VERSION](README_ENG.md) <<
 
 ## Informationen zur App
 
